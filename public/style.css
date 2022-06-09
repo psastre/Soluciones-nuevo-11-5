@@ -250,6 +250,15 @@ input:-webkit-autofill:focus {
   font-size: 25px;
   margin-left: auto;
 }
+.bttn.bttn-lg.bttn-primary{
+  top: -10px;
+}
+.bttn.bttn-lg.bttn-primary.bttn-hacer-pedido{
+  width:233px;
+}
+.bttn.bttn-lg.bttn-primary.top-service{
+  width: 232px;
+}
 
 .bttn:focus,
 .bttn:hover {
@@ -2908,13 +2917,16 @@ form i {
 }
 
 .servicios-extra h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .servicios-extra {
   cursor: pointer;
   transition: ease 1s;
+  display: flex;
+    justify-content: center;
+  
 }
 .servicios-extra:hover {
   background-color: rgba(135, 181, 255, 0.5);
@@ -2976,6 +2988,12 @@ form i {
   color: grey;
 }
 
+#filtering{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 @media only screen and (max-width: 767px){
 body {
@@ -2983,15 +3001,8 @@ body {
     height: 100vh;
     width: 100%;
 }
-.arrow {display: none};
-.speech-bubble {width: 0px;}
-.header1 {
-  font-size: 20px;
-  letter-spacing: 9px;
-  margin-top: 58px;
-  /* left: -50px; */
-  margin-left: -665px;}
-.header2 {display: none;}
+
 
 
 }
+

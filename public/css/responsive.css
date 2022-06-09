@@ -75,8 +75,8 @@
     }
     #section1R {
         margin-top: 250px;
-        margin-left: -100px;
-        height: 319px;
+        margin-left: -15px;
+        height: 337px;
     }
     .page-title {
         margin-bottom: 30px;
@@ -179,6 +179,91 @@
     .testimonials .single-testimonial .testimonial-text {
         font-size: 14px;
     }
+    /*=====Home=====*/
+    .carrouselServicios{
+        width: 100%;
+        
+        bottom: 15vh;
+        left: 0vw;
+    }
+    .arrow2{
+        bottom: 7vh;
+        left: 50%;
+        margin-left: -9px;
+        width: 26px;
+    }
+    .header-area .header-text .header-title{
+        letter-spacing: 7px;
+        margin-bottom: 102px;
+        text-align: center;
+        line-height: 53px;
+        font-size: 31px;
+    }
+    .bttn.bttn-lg.bttn-primary{
+        margin-left: 59px;
+        top: -38px;
+    }
+    #section1L h4{
+        text-align: center;
+    }
+
+    /*=====Preservicios====*/
+    .btndifer{
+        flex-direction: column;
+    }
+    .btndif{
+        height: 30vh;
+        width: 80vw;
+        padding: 24px 41px;
+    }
+    .btndif span{
+        line-height: 33px;
+    }
+
+    /*=====Servicios=====*/
+    .modal.in .modal-dialog{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .modal-content{
+        margin-left: 64px;
+        top: 35px;
+        left: 23px;
+    }
+    .bttn.bttn-lg.bttn-primary.top-service{
+        top: 0;
+        width: 180px;
+    }
+    .col-xs-6.reparaciones{
+        width: 50%;
+         margin: 0 ;
+        flex: auto;
+    }
+    .box-servicios{
+        margin: -10px;
+    }
+    .bttn.bttn-lg.bttn-primary.bttn-hacer-pedido{
+        width:180px;
+      }
+
+    /*=====Servicios 2=====*/
+    .container.service-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .servicios-extra{
+        border-radius: 13px;
+        padding: 20px 1px;
+        margin-bottom: 30px;
+        width: 85%;
+        margin-right: 2.5%;
+        height: 84px;
+      }
+      
+    
 }
 
 @media only screen and (max-width: 480px) {
