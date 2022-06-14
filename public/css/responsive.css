@@ -49,6 +49,9 @@
 /* Mobile Layout: 320px. */
 
 @media only screen and (max-width: 767px) {
+    html{
+        overflow-x: hidden;
+    }
     body {
         font-size: 12px;
         overflow-x: hidden;
@@ -201,7 +204,8 @@
     }
     .bttn.bttn-lg.bttn-primary{
         margin-left: 59px;
-        top: -38px;
+        top: 0px;
+        text-align: center;
     }
     #section1L h4{
         text-align: center;
@@ -226,10 +230,12 @@
     justify-content: center;
     align-items: center;
     }
+    .modal-dialog{
+        width: 100vw;
+    height: 100vh;
+    }
     .modal-content{
-        margin-left: 64px;
-        top: 35px;
-        left: 23px;
+        width: 90%;
     }
     .bttn.bttn-lg.bttn-primary.top-service{
         top: 0;
@@ -259,9 +265,16 @@
         padding: 20px 1px;
         margin-bottom: 30px;
         width: 85%;
-        margin-right: 2.5%;
+        margin-right: auto;
+        margin-left: auto;
         height: 84px;
       }
+      .servicioBox {
+        height: 320px;
+    }
+      .servicioBox textarea {
+        width: 100%;
+    }
       
     
 }
