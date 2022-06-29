@@ -64,44 +64,71 @@ $(window).on('load', function () {
        $('#subCategoriaPopup').modal('show');
     });
 
-    $("#btnElectricidadToma").click(function(){
-       $('#subCategoriaPopup').modal('show');
-       $('#popupElectricidad').modal('hide');
-
-       $('.tituloServicio').text("Cambio / Instalación de tomacorrientes");
-       $('.imgSubcategoria').attr("src","img/toma.jpg");
+    $(".closePopupButton").click(function(){
+       
+       $('#subCategoriaPopup').modal('hide');
+      
     });
 
-    //Albañilería
-    $("#plomeria").click(function(){
-       $('#popupPlomeria').modal('show');
+    //Plomeria
+    $("#Plomeria").click(function(){
+      $('#subCategoriaPopupPlomeria').modal('show');
+   });
+    $(".closePopupButton").click(function(){
+       $('#subCategoriaPopupPlomeria').modal('hide');
     });
 
     //Gas
     $("#gas").click(function(){
-       $('#popupGas').modal('show');
+       $('#subCategoriaPopupGasista').modal('show');
     });
+    $(".closePopupButton").click(function(){
+      $('#subCategoriaPopupGasista').modal('hide');
+   });
 
-    //Carpintería
-    $("#carpinteria").click(function(){
-       $('#popupCarpineria').modal('show');
+    //Destapacion
+    $("#destapacion").click(function(){
+       $('#subCategoriaPopupDestapacion').modal('show');
     });
+    $(".closePopupButton").click(function(){
+      $('#subCategoriaPopupDestapacion').modal('hide');
+   });
 
-    //Pintura
-    $("#pintura").click(function(){
-       $('#popupPintura').modal('show');
-    });
+    
 
     //Persiana
     $("#persiana").click(function(){
-       $('#popupPersiana').modal('show');
+       $('#subCategoriaPopupPersiana').modal('show');
     });
+    $(".closePopupButton").click(function(){
+      $('#subCategoriaPopupPersiana').modal('hide');
+   });
 
-    //Persiana
-    $("#cerrajeria").click(function(){
-       $('#popupCerrajeria').modal('show');
-    });
+   
+   
+   //Cerrajeria
+   $("#cerrajeria").click(function(){
+      $('#subCategoriaPopupCerrajeria').modal('show');
+   });
+   $(".closePopupButton").click(function(){
+     $('#subCategoriaPopupCerrajeria').modal('hide');
+  });
 
+   //PRUEBA
+   
+   $('.popupLogicDatalist').click(function(){
+      document.querySelector('#descripcionServicio').textContent = datalistValue.value;
+      console.log(datalistValue)
+      $('#pruebaPopup').modal('show');
+   });
+   $('.popupLogic').click(function(){
+      document.querySelector('#descripcionServicio').textContent = this.dataset.type
+      $('#pruebaPopup').modal('show');
+   });
+   $(".closePopupButton").click(function(){
+     $('#pruebaPopup').modal('hide');
+  });
+   
     //Aire
     $("#aireacondicionado").click(function(){
        $('#popupAire').modal('show');

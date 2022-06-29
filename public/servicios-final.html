@@ -129,7 +129,7 @@
 
                             <form action="/action_page.php">
 
-                              <input list="browser" class="browser" placeholder="Buscar...">
+                              <input list="browser" class="browser" placeholder="Buscar..." id="datalistValue">
                                   <datalist id="browser">
                                     
                                       <option value="Plomero"></option>
@@ -145,7 +145,7 @@
                                       <option value="Tv"></option>
                                       <option value="Service electronico"></option>
                                       <option value="Computadora"></option>
-                                      <option value="Herreria"</option>
+                                      <option value="Herreria"></option>
                                       <option value="Empapelado"></option>
                                       <option value="Toldos"></option>
                                       <option value="Enlozado"></option>
@@ -156,34 +156,8 @@
                                       <option value="Limpieza de alfombras"></option>
                                       <option value="Lustrado de muebles"></option>
                                   </datalist>
-                                  <!--
-                            <select name="cars" class="selecServicio">
-                              <optgroup label="Reparaciones técnicas comunes">
-                              <option value="vidrios">Vidrios</option>
-                              <option value="destapaciones">Destapaciones</option>
-
-                              <optgroup label="Services">
-                              <option value="heladera">Heladera</option>
-                              <option value="cocina">Cocina</option>
-                              <option value="lavadora">Lavadora</option>
-                              <option value="tv">TV</option>
-                              <option value="service-electronico">Service electrónico</option>
-                              <option value="computadora">Computadora</option>
-
-                              <optgroup label="Mantenimiento">
-                              <option value="herreria">Herrería</option>
-                              <option value="empapelado">Empapelado</option>
-                              <option value="toldos">Toldos</option>
-                              <option value="enlozado">Enlozado</option>
-                              <option value="pulido-plastificado">Pulido y plastificado</option>
-                              <option value="plaguicidas">Plaguicidas</option>
-                              <option value="tapiceria">Tapicería</option>
-                              <option value="jardineria">Jardinería</option>
-                              <option value="limpieza-alfombras">Limpieza de alfombras</option>
-                              <option value="lustado-muebles">Lustrado de muebles</option>
-                            </select>
-                            -->
-                            <a class="bttn bttn-lg bttn-primary top-service" style="display: block; margin: 40px auto 0;  cursor:pointer;">Hacer pedido</a>
+                                  
+                            <a class="bttn bttn-lg bttn-primary top-service popupLogicDatalist" style="display: block; margin: 40px auto 0;  cursor:pointer;">Hacer pedido</a>
                             </form>
                         </div>
                     </div>
@@ -208,135 +182,9 @@
 
                 <!-- Reparaciones -->
 
-                <!-- PopUp Electricidad -->
-
-                <div id="popupElectricidad" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title popupTitle">Electricida</h4>
-                      </div>
-                      <div class="modal-body">
-
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/toma.jpg" alt="">
-                              <h4>Cambio / Instalación de tomacorrientes</h4>
-                              <a class="bttn bttn-primary btnServicioPopup" id="btnElectricidadToma">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/artefacto.jpg" alt="">
-                              <h4>Camapana o extractor de cocina</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/calefactor.jpg" alt="">
-                              <h4>Panel calefactor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/ventilador.jpg" alt="">
-                              <h4>Instalación de ventilador</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/diagnostico.jpg" alt="">
-                              <h4>Diagnóstico y reparación</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termica.jpg" alt="">
-                              <h4>Llave térmica</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/disyuntor.jpg" alt="">
-                              <h4>Disyuntor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termotanque.jpg" alt="">
-                              <h4>Termotanque eléctrico</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img class="imgSubcategoria" src="img/aireacondicionado.jpg">
-                              <h4>Instalación eléctrica de aire acondicionado</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="modal-footer" style="border: unset;">
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div id="subCategoriaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" >
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/electricidad.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 class="descripcionServicio">Electricista</h4>
-                              <a href="guia-precios.html" target="_blank" class="precioServicio">Descripción del trabajo a realizar</a>
-                              <p>Escribi el detalle del pedido lo mas completo posible(esto nos ayuda a elegir al profesional indicado)</p>
-                              <textarea rows="5" cols="55" name="comment" form="usrform" placeholder="Corte de luz en parte de la casa ..."></textarea>
-
-                              <div class="row">
-
-                                <div class="col-sm-12">
-                                  <a href="usuario.html#mis-pedidos" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</a>
-                                  
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- PopUp Electricidad -->
-
+                
                 <!-- Box Electricidad -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones" id="electricidad">
+                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Electricidad" id="electricidad">
                     <div class="filter-box">
                         <div class="filter-image">
                             <img src="img/electricidad.jpg" alt="">
@@ -350,139 +198,10 @@
                 </div>
                 <!-- Box Electricidad -->
 
-                <!-- PopUp Plomería -->
-                <div id="popupPlomeria" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title popupTitle">Plomería</h4>
-                      </div>
-                      <div class="modal-body">
-
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/toma.jpg" alt="">
-                              <h4>Cambio / Instalación de tomacorrientes</h4>
-                              <a class="bttn bttn-primary btnServicioPopup" id="btnElectricidadToma">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/artefacto.jpg" alt="">
-                              <h4>Camapana o extractor de cocina</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/calefactor.jpg" alt="">
-                              <h4>Panel calefactor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/ventilador.jpg" alt="">
-                              <h4>Instalación de ventilador</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/diagnostico.jpg" alt="">
-                              <h4>Diagnóstico y reparación</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termica.jpg" alt="">
-                              <h4>Llave térmica</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/disyuntor.jpg" alt="">
-                              <h4>Disyuntor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termotanque.jpg" alt="">
-                              <h4>Termotanque eléctrico</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img class="imgSubcategoria" src="img/aireacondicionado.jpg">
-                              <h4>Instalación eléctrica de aire acondicionado</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="modal-footer" style="border: unset;">
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div id="subCategoriaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/electricidad.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 class="descripcionServicio">Contratá el servicio ahora con un precio fijo! Podés pagar con tarjeta de crédito. Si sos socio de Soluciones no pagás por la visita para presupuestar.</h4>
-                              <h1 class="precioServicio">$449</h1>
-
-                              <div class="row">
-                                <div class="col-sm-6">
-                                  <img src="img/tarjetas.jpg" alt="" id="imgTarjetas">
-                                </div>
-
-                                <div class="col-sm-6">
-                                  <!-- Boton MercadoPago -->
-                                  <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-90e0a441-229d-4eec-b149-6bf80ab098db" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio'>Pagar</a>
-                                  <script type="text/javascript">
-                                  (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                                  </script>
-                                  <!-- Boton MercadoPago -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- PopUp Plomería -->
-
+                 
+               
                 <!-- Box plomeria -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones" id="plomeria">
+                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Plomeria" id="Plomeria">
                     <div class="filter-box">
                         <div class="filter-image">
                             <img src="img/plomeria.jpg" alt="">
@@ -495,139 +214,9 @@
                 </div>
                 <!-- Box Albañilería -->
 
-                <!-- PopUp Gas -->
-                <div id="popupGas" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title popupTitle">Gas</h4>
-                      </div>
-                      <div class="modal-body">
-
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/toma.jpg" alt="">
-                              <h4>Cambio / Instalación de tomacorrientes</h4>
-                              <a class="bttn bttn-primary btnServicioPopup" id="btnElectricidadToma">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/artefacto.jpg" alt="">
-                              <h4>Camapana o extractor de cocina</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/calefactor.jpg" alt="">
-                              <h4>Panel calefactor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/ventilador.jpg" alt="">
-                              <h4>Instalación de ventilador</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/diagnostico.jpg" alt="">
-                              <h4>Diagnóstico y reparación</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termica.jpg" alt="">
-                              <h4>Llave térmica</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/disyuntor.jpg" alt="">
-                              <h4>Disyuntor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termotanque.jpg" alt="">
-                              <h4>Termotanque eléctrico</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img class="imgSubcategoria" src="img/aireacondicionado.jpg">
-                              <h4>Instalación eléctrica de aire acondicionado</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="modal-footer" style="border: unset;">
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div id="subCategoriaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/electricidad.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 class="descripcionServicio">Contratá el servicio ahora con un precio fijo! Podés pagar con tarjeta de crédito. Si sos socio de Soluciones no pagás por la visita para presupuestar.</h4>
-                              <h1 class="precioServicio">$449</h1>
-
-                              <div class="row">
-                                <div class="col-sm-6">
-                                  <img src="img/tarjetas.jpg" alt="" id="imgTarjetas">
-                                </div>
-
-                                <div class="col-sm-6">
-                                  <!-- Boton MercadoPago -->
-                                  <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-90e0a441-229d-4eec-b149-6bf80ab098db" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio'>Pagar</a>
-                                  <script type="text/javascript">
-                                  (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                                  </script>
-                                  <!-- Boton MercadoPago -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- PopUp Gas -->
-
+               
                 <!-- Box Gas -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones" id="gas">
+                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Gas" id="gas">
                     <div class="filter-box">
                         <div class="filter-image">
                             <img src="img/gas.jpg" alt="">
@@ -640,284 +229,11 @@
                 </div>
                 <!-- Box Gas -->
 
-                <!-- PopUp Carpinteria -->
-                <div id="popupCarpineria" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title popupTitle">Carpintería</h4>
-                      </div>
-                      <div class="modal-body">
+              
 
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/toma.jpg" alt="">
-                              <h4>Cambio / Instalación de tomacorrientes</h4>
-                              <a class="bttn bttn-primary btnServicioPopup" id="btnElectricidadToma">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/artefacto.jpg" alt="">
-                              <h4>Camapana o extractor de cocina</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/calefactor.jpg" alt="">
-                              <h4>Panel calefactor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/ventilador.jpg" alt="">
-                              <h4>Instalación de ventilador</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/diagnostico.jpg" alt="">
-                              <h4>Diagnóstico y reparación</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termica.jpg" alt="">
-                              <h4>Llave térmica</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/disyuntor.jpg" alt="">
-                              <h4>Disyuntor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termotanque.jpg" alt="">
-                              <h4>Termotanque eléctrico</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img class="imgSubcategoria" src="img/aireacondicionado.jpg">
-                              <h4>Instalación eléctrica de aire acondicionado</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="modal-footer" style="border: unset;">
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div id="subCategoriaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/carpinteria.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 class="descripcionServicio">Contratá el servicio ahora con un precio fijo! Podés pagar con tarjeta de crédito. Si sos socio de Soluciones no pagás por la visita para presupuestar.</h4>
-                              <h1 class="precioServicio">$449</h1>
-
-                              <div class="row">
-                                <div class="col-sm-6">
-                                  <img src="img/tarjetas.jpg" alt="" id="imgTarjetas">
-                                </div>
-
-                                <div class="col-sm-6">
-                                  <!-- Boton MercadoPago -->
-                                  <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-90e0a441-229d-4eec-b149-6bf80ab098db" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio'>Pagar</a>
-                                  <script type="text/javascript">
-                                  (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                                  </script>
-                                  <!-- Boton MercadoPago -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- PopUp Carpinteria -->
-
-                <!-- Box Carpinteria -->
-                <!--<div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones" id="carpinteria">
-                    <div class="filter-box">
-                        <div class="filter-image">
-                            <img src="img/carpinteria.jpg" alt="">
-                        </div>
-                        <div class="filter-hover">
-                            <h5>Carpintería</h5>
-                            <a href="img/carpinteria.jpg" data-effect="mfp-zoom-in"></a>
-                        </div>
-                    </div>
-                </div>-->
-                <!-- Box Carpintería -->
-
-                <!-- PopUp Pintura -->
-                <div id="popupPintura" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title popupTitle">Destapaciones</h4>
-                      </div>
-                      <div class="modal-body">
-
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/toma.jpg" alt="">
-                              <h4>Cambio / Instalación de tomacorrientes</h4>
-                              <a class="bttn bttn-primary btnServicioPopup" id="btnElectricidadToma">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/artefacto.jpg" alt="">
-                              <h4>Camapana o extractor de cocina</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/calefactor.jpg" alt="">
-                              <h4>Panel calefactor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/ventilador.jpg" alt="">
-                              <h4>Instalación de ventilador</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/diagnostico.jpg" alt="">
-                              <h4>Diagnóstico y reparación</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termica.jpg" alt="">
-                              <h4>Llave térmica</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/disyuntor.jpg" alt="">
-                              <h4>Disyuntor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termotanque.jpg" alt="">
-                              <h4>Termotanque eléctrico</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img class="imgSubcategoria" src="img/aireacondicionado.jpg">
-                              <h4>Instalación eléctrica de aire acondicionado</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="modal-footer" style="border: unset;">
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div id="subCategoriaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/carpinteria.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 class="descripcionServicio">Contratá el servicio ahora con un precio fijo! Podés pagar con tarjeta de crédito. Si sos socio de Soluciones no pagás por la visita para presupuestar.</h4>
-                              <h1 class="precioServicio">$449</h1>
-
-                              <div class="row">
-                                <div class="col-sm-6">
-                                  <img src="img/tarjetas.jpg" alt="" id="imgTarjetas">
-                                </div>
-
-                                <div class="col-sm-6">
-                                  <!-- Boton MercadoPago -->
-                                  <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-90e0a441-229d-4eec-b149-6bf80ab098db" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio'>Pagar</a>
-                                  <script type="text/javascript">
-                                  (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                                  </script>
-                                  <!-- Boton MercadoPago -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- PopUp Pintura -->
-
-                <!-- Box Pintura -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones" id="pintura">
+               
+                <!-- Box Destapacion -->
+                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Destapacion" id="destapacion">
                     <div class="filter-box">
                         <div class="filter-image">
                             <img src="img/destapaciones.jpg" alt="">
@@ -928,141 +244,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- Box Pintura -->
+                <!-- Box  Destapacion -->
 
-                <!-- PopUp Persiana -->
-                <div id="popupPersiana" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title popupTitle">Persiana</h4>
-                      </div>
-                      <div class="modal-body">
-
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/toma.jpg" alt="">
-                              <h4>Cambio / Instalación de tomacorrientes</h4>
-                              <a class="bttn bttn-primary btnServicioPopup" id="btnElectricidadToma">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/artefacto.jpg" alt="">
-                              <h4>Camapana o extractor de cocina</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/calefactor.jpg" alt="">
-                              <h4>Panel calefactor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/ventilador.jpg" alt="">
-                              <h4>Instalación de ventilador</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/diagnostico.jpg" alt="">
-                              <h4>Diagnóstico y reparación</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termica.jpg" alt="">
-                              <h4>Llave térmica</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/disyuntor.jpg" alt="">
-                              <h4>Disyuntor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termotanque.jpg" alt="">
-                              <h4>Termotanque eléctrico</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img class="imgSubcategoria" src="img/aireacondicionado.jpg">
-                              <h4>Instalación eléctrica de aire acondicionado</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="modal-footer" style="border: unset;">
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div id="subCategoriaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/carpinteria.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 class="descripcionServicio">Contratá el servicio ahora con un precio fijo! Podés pagar con tarjeta de crédito. Si sos socio de Soluciones no pagás por la visita para presupuestar.</h4>
-                              <h1 class="precioServicio">$449</h1>
-
-                              <div class="row">
-                                <div class="col-sm-6">
-                                  <img src="img/tarjetas.jpg" alt="" id="imgTarjetas">
-                                </div>
-
-                                <div class="col-sm-6">
-                                  <!-- Boton MercadoPago -->
-                                  <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-90e0a441-229d-4eec-b149-6bf80ab098db" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio'>Pagar</a>
-                                  <script type="text/javascript">
-                                  (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                                  </script>
-                                  <!-- Boton MercadoPago -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- PopUp Persiana -->
+                
 
                 <!-- Box Persiana -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones" id="persiana">
+                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Persiana" id="persiana">
                     <div class="filter-box">
                         <div class="filter-image">
                             <img src="img/persiana.jpg" alt="">
@@ -1075,139 +262,10 @@
                 </div>
                 <!-- Box Persiana -->
 
-                <!-- PopUp Cerrajería -->
-                <div id="popupCerrajeria" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title popupTitle">Cerrajería</h4>
-                      </div>
-                      <div class="modal-body">
-
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/toma.jpg" alt="">
-                              <h4>Cambio / Instalación de tomacorrientes</h4>
-                              <a class="bttn bttn-primary btnServicioPopup" id="btnElectricidadToma">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/artefacto.jpg" alt="">
-                              <h4>Camapana o extractor de cocina</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/calefactor.jpg" alt="">
-                              <h4>Panel calefactor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/ventilador.jpg" alt="">
-                              <h4>Instalación de ventilador</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/diagnostico.jpg" alt="">
-                              <h4>Diagnóstico y reparación</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termica.jpg" alt="">
-                              <h4>Llave térmica</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/disyuntor.jpg" alt="">
-                              <h4>Disyuntor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termotanque.jpg" alt="">
-                              <h4>Termotanque eléctrico</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img class="imgSubcategoria" src="img/aireacondicionado.jpg">
-                              <h4>Instalación eléctrica de aire acondicionado</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="modal-footer" style="border: unset;">
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div id="subCategoriaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/carpinteria.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 class="descripcionServicio">Contratá el servicio ahora con un precio fijo! Podés pagar con tarjeta de crédito. Si sos socio de Soluciones no pagás por la visita para presupuestar.</h4>
-                              <h1 class="precioServicio">$449</h1>
-
-                              <div class="row">
-                                <div class="col-sm-6">
-                                  <img src="img/tarjetas.jpg" alt="" id="imgTarjetas">
-                                </div>
-
-                                <div class="col-sm-6">
-                                  <!-- Boton MercadoPago -->
-                                  <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-90e0a441-229d-4eec-b149-6bf80ab098db" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio'>Pagar</a>
-                                  <script type="text/javascript">
-                                  (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                                  </script>
-                                  <!-- Boton MercadoPago -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- PopUp Cerrajería -->
+               
 
                 <!-- Box Cerrajería -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones" id="cerrajeria">
+                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Cerrajeria" id="cerrajeria">
                     <div class="filter-box">
                         <div class="filter-image">
                             <img src="img/cerrajeria.jpg" alt="">
@@ -1220,136 +278,8 @@
                 </div>
                 <!-- Box Cerrajería -->
 
-                <!-- PopUp Aire -->
-                <div id="popupAire" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title popupTitle">Aire acondicionado</h4>
-                      </div>
-                      <div class="modal-body">
-
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/toma.jpg" alt="">
-                              <h4>Cambio / Instalación de tomacorrientes</h4>
-                              <a class="bttn bttn-primary btnServicioPopup" id="btnElectricidadToma">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/artefacto.jpg" alt="">
-                              <h4>Camapana o extractor de cocina</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/calefactor.jpg" alt="">
-                              <h4>Panel calefactor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/ventilador.jpg" alt="">
-                              <h4>Instalación de ventilador</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/diagnostico.jpg" alt="">
-                              <h4>Diagnóstico y reparación</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termica.jpg" alt="">
-                              <h4>Llave térmica</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/disyuntor.jpg" alt="">
-                              <h4>Disyuntor</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img src="img/electricidad/termotanque.jpg" alt="">
-                              <h4>Termotanque eléctrico</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="subCategoriaBox">
-                              <img class="imgSubcategoria" src="img/aireacondicionado.jpg">
-                              <h4>Instalación eléctrica de aire acondicionado</h4>
-                              <a href="" class="bttn bttn-primary btnServicioPopup">Contratar</a>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="modal-footer" style="border: unset;">
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div id="subCategoriaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" style="width:70%;">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/carpinteria.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 class="descripcionServicio">Contratá el servicio ahora con un precio fijo! Podés pagar con tarjeta de crédito. Si sos socio de Soluciones no pagás por la visita para presupuestar.</h4>
-                              <h1 class="precioServicio">$449</h1>
-
-                              <div class="row">
-                                <div class="col-sm-6">
-                                  <img src="img/tarjetas.jpg" alt="" id="imgTarjetas">
-                                </div>
-
-                                <div class="col-sm-6">
-                                  <!-- Boton MercadoPago -->
-                                  <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-90e0a441-229d-4eec-b149-6bf80ab098db" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio'>Pagar</a>
-                                  <script type="text/javascript">
-                                  (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-                                  </script>
-                                  <!-- Boton MercadoPago -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- PopUp Cerrajería -->
+               
+               
 
                 <!-- Box Aire -->
                 <!--<div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones" id="aireacondicionado">
@@ -1365,36 +295,46 @@
                 </div>-->
                 <!-- Box Aire -->
                 <!-- Mantenimiento -->
+                <!---------PRUIEBA -->
+                <div id="pruebaPopup" class="modal fade" role="dialog">
+                  <div class="modal-dialog" >
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="closePopup"><button class="closePopupButton">x</button></div>
+                          <div class="row">
+                            <div class="col-sm-6 servicioBox">
+                              <img src="img/electricidad.jpg" alt="" class="imgServicioBox">
+                            </div>
+                            <div class="col-sm-6 servicioBox">
+                              <h1 class="tituloServicio"></h1>
+                              <h4 id="descripcionServicio">Cerrajeria</h4>
+                              <a href="guia-precios.html" target="_blank" class="precioServicio">Descripción del trabajo a realizar</a>
+                              <p>Escribi el detalle del pedido lo mas completo posible(esto nos ayuda a elegir al profesional indicado)</p>
+                              <textarea rows="5" cols="55" name="comment" form="usrform" placeholder="Corte de luz en parte de la casa ..."></textarea>
 
+                              <div class="row">
+
+                                <div class="col-sm-12">
+                                  <a href="contratar.html" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!---------PRUIEBA -->
             </div>
         </div>
     </section>
 
     <section>
       <div class="row">
-         <!--- <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-              <div class="page-title text-center">
-                  <h3 class="title">Service</h3>
-              </div>
-          </div>
-
-          
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Vidrios</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Destapaciones</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>-->
+        
             <div class="container">
 
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
@@ -1402,67 +342,20 @@
                     <h3 class="title">Service</h3>
                 </div>
             </div>
-            <!--<div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Heladera</h4>
-              </div>
-              <div class="col-md-6">
-                
-              </div>
-            </div>-->
+            
 
-            <a class="col-md-6  servicios-extra"><h4>Heladera</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Cocina</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Aire acondicionado</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Lavarropa</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>TV</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Service electronico</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Computadora</h4></a>
+            <a class="col-md-6  servicios-extra popupLogic" data-type="Heladera"><h4>Heladera</h4></a>
+            <a class="col-md-6  servicios-extra popupLogic"  data-type="Cocina"><h4>Cocina</h4></a>
+            <a class="col-md-6  servicios-extra popupLogic"  data-type="Aire acondicionado"><h4>Aire acondicionado</h4></a>
+            <a class="col-md-6  servicios-extra popupLogic"  data-type="Lavarropa"><h4>Lavarropa</h4></a>
+            <a class="col-md-6  servicios-extra popupLogic"  data-type="TV"><h4>TV</h4></a>
+            <a class="col-md-6  servicios-extra popupLogic"  data-type="Service electronico"><h4>Service electronico</h4></a>
+            <a class="col-md-6  servicios-extra popupLogic"  data-type="Computadora"><h4>Computadora</h4></a>
             
 
 
 
-            <!--<div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Cocina</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Lavadora</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>TV</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Service electrónico</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Computadora</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-          -->
+           
 
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="page-title text-center">
@@ -1485,86 +378,7 @@
             <a class="col-md-6  servicios-extra"><h4>Limpieza de alfombras
             </h4></a>
 
-            <!--
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Herrería</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Empapelado</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Toldos</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Enlozado</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Pulido y plastificado</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Plaguicidas</h4>
-              </div>
-              
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Tapicería</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Jardinería</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Limpieza de alfombras</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-            <div class="col-md-6  servicios-extra">
-              <div class="col-md-6">
-                <h4>Lustrado de muebles</h4>
-              </div>
-              <div class="col-md-6">
-                <a class="bttn bttn-lg bttn-primary">Hacer pedido</a>
-              </div>
-            </div>
-          -->
+            
       </div>
     <!-- Portfolio-Area / -->
 

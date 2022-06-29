@@ -107,6 +107,8 @@
     }
     .mainmenu-area #mainmenu {
         padding: 0 30px;
+        position: fixed;
+        width: 80%;
         background: #87b5ff;
         background: -webkit-gradient(linear, left top, right top, from(#87b5ff), to(#99d4ef));
         background: linear-gradient(to right, #87b5ff 0%, #99d4ef 100%);
@@ -116,7 +118,12 @@
     .mainmenu-area .navbar-toggle {
         border: 1px solid #ffffff;
         border-radius: 3px;
-    }
+        position: fixed;
+        right: 20px;
+        margin-top: 23px;
+        -webkit-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4); 
+box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
+        }
 
     .mainmenu-area .navbar-toggle .icon-bar {
         background-color: #ffffff;
@@ -272,9 +279,7 @@
       .servicioBox {
         height: 320px;
     }
-      .servicioBox textarea {
-        width: 100%;
-    }
+     
       
     
 }
