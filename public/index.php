@@ -28,7 +28,7 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/custom.js"></script>
-    <script src="js/custom2.js"></script>
+    <script src="js/custom22.js"></script>
 
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -48,76 +48,8 @@
 
     <header class="header-area overlay" id="inicio">
         <!-- Mainmenu-Area -->
-    <nav class="navbar mainmenu-area" id="menuFijo" data-spy="affix" data-offset-top="197">
-        <div class="container" id="navbar1">
-            <div class="row">
-                <div class="col-xs-12">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="navbar-header smoth">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainmenu">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" id="logoMenu" href="#inicio"><img src="img/logo.png" alt=""></a>
-                        <div class="speech-bubble wow fadeInUp">
-                          <div class="arrow bounce"></div>
-                          <p class="header1">28 años</p>
-                          <p class="header2">ofreciendo confianza y seguridad</p>
-                        </div>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-right" id="mainmenu">
-                        <ul class="nav navbar-nav navbar-right help-menu">
-                            <li><a href="#" onclick="myFunction()"><i class="icofont icofont-user-alt-4"></i></a></li>
-                        </ul>
-                        <ul class="nav navbar-nav primary-menu">
-                            <li><a href="quienes-somos.html">¿Qué es Soluciones?</a></li>
-                            <?php
-                                if(isset($_SESSION["userEmail"])){
-                                    echo"<li><a href='usuario.php'>" . $_SESSION["userName"] ."</a></li>";
-                                }
-                                else{
-                                    echo "<li><a onclick='myFunction()'>Registrarse</a></li>";
-                                }
-                                ?>
-                            <li><a id="user-btn" onclick="myFunction()"><img src="img/user-white.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Mainmenu-Area-/ -->
-
-    <!-- Inicio de sesión -->
-    <div style="display:none;" class="logIn wow fadeInUp" id="logIn">
-      <div class="title">
-        Iniciá sesión
-      </div>
-      <form action="backend/login.inc.php" method="post">
-      <div class="form-input">
-        <label>
-          <input name="email" type="email" required>
-          <span class="placeholder">E-Mail</span>
-        </label>
-      </div>
-      <div class="form-input">
-        <label>
-          <input name="pwd"type="password" required>
-          <span class="placeholder">Contraseña</span>
-        </label>
-      </div>
-
-      <button type="submit" name="submit" href="#" class="bttn bttn-primary">Entrar</button>
-    </form>
-      <p>¿Todavía no estás registrado?</p>
-      <a href="registrarse.html" id="registrarse">Registrarse</a>
-    </div>
-    <!-- Inicio de sesión -->
+        <?php include_once("navbar.php"); ?>
+            <!-- Mainmenu-Area-/ -->
         <div class="vcenter">
             <div class="container" id="containerHeader">
                 <div class="row">

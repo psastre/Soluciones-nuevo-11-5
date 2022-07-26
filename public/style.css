@@ -446,6 +446,14 @@ a.scrolldown {
   padding-left: 9%;
 }
 
+.socioNoregPopup form{
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
 /*-- 6. Header-Area --*/
 
 .header-area {

@@ -1,3 +1,29 @@
+<?php
+require __DIR__ .  '/vendor/autoload.php';
+
+MercadoPago\SDK::setAccessToken('TEST-1263645313893250-071807-15130eb1238f9c7772f52ddfefa8e3c4-211426020');
+
+
+$preference = new MercadoPago\Preference();
+
+// Crea un ítem en la preferencia
+$item = new MercadoPago\Item();
+$item->id = '0001';
+$item->title = 'Servicio de Soluciones';
+$item->quantity = 1;
+$item->unit_price = 500.00;
+$item->currency_id = "ARS";
+$preference->items = array($item);
+$preference-> back_url = array(
+  "success" => "http://localhost/Soluciones-firebase/public/index.php",
+  "failure" => "http://localhost/Soluciones-firebase/public/index.php"
+);
+
+
+$preference->save();
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="es">
 
@@ -25,6 +51,7 @@
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
 
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -224,14 +251,36 @@
                       <i class="bi bi-eye-slash" id="togglePassword"></i><br></div>
                       <div class="campo"><h4>Repetir Contraseña </h4><input type="passwordRepeat" name="passwordRepeat" id="password"/></div>
 
-                    <button type="submit" name="submit">Submit</button>
+                    <button type="submit" name="submit" >Submit</button>
+                    
 
-                    <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-a05f0849-5831-4f91-b9e0-f760857f4f18" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary bttn-pagar' style="margin-top:30px;">Pagar</a>
+                    
+
+                  </form>
+                  <div class="MLButton"></div>
+
+
+                   <!--Script MERCADO PAGO VIEJO
+                     <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=72429612-a05f0849-5831-4f91-b9e0-f760857f4f18" name="MP-payButton" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary bttn-pagar' style="margin-top:30px;">Pagar</a>
                     <script type="text/javascript">
                     (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
                     </script>
+                    -->
 
-                  </form>
+                    <script>
+                    const mp = new MercadoPago('TEST-8565ea6f-8218-4d00-a455-f0ce09e4d4e8', {
+                      locale:'es-AR',
+                    });
+                    mp.checkout({
+                        preference: {
+                          id: '<?php echo $preference->id; ?>'
+                        },
+                        render: {
+                          container: ".MLButton", // Indica el nombre de la clase donde se mostrará el botón de pago
+                          label: "Pagar", // Cambia el texto del botón de pago (opcional)
+                        },
+                      });
+                    </script>
                 </div>
                 
             </div>

@@ -13,9 +13,6 @@ function contrasenaEnviada() {
  }
 
 function userTitle() {
-  var name = "Juan"
-  var surname = "Perez"
-  document.getElementById("userTitle").innerHTML= name + " " + surname;
-  document.getElementById("userPageTitle").innerHTML= name + " " + surname + " - Soluciones Hogar";
+  
   document.getElementsByName('Email')[0].placeholder='new text for email';
 }

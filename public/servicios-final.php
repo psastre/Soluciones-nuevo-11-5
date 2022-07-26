@@ -27,8 +27,7 @@
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/custom2.js"></script>
+    
 
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -37,12 +36,14 @@
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area">
-  <div class="btndifer">
-    <a href="#" class="btndif nosocioBtndif"> <span> Es mi 1er pedido</span><br/>Es la primera vez que hago un pedido a Soluciones.</a>
-    <a href="#" class="btndif socioBtndif"><span>Soy cliente registrado</span><br/>Ya era cliente y ahora quiero hacer pedido de forma online</a>
-
-  </div>
-
+    <?php
+    if(isset($_SESSION["userEmail"])){
+       
+    }
+    else{
+        include_once('btndifer.php');
+    }
+    ?>
   <div id="myModal" class="modal fade" role="dialog" style="justify-content:center;">
     <div class="modal-dialog" style="width:70%; margin: auto;">
       <!-- Modal content-->
@@ -79,6 +80,11 @@
     </div>
   </div>
 
+  <!--POP UP SOCIO NO registrado-->
+    <?php
+      include_once("socioNoregPopup.php");
+    ?>
+
     
     <!--Preloader-->
     <div class="preloader">
@@ -103,49 +109,7 @@
         
         
       <!-- Mainmenu-Area -->
-      <nav class="navbar mainmenu-area" id="nav-servicios" data-spy="affix" data-offset-top="197">
-          <div class="container" id="navbar1">
-              <div class="row">
-                  <div class="col-xs-12">
-
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-xs-12">
-                      <div class="navbar-header smoth">
-                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainmenu">
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                          </button>
-                          <a class="navbar-brand" id="logoMenu" href="index.php"><img src="img/logo.png" alt=""></a>
-                          <div class="speech-bubble wow fadeInUp">
-                            <div class="arrow bounce"></div>
-                            <p class="header1">25 años</p>
-                            <p class="header2">ofreciendo confianza y seguridad</p>
-                          </div>
-                      </div>
-                      <div class="collapse navbar-collapse navbar-right" id="mainmenu">
-                          <ul class="nav navbar-nav navbar-right help-menu">
-                              <li><a href="#" onclick="myFunction()"><i class="icofont icofont-user-alt-4"></i></a></li>
-                          </ul>
-                          <ul class="nav navbar-nav primary-menu">
-                              <li><a href="index.php">Inicio</a></li>
-                              <?php
-                                if(isset($_SESSION["userEmail"])){
-                                    echo"<li><a href='usuario.php'>" . $_SESSION["userName"] ."</a></li>";
-                                }
-                                else{
-                                    echo "<li><a onclick='myFunction()'>Registrarse</a></li>";
-                                }
-                                ?>
-                              <li><a href="#" id="user-btn"><img src="img/user-white.png" alt=""></a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </nav>
+      <?php include_once("navbar.php"); ?>
       <!-- Mainmenu-Area-/ -->
 
       <!-- Inicio de sesión -->
@@ -332,35 +296,7 @@
                 </div>
                
                 <!---------PRUIEBA -->
-                <div id="pruebaPopup" class="modal fade" role="dialog">
-                  <div class="modal-dialog" >
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                        <div class="closePopup"><button class="closePopupButton">x</button></div>
-                          <div class="row">
-                            <div class="col-sm-6 servicioBox">
-                              <img src="img/electricidad.jpg" alt="" class="imgServicioBox">
-                            </div>
-                            <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
-                              <h4 id="descripcionServicio">Cerrajeria</h4>
-                              <a href="guia-precios.html" target="_blank" class="precioServicio">Descripción del trabajo a realizar</a>
-                              <p>Escribi el detalle del pedido lo mas completo posible(esto nos ayuda a elegir al profesional indicado)</p>
-                              <textarea class="detallePedido" rows="5" cols="55" name="comment" form="usrform" placeholder="Corte de luz en parte de la casa ..."></textarea>
-
-                              <div class="row">
-
-                                <div class="col-sm-12">
-                                  <a href="contratar.php" class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</a>
-                                  <a  onClick="localStorageFunc()">Prueba</a>
-                                  
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
+                <?php include_once 'pedidoPopup.php'?>
 
                   </div>
                 </div>
@@ -491,6 +427,12 @@
     <script src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXZ3vJtdK6aKAEWBovZFe4YKj1SGo9V20&callback=initMap"></script>
     <script src="js/maps.js"></script>
+    <script src="js/multiLogic.js"></script>
+    <script src="js/custom.js"></script>
+    
+    <script src="js/custom22.js"></script>
+    
+    
 
     <script>
       $(document).ready(function(){

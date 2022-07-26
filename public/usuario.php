@@ -106,8 +106,17 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="page-title text-center">
-                        <h2 id="userTitle"></h2>
+                        
                         <script>userTitle();</script>
+                        <?php
+                                if(isset($_SESSION["userName"])){
+                                    echo "<h1 id='userTitle'>" . $_SESSION["userName"] ." ". $_SESSION["userLastName"]. "</span>";
+                                    
+                                }
+                                else{
+                                    echo "<span class='placeholder'>Nombre</span>";
+                                }
+                                ?>
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12" id="userBox">
@@ -130,13 +139,15 @@
                           <div class="userSpace" id="generalSpace">
                             <h2>General</h2>
 
+                            <form action="backend/userEdit.php" method="post">
+
                             <div class="col-xs-12 col-sm-6 col-md-4">
                               <div class="form-input">
                                 <label>
-                                  <input type="text" required>
+                                
                                   <?php
                                 if(isset($_SESSION["userName"])){
-                                    echo "<span class='placeholder'>" . $_SESSION["userName"] . "</span>";
+                                  echo "<input type='text' name='firstName' value='". $_SESSION["userName"] ."'>";
                                     
                                 }
                                 else{
@@ -151,10 +162,11 @@
                             <div class="col-xs-12 col-sm-6 col-md-4">
                               <div class="form-input">
                                 <label>
-                                  <input type="text" required>
+                                
                                   <?php
                                 if(isset($_SESSION["userLastName"])){
-                                    echo "<span class='placeholder'>" . $_SESSION["userLastName"] . "</span>";
+                                  echo "<input type='text' name='lastName' value='". $_SESSION["userLastName"] ."'>";
+                                   
                                     
                                   }
                                 else{
@@ -168,19 +180,10 @@
                             <div class="col-xs-12 col-sm-6 col-md-4">
                               <div class="form-input">
                                 <label>
-                                  <input type="text" required>
-                                  <span class="placeholder">E-mail</span>
-                                </label>
-                              </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="form-input">
-                                <label>
-                                  <input type="text" required>
+                                  
                                   <?php
-                                if(isset($_SESSION["userAddressName"])){
-                                    echo "<span class='placeholder'>" . $_SESSION["userAddressName"] . "</span>";
+                                if(isset($_SESSION["userEmail"])){
+                                  echo "<input type='text' name='email' value='". $_SESSION["userEmail"] ."'  readonly>";
                                     
                                   }
                                 else{
@@ -194,10 +197,27 @@
                             <div class="col-xs-12 col-sm-6 col-md-4">
                               <div class="form-input">
                                 <label>
-                                  <input type="text" required>
+                                
+                                  <?php
+                                if(isset($_SESSION["userAddressName"])){
+                                  echo "<input type='text' name='addressName' value='". $_SESSION["userAddressName"] ."'>";
+                                    
+                                  }
+                                else{
+                                    echo "<span class='placeholder'>Direccion</span>";
+                                }
+                                ?>
+                                </label>
+                              </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                              <div class="form-input">
+                                <label>
+                                
                                   <?php
                                 if(isset($_SESSION["userAddressNumber"])){
-                                    echo "<span class='placeholder'>" . $_SESSION["userAddressNumber"] . "</span>";
+                                  echo "<input type='text' name='addressNumber' value='". $_SESSION["userAddressNumber"] ."'>";
                                 }
                                 else{
                                     echo "<span class='placeholder'>Numero</span>";
@@ -210,10 +230,10 @@
                             <div class="col-xs-12 col-sm-6 col-md-4">
                               <div class="form-input">
                                 <label>
-                                  <input type="text" required>
+                                
                                   <?php
                                 if(isset($_SESSION["userFloorNumber"])){
-                                    echo "<span class='placeholder'>" . $_SESSION["userFloorNumber"] . "</span>";
+                                  echo "<input type='text' name='floorNumber' value='". $_SESSION["userFloorNumber"] ."'>";
                                 }
                                 else{
                                     echo "<span class='placeholder'>Piso</span>";
@@ -226,10 +246,9 @@
                             <div class="col-xs-12 col-sm-6 col-md-6 ">
                               <div class="form-input">
                                 <label>
-                                  <input type="text" required>
                                   <?php
                                 if(isset($_SESSION["userDeptNumber"])){
-                                    echo "<span class='placeholder'>" . $_SESSION["userDeptNumber"] . "</span>";
+                                  echo "<input type='text' name='deptNumber' value='". $_SESSION["userDeptNumber"] ."'>";
                                 }
                                 else{
                                     echo "<span class='placeholder'>Departamento</span>";
@@ -242,10 +261,10 @@
                             <div class="col-xs-12 col-sm-6 col-md-6">
                               <div class="form-input">
                                 <label>
-                                  <input type="text" required>
+                                <input type="text" name="cellphoneNumber">
                                   <?php
                                 if(isset($_SESSION["userCellphone"])){
-                                    echo "<span class='placeholder'>" . $_SESSION["userCellphone"] . "</span>";
+                                  echo "<input type='text' name='cellphoneNumber' value='". $_SESSION["userCellphone"] ."'>";
                                 }
                                 else{
                                     echo "<span class='placeholder'>Telefono</span>";
@@ -255,7 +274,8 @@
                               </div>
                             </div>
                           </div>
-
+                                <button type="submit" name="submit" class="bttn bttn-primary">Cambiar Datos</button>
+                          </form>
                           <div class="userSpace" id="misPedidosSpace">
 
                             <div class="containerPedidos">

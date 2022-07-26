@@ -39,5 +39,5 @@ if(isset($_POST["submit"])){
 
 }
 else{
-    header("location:../index.html");
+    header("location:../index.php");
 }

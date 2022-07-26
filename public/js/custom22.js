@@ -1,15 +1,3 @@
-function localStorageFunc(){
-   console.log(document.querySelector('#descripcionServicio'))
-   console.log(document.querySelector('.detallePedido').value )
-  localStorage.setItem(
-   document.querySelector('#descripcionServicio'), 
-   document.querySelector('.detallePedido').value )
-}
-
-localStorageFunction();
-
-
-
 $(window).on('load', function () {
    $('#tranquilidad-home').hide();
   //IMG Home
@@ -18,6 +6,7 @@ $(window).on('load', function () {
      $('#confianza-home').hide();
      $('#transparencia-home').hide();
      $('#tranquilidad-home').hide();
+     
   });
 
   $("#confianza-home-btn").click(function(){
@@ -76,16 +65,27 @@ $(window).on('load', function () {
    //POPUP LOGIc
    
    $('.popupLogicDatalist').click(function(){
-      document.querySelector('#descripcionServicio').textContent = datalistValue.value;
+    //  document.querySelector('#descripcionServicio').textContent = datalistValue.value;
+      document.querySelector('#rubroSeleccionado').value=datalistValue.value;
       console.log(datalistValue)
       $('#pruebaPopup').modal('show');
    });
    $('.popupLogic').click(function(){
-      document.querySelector('#descripcionServicio').textContent = this.dataset.type
+    //  document.querySelector('#descripcionServicio').textContent = this.dataset.type
+      document.querySelector('#rubroSeleccionado').value= this.dataset.type;
       $('#pruebaPopup').modal('show');
    });
    $(".closePopupButton").click(function(){
      $('#pruebaPopup').modal('hide');
+     $('#myModal2').modal('hide');
+  });
+  
+   $(".closeSocioNoReg").click(function(){
+    
+     $('.btndifer').modal('show');
+     $('.modal-backdrop').css("display", "none");
+     
+     
   });
 
   //
@@ -98,15 +98,19 @@ $(window).on('load', function () {
    $('#myModal').modal('show');
   
   
+   $('.contratarServicio').href="contratar.php"; 
+});
+  $(".socioBtndif").click(function(){
+   $('.modal-backdrop').css("display", "block");
+   $('#myModal2').modal('show');
+  
+  
    $('.contratarServicio').href="index.html"; 
 });
-  $(".socioBtndif").click(function(){ 
-   document.querySelector(".contratarServicio").href="quienes-somos.html"; 
-});
+  
 
   
 
     
 
 });
-

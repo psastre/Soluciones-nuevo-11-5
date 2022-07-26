@@ -83,7 +83,7 @@
     header("location:../contratar.php?error=none");
     exit();
  }
-   
+   // LOGIN
  function emptyInputLogin($email, $pwd){
     $result;
     if( empty($email) || empty($pwd)){
@@ -99,7 +99,7 @@
     $emailExists = emailExists($conn, $email);
 
     if($emailExists === false){
-        header("location:../index.html?error=wronglogin");
+        header("location:../index.php?error=wronglogin");
         exit();
     }
 
@@ -113,6 +113,8 @@
     else if($checkPwd === true){
         session_start();
         $_SESSION["userEmail"]= $emailExists["email"];
+        $_SESSION["userStatus"]= $emailExists["clientStatus"];
+
         $_SESSION["userName"] = $emailExists["firstName"];
         $_SESSION["userLastName"] = $emailExists["lastName"];
         $_SESSION["userAddressName"] = $emailExists["addressName"];
@@ -121,9 +123,40 @@
         $_SESSION["userDeptNumber"] = $emailExists["deptNumber"];
         $_SESSION["userCellphone"] = $emailExists["cellphoneNumber"];
         $_SESSION["userTelephone"] = $emailExists["telephoneNumber"];
+        $_SESSION["userId"] = $emailExists["id"];
+
 
         header("location:../index.php?todobien");
         exit();
     }
  }
  
+ // ORDER
+
+ function emptyOrder($detalle){
+    $result;
+    if(empty($detalle)){
+        $result =true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
+ }
+
+ function createOrder($conn, $userid, $rubro, $detalle){
+    $sql = "INSERT INTO  pedidos (category, detail, userid) VALUES (?,?,?);";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+        header("location:../contratar.php?error=errorcreateorder");
+        exit();
+    }
+
+    
+
+    mysqli_stmt_bind_param($stmt, "sss", $rubro,  $detalle, $userid);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location:../usuario.php?error=none");
+    exit();
+ }
