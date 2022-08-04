@@ -20,6 +20,6 @@
       <button type="submit" name="submit" href="#" class="bttn bttn-primary">Entrar</button>
     </form>
       <p>¿Todavía no estás registrado?</p>
-      <a href="registrarse.html" id="registrarse">Registrarse</a>
+      <a href="registrarse.php" id="registrarse">Registrarse</a>
     </div>
     <!-- Inicio de sesión -->

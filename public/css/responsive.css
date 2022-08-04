@@ -280,6 +280,43 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
         height: 320px;
     }
      
+
+    .navbar-brand img{
+        max-width: 75%;
+
+    }
+    /*=====Quien Somos=====*/
+    .sidebar a {
+        padding: 35px 24px;
+    }
+    .sidebar-arrow{
+        display: block;
+    }
+
+    .section-padding {
+        padding: 122px 0;
+    }
+    .quote-slider li {
+        font-size: 30px;
+        }
+        
+        .quienescompleto {
+        margin-left: auto;
+        }
+        
+        
+        .text-quienes {
+            width: 100%;
+        }
+        .subt-quienes {
+           
+            font-size: 18px;
+        }
+        
+        .btn{
+        white-space: normal;
+        }
+
       
     
 }

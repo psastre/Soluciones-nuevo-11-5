@@ -25,7 +25,7 @@
                             <li><a href="#" onclick="myFunction()"><i class="icofont icofont-user-alt-4"></i></a></li>
                         </ul>
                         <ul class="nav navbar-nav primary-menu">
-                            <li><a href="quienes-somos.html">¿Qué es Soluciones?</a></li>
+                            <li><a href="quienes-somos.php">¿Qué es Soluciones?</a></li>
                             <?php
                                 if(isset($_SESSION["userEmail"])){
                                     echo"<li><a href='usuario.php'>" . $_SESSION["userName"] ."</a></li>";

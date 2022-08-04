@@ -6,7 +6,7 @@ $(window).on('load', function () {
       setTimeout(function() {
         // Move $("#quote" + i) off to the left
         $("#quote" + i).animate({
-          right: "120%"
+          right: "150%"
         }, 1000);
         // Change selected quote
         i++;
@@ -14,7 +14,7 @@ $(window).on('load', function () {
           i = 0;
         }
         // Move $("#quote" + i) to right side then back to middle
-        $("#quote" + i).css("right", "-100%");
+        $("#quote" + i).css("right", "-150%");
         $("#quote" + i).animate({
           right: "10%"
         }, 1000);
