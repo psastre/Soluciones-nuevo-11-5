@@ -14,22 +14,16 @@
                                 if(isset($_SESSION["userEmail"])){
                                     if($_SESSION["userStatus"] === 1){
                                         echo " <form action='backend/orderCreationSocio.inc.php' method='post' id='sample'>";
-                                    }else if($_SESSION["userStatus"] === 0){
+                                    }else if($_SESSION["userStatus"] === 0 ){
                                         echo " <form action='backend/orderCreationNoSocio.inc.php' method='get' id='sample'>";
+                                }else if(empty($_SESSION["userEmail"])){
+                                  echo " <form action='backend/orderCreationNoSocio.inc.php' method='get' id='sample'>";
                                 }
                             }
                                 ?>
                               <input id="rubroSeleccionado" type="text" name="rubro" readonly>
-                              <?php
-                              if(isset($_SESSION["userEmail"])){
-                                    
-                                    echo "<input  type='text' name='userid' value='" . $_SESSION["userId"] . "' readonly>";
-                                   
-                                }
-                                else{
-                                    echo "<span class='placeholder'>No registrado</span>";
-                                }
-                                ?>
+                               
+                               
                               
                               <a href="guia-precios.html" target="_blank" class="precioServicio">Descripción del trabajo a realizar</a>
                               <p>Escribi el detalle del pedido lo mas completo posible(esto nos ayuda a elegir al profesional indicado)</p>
