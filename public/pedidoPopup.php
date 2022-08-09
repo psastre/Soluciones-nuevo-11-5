@@ -16,10 +16,10 @@
                                         echo " <form action='backend/orderCreationSocio.inc.php' method='post' id='sample'>";
                                     }else if($_SESSION["userStatus"] === 0 ){
                                         echo " <form action='backend/orderCreationNoSocio.inc.php' method='get' id='sample'>";
-                                }else if(empty($_SESSION["userEmail"])){
-                                  echo " <form action='backend/orderCreationNoSocio.inc.php' method='get' id='sample'>";
+                                }}else{
+                                  echo " <form action='backend/orderCreationNoSocio.inc.php' method='get' id='sample55'>";
                                 }
-                            }
+                            
                                 ?>
                               <input id="rubroSeleccionado" type="text" name="rubro" readonly>
                                
@@ -27,7 +27,7 @@
                               
                               <a href="guia-precios.html" target="_blank" class="precioServicio">Descripción del trabajo a realizar</a>
                               <p>Escribi el detalle del pedido lo mas completo posible(esto nos ayuda a elegir al profesional indicado)</p>
-                              <textarea name="detalle" class="detallePedido" form="sample" rows="5" cols="55"  form="usrform" placeholder="Corte de luz en parte de la casa ..."></textarea>
+                              <textarea name="detalle" class="detallePedido"  rows="5" cols="55"   placeholder="Corte de luz en parte de la casa ..."></textarea>
 
                               <div class="row">
 
@@ -38,7 +38,7 @@
                                   echo "<button name='submit' type='submit' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</button>";
                                 }
                                 else{
-                                  echo "<a href='contratar.php' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</a>";
+                                  echo "<button name='submit' type='submit' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</button>";
                                 }
                                 ?>
                                   </form>
