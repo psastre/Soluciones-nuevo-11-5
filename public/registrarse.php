@@ -57,22 +57,22 @@
                         </div>
                         <div class="col-xs-12 col-md-12">
                             <div class="contact-form contact-form-registro">
-                                <form action="process.php" id="contact-form" method="post">
+                                <form action="backend/signup.inc.php" method="post" id="contact-form">
                                     <div class="form-double">
-                                        <input type="text" id="form-name" name="form-name" placeholder="Nombre" required="required">
-                                        <input type="text" placeholder="Apellido">
+                                        <input type="text" id="form-name" name="firstName" placeholder="Nombre" required="required">
+                                        <input type="text" name="lastName" placeholder="Apellido" >
                                     </div>
                                     <div class="form-double">
-                                        <input type="email" name="form-email" name="email" id="form-email" placeholder="Correo Electrónico" required="required">
-                                        <input type="text" name="phone" id="phone" placeholder="Teléfono" required="required">
+                                        <input type="email"  name="email" id="form-email" placeholder="Correo Electrónico" required="required">
+                                        <input type="text" name="telephoneNumber" id="phone" placeholder="Celular" required="required">
+                                        <input type="text" name="cellphoneNumber" id="phone" placeholder="Teléfono" required="required">
                                     </div>
                                     <div class="form-double">
-                                        <input type="password" id="password" name="password" placeholder="Contraseña" required="required">
-                                        <input type="password" id="password" name="password" placeholder="Confirmar contraseña" required="required">
-                                    </div>
-                                    <div class="form-double">
-                                            <input type="text" id="direccion" name="direccion" placeholder="Dirección" required="required">
-                                            <select style="width: 40%; margin: 0 auto;" class="form-control" placeholder="Barrio">
+                                        <input type="text"  name="addressName" id="form-email" placeholder="Direccion" required="required">
+                                        <input type="text" name="addressNumber" id="phone" placeholder="Numero " required="required">
+                                        <input type="text" name="floorNumber" id="phone" placeholder="Piso" required="required">
+                                        <input type="text"  name="deptNumber" id="phone" placeholder="Depto." required="required">
+                                        <!--<select style="width: 40%; margin: 0 auto;" class="form-control" placeholder="Barrio">
                                                     <option value="barrio" disabled selected>Barrio</option>    
                                                     <option>Agronomía</option>
                                                     <option>Almagro</option>
@@ -122,20 +122,26 @@
                                                     <option>Villa Santa Rita</option>
                                                     <option>Villa Soldati</option>
                                                     <option>Villa Urquiza</option>
-                                                  </select>
-                                        </div>
-                                    <div class="col-md-12">
-                                            <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                            <label style="margin-bottom:20px;" class="custom-control-label" for="defaultUnchecked">Acepto los <a style="color:#034783;" href="terminos-y-condiciones.html">términos y condiciones</a></label>
+                                                  </select> -->
+                                    </div>
+                                    <div class="form-double">
+                                        <input type="password" id="password" name="password" placeholder="Contraseña" required="required">
+                                        <input type="password" id="password" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
                                     </div>
                                     
-                                    <button class="bttn bttn-primary">Enviar</button>
+                                    <!--<div class="col-md-12">
+                                            <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                            <label style="margin-bottom:20px;" class="custom-control-label" for="defaultUnchecked">Acepto los <a style="color:#034783;" href="terminos-y-condiciones.html">términos y condiciones</a></label>
+                                    </div>-->
+                                    
+                                    <button type="submit" name="submit" class="bttn bttn-primary">Enviar</button>
+                                    
     
                                 </form>
                             </div>
                         </div>
     
-                        <div style="margin-top:50px;" class="col-md-12">
+                        <div style="margin-top:50px;" class="btnLogin">
                             <div class="contact-form-registro">
                                 <p>¿Ya estás registrado?</p>
                                 <a class="bttn bttn-primary" href="iniciar-sesion.html">Iniciar sesión</a>

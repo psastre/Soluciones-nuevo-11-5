@@ -71,7 +71,7 @@
     $sql = "INSERT INTO  usuarios (firstName, lastName, addressName, addressNumber,floorNumber, deptNumber, cellphoneNumber, telephoneNumber, email, pwd) VALUES (?,?,?,?,?,?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location:../contratar.php?error=errorcreateuser");
+        header("location:../registrarse.php?error=errorcreateuser");
         exit();
     }
 
@@ -80,7 +80,7 @@
     mysqli_stmt_bind_param($stmt, "ssssssssss", $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location:../contratar.php?error=none");
+    header("location:../index.php");
     exit();
  }
    // LOGIN

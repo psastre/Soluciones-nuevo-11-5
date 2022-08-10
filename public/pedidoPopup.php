@@ -22,6 +22,14 @@
                             
                                 ?>
                               <input id="rubroSeleccionado" type="text" name="rubro" readonly>
+                              <?php
+                              if(isset($_SESSION["userEmail"])){
+
+                                    echo "<input  type='text' name='userid' value='" . $_SESSION["userId"] . "' readonly style='display:none'>";
+
+                                }
+                               
+                                ?>
                                
                                
                               
