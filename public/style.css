@@ -3016,12 +3016,13 @@ form i {
   display: none;
   z-index: 10000;
   position: fixed;
-  top: 40px;
+  top: 150px;
   left: 300px;
   width: 50px;
   height: 60px;
   padding-top: 10px;
   background: #37474f;
+ 
   font-size: 50px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
@@ -3040,6 +3041,7 @@ form i {
   margin-left: -250px;
   overflow-y: auto;
   background: #37474f;
+  
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -3053,19 +3055,25 @@ form i {
   display: none;
   z-index: 10000;
   position: fixed;
-  top: 50px;
+  top: 150px;
   left: 0px;
   width: 50px;
   height: 50px;
   padding-top: 10px;
   background: #37474f;
+  background-image: url("images/arrow_sidebar.png");
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  filter: invert(100%);
   font-size: 50px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  transform: scaleX(-1);
+  
 }
 
 
@@ -3077,12 +3085,14 @@ form i {
 .quienescompleto {
   width: 70vw;
   margin-left: 24vw;
+  margin-top: 80px;
 }
+
 
 .sidebar a {
   background: none;
   border-bottom: 1px solid #455a64;
-  color: #cfd8dc;
+  color: #f9f9f9;;
   font-size: 14px;
   padding: 25px 24px;
   display: block;
@@ -3092,6 +3102,11 @@ form i {
   background: rgb(245, 243, 243);
   color: grey;
 }
+
+.mb-0 .btn{
+  white-space: normal;
+  text-align: left;
+  }
 
 #filtering{
   display: flex;

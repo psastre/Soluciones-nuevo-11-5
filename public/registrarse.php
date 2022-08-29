@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-xs-12 col-md-12">
                             <div class="contact-form contact-form-registro">
-                                <form action="backend/signup.inc.php" method="post" id="contact-form">
+                                <form action="backend/signup.inc.php" method="post" id="contact-form" >
                                     <div class="form-double">
                                         <input type="text" id="form-name" name="firstName" placeholder="Nombre" required="required">
                                         <input type="text" name="lastName" placeholder="Apellido" >

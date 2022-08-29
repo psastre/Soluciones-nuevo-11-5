@@ -34,6 +34,9 @@
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .speech-bubble {color: #9e9e9e;}
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area" style="position:relative;">
@@ -43,7 +46,7 @@
     </div>
 
     <!-- Mainmenu-Area -->
-    <div class="sidebar-arrow"><-</div>
+    <div class="sidebar-arrow"></div>
     <div class="container sidebar">
       
       <div class="menuQuienes">
@@ -55,7 +58,7 @@
           <a class="sidebar-options" href="#beneficios">Beneficios</a>
         
         
-            <a class="sidebar-options" href="#funcionamiento">Funcionamiento</a>
+          <a class="sidebar-options" href="#funcionamiento">Funcionamiento</a>
         
         
           <a class="sidebar-options" href="#como-asociarse">Cómo asociarse</a>
