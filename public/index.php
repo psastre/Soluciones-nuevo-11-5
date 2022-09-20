@@ -78,82 +78,26 @@
             <h2>Bienvenido a Soluciones Hogar</h2>
           </div>
           <div class="col-xs-12 col-sm-6" id="section1L">
-            <p>Soluciones Hogar nace en 1993, pionera en América brindando toda la asistencia al hogar que necesita una persona, familia u oficina, en Capital Federal con la confianza y seguridad que necesitas.. Ofreciendo un nuevo servicio donde todo trabajo realizado tiene una garantía doble brindad por los profesional independiente y por Soluciones Hogar.               
+            <p>Soluciones Hogar nace en 1993, pionera en América brindando toda la asistencia al hogar que necesita una persona, familia u oficina, en Capital Federal con la confianza y seguridad que necesitas.               
             </p>
             
             <h4>ACTUALIDAD</h4>
-            <p>Hoy hemos implementado una plataforma para que nuestros clientes suscriptos puedan solicitar los pedidos de forma online y  también las personas que no estan asociados puedan solicitarlo por unica vez para probarlo.</p>
-            <a href="como-asociarse.html" target="_blank">Más información</a><img src="img/right-arrow.svg" alt="">
+            <p>Hoy hemos implementado una plataforma para que nuestros clientes suscriptos puedan solicitar los pedidos de forma online. 
+Si no estas suscripto podes probar un mes totalmente gratis.
+</p>
+            <!--<a href="como-asociarse.html" target="_blank">Más información</a><img src="img/right-arrow.svg" alt="">-->
+            <a href="quienes-somos.php" class="bttn bttn-lg bttn-primary" style="margin-right: 45px;">Mas Informacion</a>
         </div>
           <div class="col-xs-12 col-sm-6" id="section1R">
-
+            <img src="images/mockuplaptop.png" alt="">
+            <img src="images/mockupcelu.png" alt="">
           </div>
         </div>
       </div>
     </section>
     <!-- Qué es -->
-<!-- Funcionamiento -->
-<section class="section-padding" id="funcionamiento">
-    <div class="container" style="width:80%;">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                <div class="page-title text-center">
-                    <h2 class="title">Funcionamiento</h2>
-                    <p>Conocé cómo es el proceso de funcionamiento de Soluciones</p>
-                </div>
-            </div>
-        </div>
-        <div class="row process text-center" style="background-size:80%;margin:0 auto;">
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="single-process">
-                    <div class="process-icon">
-                        <img src="img/script.svg" alt="">
-                    </div>
-                    <h3>Seleccioná el servicio</h3>
-                    <p>
-                      - Seleccioná el servicio que estás necesitando.<br>
-                      - Completá tus datos personales.<br>
-                    </p>
-                    <div class="primer-pedido">
-                        <p>Es tu primer pedido con Soluciones Hogar?<br/>
-                            Conoce como funciona -></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="single-process">
-                    <div class="process-icon">
-                        <img src="img/support.svg" alt="">
-                    </div>
-                    <h3>Pedido</h3>
-                    <p>
-                      - Soluciones recibe el pedido, selecciona y asigna el profesional adecuado.<br>
-                      
-                    </p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="single-process">
-                    <div class="process-icon">
-                        <img src="img/hired.svg" alt="">
-                    </div>
-                    <h3>Contacto</h3>
-                    <p>
-                      - El profesional se contactará a la brevedad para combinar horario y fecha de visita adecuado a tu necesidad.<br>
-                      - El profesional se presenta en fecha y hora acordada, presupuesta el trabajo, lo realiza y él es quien cobra y factura por el mismo.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="btnFuncionamiento">
-          <a href="servicios.html" target="_blank" class="bttn bttn-sm bttn-default">Hacer pedido</a>
-        </div>
-    </div>
-
-</section>
-<!-- Funcionamiento -->
-    <!-- Qué es -->
-    <section class="section-padding gray-bg" id="que-es">
+     <!-- BENEFICIOS -->
+     <section class="section-padding gray-bg beneficios-screen" id="que-es">
         <div class="container">
             <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
@@ -200,12 +144,72 @@
                             <br/>
                         </div>
                     </div>
+                    <div style="width:100%; display:flex; justify-content:center;"><a href=""><button class="bttn bttn-mesgratis" >Prueba un mes gratis</button></a></div>
+                    
                 </div>
             </div>
         </div>
     </section>
-    <!-- Qué es -->
+    <!-- BENEFICIOS -->
 
+<!-- Funcionamiento -->
+<section class="section-padding" id="funcionamiento">
+    <div class="container" style="width:80%;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <div class="page-title text-center">
+                    <h2 class="title">Funcionamiento</h2>
+                    <p>Conocé cómo es el proceso de funcionamiento de Soluciones</p>
+                </div>
+            </div>
+        </div>
+        <div class="row process text-center" style="background-size:80%;margin:0 auto;">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="single-process">
+                    <div class="process-icon">
+                        <img src="img/script.svg" alt="">
+                    </div>
+                    <h3>Seleccioná el servicio</h3>
+                    <p>
+                      - Seleccioná el servicio que estás necesitando.<br>
+                      - Completá tus datos personales.<br>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="single-process">
+                    <div class="process-icon">
+                        <img src="img/support.svg" alt="">
+                    </div>
+                    <h3>Pedido</h3>
+                    <p>
+                      - Soluciones recibe el pedido, selecciona y asigna el profesional adecuado.<br>
+                      
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="single-process">
+                    <div class="process-icon">
+                        <img src="img/hired.svg" alt="">
+                    </div>
+                    <h3>Contacto</h3>
+                    <p>
+                      - El profesional se contactará a la brevedad para combinar horario y fecha de visita adecuado a tu necesidad.<br>
+                      - El profesional se presenta en fecha y hora acordada, presupuesta el trabajo, lo realiza y él es quien cobra y factura por el mismo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="btnFuncionamiento">
+          <a href="servicios.html" target="_blank" class="bttn bttn-sm bttn-default">Hacer pedido</a>
+        </div>
+    </div>
+
+</section>
+<!-- Funcionamiento -->
+   
     
 <!--
     <-- Guia de precios ->

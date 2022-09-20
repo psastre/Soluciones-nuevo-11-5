@@ -32,7 +32,53 @@
 
 <body data-spy="scroll" data-target=".mainmenu-area">
     
-    <?php include_once('btndifer.php'); ?>
+<?php 
+    if(isset($_SESSION["userEmail"])){
+       
+    }
+    else{
+        include_once('btndifer.php');
+    }
+    ?>
+  <div id="myModal" class="modal fade" role="dialog" style="justify-content:center;">
+    <div class="modal-dialog" style="width:70%; margin: auto;">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">IMPORTANTE</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-sm-4">
+              <img class="img-modal" src="img/icon-14.png" alt="">
+              <h4 class="texto-modal">Nuestro servicio se brinda en toda la Capital Federal.</h4>
+            </div>
+
+            <div class="col-sm-4">
+              <img class="img-modal" src="img/icon-17.png" alt="">
+              <h4 class="texto-modal">Recepcion de pedidos, de lunes a viernes de 8 a 20hs</b></h4>
+            </div>
+
+            <div class="col-sm-4">
+              <img class="img-modal" src="img/icon-1.png" alt="">
+              <h4 class="texto-modal">Una vez hecho el pedido el tecnico se comunicara con usted a la brevedad</h4>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--POP UP SOCIO NO registrado-->
+    <?php
+      include_once("socioNoregPopup.php");
+    ?>
 
     <!--Preloader-->
     <div class="preloader">
@@ -45,14 +91,60 @@
     <!-- Mainmenu-Area-/ -->
 
     <!-- Como asociarse -->
-    <section class="section-padding gray-bg" id="como-asociarse">
+    <div class="explicacion-primer-pedido">
+    <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="page-title text-center">
+                        <h1 class="title">Soluciones Hogar es un servicio por suscripcion
+ en el que te garantizamos que todos tus trabajos  se realizaran con exito, pero porque ?</h1>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2 pasos-como">
+                <img src="img/icon-9.png" alt="">
+                <h4>Hacé tu pedido telefónicamente o vía web.</h4>
+              </div>
+
+              <div class="col-sm-2 pasos-como">
+                <img src="img/icon-10.png" alt="">
+                <h4>Asignamos al profesional adecuado por su idoneidad y disponibilidad para tu pedido.</h4>
+              </div>
+
+              <div class="col-sm-2 pasos-como">
+                <img src="img/icon-11.png" alt="">
+                <h4>El profesional se comunica a tu teléfono para concretar horario y día.</h4>
+              </div>
+
+              <div class="col-sm-2 pasos-como">
+                <img src="img/icon-5.png" alt="">
+                <h4>Antes de realizar el trabajo, el técnico ofrecerá un presupuesto de acuerdo a la tarea.</h4>
+              </div>
+
+              <div class="col-sm-2 pasos-como">
+                <img src="img/icon-12.png" alt="">
+                <h4>Una vez finalizado el trabajo, el profesional es quien te cobra y factura.</h4>
+              </div>
+
+              <div class="col-sm-2 pasos-como">
+                <img src="img/icon-13.png" alt="">
+                <h4>Todos tus pedidos quedarán registrados en tu historial.</h4>
+              </div>
+            </div>
+        
+    </div>
+    <section class="section-padding gray-bg" id="como-asociarse" style="padding: 0;">
         <div class="container">
+        
             <section class="section-padding gray-bg" id="como-asociarse">
                 <div class="container">
+               
                     <div class="row">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div class="page-title text-center">
-                                <h1 class="title">Completá tus datos para registrarte.</h1>
+                                <h1 class="title">Completa el formulario y empeza tu mes gratis</h1>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-12">
@@ -151,46 +243,7 @@
                 </div>
             </section>
 
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                    <div class="page-title text-center">
-                        <h1 class="title">Registrate para contratar a los mejores profesionales!</h1>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-2 pasos-como">
-                <img src="img/icon-9.png" alt="">
-                <h4>Hacé tu pedido telefónicamente o vía web.</h4>
-              </div>
-
-              <div class="col-sm-2 pasos-como">
-                <img src="img/icon-10.png" alt="">
-                <h4>Asignamos al profesional adecuado por su idoneidad y disponibilidad para tu pedido.</h4>
-              </div>
-
-              <div class="col-sm-2 pasos-como">
-                <img src="img/icon-11.png" alt="">
-                <h4>El profesional se comunica a tu teléfono para concretar horario y día.</h4>
-              </div>
-
-              <div class="col-sm-2 pasos-como">
-                <img src="img/icon-5.png" alt="">
-                <h4>Antes de realizar el trabajo, el técnico ofrecerá un presupuesto de acuerdo a la tarea.</h4>
-              </div>
-
-              <div class="col-sm-2 pasos-como">
-                <img src="img/icon-12.png" alt="">
-                <h4>Una vez finalizado el trabajo, el profesional es quien te cobra y factura.</h4>
-              </div>
-
-              <div class="col-sm-2 pasos-como">
-                <img src="img/icon-13.png" alt="">
-                <h4>Todos tus pedidos quedarán registrados en tu historial.</h4>
-              </div>
-            </div>
+           
 
               <!-- Registro -->
     

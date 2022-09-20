@@ -31,10 +31,10 @@
                                     echo"<li><a href='usuario.php'>" . $_SESSION["userName"] ."</a></li>";
                                 }
                                 else{
-                                    echo "<li><a onclick='myFunction()'>Registrarse</a></li>";
+                                    echo "<li><a  href='registrarse.php'>Registrarse</a></li>";
                                 }
                                 ?>
-                            <li><a id="user-btn" onclick="myFunction()"><img src="img/user-white.png" alt=""></a></li>
+                            <li><a id="user-btn" onclick="myFunction()"><!--<img src="img/user-white.png" alt="">-->Iniciar sesión</a></li>
                         </ul>
                     </div>
                 </div>

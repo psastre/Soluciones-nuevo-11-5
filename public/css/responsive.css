@@ -209,6 +209,10 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
         line-height: 53px;
         font-size: 31px;
     }
+
+    #queEsSoluciones{
+        height: fit-content;
+      }
     .bttn.bttn-lg.bttn-primary{
         margin-left: 59px;
         top: 0px;
@@ -287,7 +291,7 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
     }
     /*=====Quien Somos=====*/
     .sidebar{
-        width: 500px;
+        width: 250px;
     }
     .sidebar a {
         padding: 35px 24px;

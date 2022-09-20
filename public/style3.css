@@ -140,6 +140,9 @@ input:-webkit-autofill:focus {
 .gray-bg {
     background-color: #f9f9f9;
 }
+.beneficios-screen{
+    background-color: #72bbff;
+}
 
 .page-title {
     margin-bottom: 50px;

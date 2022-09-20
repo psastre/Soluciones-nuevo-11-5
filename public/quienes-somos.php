@@ -50,7 +50,7 @@
     <div class="container sidebar">
       
       <div class="menuQuienes">
-        <img src="img/logo.png" alt="" id="logoMenu">
+        <a href="index.php" style="padding: 0; height: 0;"><img src="img/logo.png" alt="" id="logoMenu"></a>
         
           <a class="sidebar-options" href="#servicios">Servicios</a>
         
@@ -106,7 +106,15 @@
         
         <div class="container quienescompleto">
             <div class="row">
-              <div class="col-sm-12">
+              <div class="video-presentacion">
+              <video width="75%" controls
+              poster="images/blog-md-2.jpg">
+                
+                <source src="images/presentacion.mp4" type="video/mp4">
+              </video>
+              <div></div>
+              </div>
+              <!--<div class="col-sm-12">
                 <div class="quotes">
                   <ul class="quote-slider">
                     <li id='quote0' style='right: 10%'>
@@ -138,13 +146,18 @@
                     <img src="images/video-image.png" alt="" id="video-quienes">
                     <a href="https://www.youtube.com/watch?v=G8A0bsZ7V2M" class="video-bttn"><img src="images/video-button.png" alt=""></a>
                 </div>
-              </div>
-
+              </div>-->
+              <div class="col-sm-12" id="servicios">
+                      <h2 class="text-center text-quienes">Beneficios</h2>
+                      <p>Porque te conviene?</p>
+                  </div>
+    
               <div class="col-sm-12" id="beneficios">
-                  <h4 class="text-center text-quienes">Soluciones Hogar nace en 1993 y brinda todo la asistencia al hogar que necesita una persona, familia u oficina, en Capital Federal.</h4>
+                  <h4 class="text-center text-quienes titulo-beneficios-quienes">Soluciones Hogar nace en 1993 y brinda todo la asistencia al hogar que necesita una persona, familia u oficina, en Capital Federal.</h4>
               </div>
-
+              <section class="seccion-beneficios-quienes">
               <div class="row">
+                
                 <div class="col-sm-3 sec-quienes">
                   <img src="img/icon-1.png" alt="">
                   <h4>Cuenta con un Centro de Atención especializado permanente (de lunes a viernes, de 8 a 21 hs. y sábados de 8 a 13 hs.) y un servicio de Emergencias las 24 horas.</h4>
@@ -188,6 +201,19 @@
                   <h4>Un departamento técnico que lleva a cabo una constante evaluación de precios y prestaciones.</h4>
                 </div>
               </div>
+              </section>
+              <div class="seccion-line-beneficios">
+                <div class="line-beneficios"></div>
+            
+                <div class="precio-beneficios">
+                  <p>Todos estos beneficios con suscripcion mensual de</p>
+                  <h3>$420 + IVA</h3>
+                  <a href="servicios.html" target="_blank" class="bttn bttn-sm bttn-default bttn-beneficios-quienes">Probar un mes gratis</a>
+                </div>
+                <div class="fondo-beneficios"></div>
+              
+              </div>
+              
 
               <section>
                   <div class="col-sm-12" id="servicios">

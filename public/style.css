@@ -132,8 +132,16 @@ input:-webkit-autofill:focus {
 .section-padding {
   padding: 50px 0;
 }
+#queEsSoluciones{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
 .gray-bg {
+  background-color: #f9f9f9;
+}
+.beneficios-screen{
   background-color: #f9f9f9;
 }
 
@@ -224,6 +232,11 @@ input:-webkit-autofill:focus {
   transform: translateY(0);
   border: none;
 }
+.bttn.bttn-mesgratis{
+  background: linear-gradient(to right, #21a849 0%, #86cf7d 100%);
+  box-shadow: 0 2px 0 0 rgb(45 146 33), 0 4px 0 0 #1c5d24;
+  margin-top:20px;
+}
 #buttomcust {
   position: absolute;
   bottom: 21vh;
@@ -268,6 +281,11 @@ input:-webkit-autofill:focus {
   transform: translateY(-4px);
   -webkit-box-shadow: 0 5px 0 0 rgb(121, 17, 26), 0 4px 0 0 #a73333;
   box-shadow: 0 5px 0 0 rgb(121, 17, 26), 0 4px 0 0 #a73333;
+}
+.bttn.bttn-mesgratis:focus,
+.bttn.bttn-mesgratis:hover{
+  box-shadow: 0 5px 0 0 rgb(25 82 38), 0 4px 0 0 #1d6420;
+
 }
 
 .bttn.bttn-primary:hover {
@@ -409,7 +427,7 @@ a.scrolldown {
   position: absolute;
   top: 15%;
   right: 2%;
-  width: 250px;
+  width: 450px;
   background-color: #e3e3e3;
   z-index: 2;
   border-radius: 20px;
@@ -424,7 +442,7 @@ a.scrolldown {
 
 .logIn .bttn {
   margin-top: 15px;
-  margin-left: 25%;
+  
   width: 50%;
 }
 
@@ -439,6 +457,13 @@ a.scrolldown {
   margin-bottom: 15px;
 }
 
+.btndifer-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
 #registrarse {
   font-size: 13px;
   /* text-align: center; */
@@ -1895,20 +1920,7 @@ a.scrolldown {
 
 /*-- 21. process-area --*/
 
-.primer-pedido {
-  display: flex;
-  align-items: center;
-  background-color: grey;
-  height: 130px;
-  width: 250px;
-  color: white;
-  border-radius: 25px;
-  margin: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.primer-pedido p {
-}
+
 
 .process {
   background: url("images/service-line.jpg") no-repeat scroll top 20px center;
@@ -2167,7 +2179,7 @@ a.scrolldown {
 
 .form-input {
   margin: 15px 0;
-  width: 100%;
+  width: 70%;
 }
 .form-input label {
   position: relative;
@@ -2450,9 +2462,13 @@ a.scrolldown {
 }
 
 #section1L a {
-  color: #0090c9;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   font-size: 18px;
+  margin-top: 30px;
+}
+.tab-content{
+  height: 100px;
 }
 
 #section1L p {
@@ -2464,13 +2480,24 @@ a.scrolldown {
 #section1L img {
   width: 18px;
   margin-bottom: 5px;
+  
 }
 
 #section1R {
-  background-image: url(img/laptopedit.jpg);
+  
   background-size: cover;
   height: 400px;
+  overflow: hidden ;
 }
+
+#section1R img:nth-child(2){
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  top: 74px;
+  right: 104px;
+}
+
 
 /* GUIA DE PRECIOS */
 
@@ -2655,6 +2682,13 @@ a.scrolldown {
 .subt-quienes {
   margin: 20px 0 30px;
 }
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .btndifer {
   position: absolute;
   display: flex;
@@ -2688,8 +2722,34 @@ a.scrolldown {
   padding: 80px 0;
   background: linear-gradient(to right, #87b5ff 0%, #99d4ef 100%);
 }
+.btndif-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  width: 50%;
+  background-color: rgb(207, 116, 99);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  border-width: 0ch;
+  margin: 10px;
+  box-shadow: 0 8px 6px -6px black;
+  transition: ease 0.5s;
+  text-align: center;
+  padding: 26px 10px;
+  background: linear-gradient(to right, #87b5ff 0%, #99d4ef 100%);
+}
 .btndif span {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.btndif-login span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.btndif-login a {
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .modal-dialog{
@@ -2748,8 +2808,9 @@ a.scrolldown {
   padding: 15px 20px;
   margin-bottom: 30px;
   width: 45%;
-  margin-right: 2.5%;
+  
   height: 90px;
+  margin: 25px 0;
 }
 
 .servicios-extra h4 {
@@ -2840,6 +2901,12 @@ a.scrolldown {
   transform: translate(0, -5px);
 }
 */
+.menuQuienes{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
 
 .subServicios2 {
   background-color: white;
@@ -2864,6 +2931,11 @@ a.scrolldown {
   margin-top: 25px;
   font-weight: 200;
   font-size: 18px;
+}
+
+.col-md-6.col-xs-12.servicios-de-informacion{
+  width: 33%;
+  
 }
 
 .navbar-brand img {
@@ -2965,6 +3037,7 @@ form i {
   transition: ease 1s;
   display: flex;
     justify-content: center;
+    margin: 25px;
   
 }
 .servicios-extra:hover {
@@ -3017,11 +3090,12 @@ form i {
   z-index: 10000;
   position: fixed;
   top: 150px;
-  left: 300px;
+  left: 250px;
   width: 50px;
   height: 60px;
   padding-top: 10px;
   background: #37474f;
+  display: none;
  
   font-size: 50px;
   cursor: pointer;
@@ -3094,8 +3168,9 @@ form i {
   border-bottom: 1px solid #455a64;
   color: #f9f9f9;;
   font-size: 14px;
-  padding: 25px 24px;
+  padding: 35px 24px;
   display: block;
+  height: 16.66%;
 }
 
 .sidebar a:hover {
@@ -3103,6 +3178,90 @@ form i {
   color: grey;
 }
 
+.video-presentacion{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.video-presentacion video{
+  
+  border-radius: 25px;
+  box-shadow: 0px 0px 16px -4px rgb(0 0 0 / 30%);
+}
+
+
+.titulo-beneficios-quienes{
+  border: #000 solid 2px;
+  border-radius: 40px;
+  padding: 20px;
+  background-color: white;
+  margin-top: 50px;
+}
+
+#servicios p{
+  text-align: center;
+  
+}
+
+.seccion-beneficios-quienes{
+  
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0px 0px 16px -4px rgb(0 0 0 / 30%);
+}
+  
+
+.seccion-line-beneficios{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.line-beneficios {
+  width: 5px;
+  height: 65px;
+  background-color: rgb(182, 182, 182);
+  border-bottom: solid 1px #fff;
+  z-index: 1;
+  transform: rotate(90);
+}
+.precio-beneficios{
+  display: flex;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 40px;
+  z-index: 1;
+  background-color: white;
+  padding: 25px 0;
+}
+.precio-beneficios p{
+  font-size: 25px;
+  padding: 15px;
+}
+.bttn-beneficios-quienes{
+  position: absolute;
+  margin-top: 203px;
+}
+
+.fondo-beneficios{
+  position: absolute;
+  width: 368px;
+  height: 208px;
+  border-radius: 40px;
+  margin-top: 65px;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgb(205, 196, 196) 17%, rgba(171,26,58,1) 100%);
+  
+ 
+}
 .mb-0 .btn{
   white-space: normal;
   text-align: left;
@@ -3137,6 +3296,16 @@ form i {
   background: linear-gradient(to right, #87b5ff 0%, #99d4ef 100%);
 }
 
+.explicacion-primer-pedido{
+  width: 90%;
+  height: 70vh;
+  margin: 50px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 
 @media only screen and (max-width: 767px){
