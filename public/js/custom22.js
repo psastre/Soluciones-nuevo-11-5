@@ -1,5 +1,6 @@
 $(window).on('load', function () {
    $('#tranquilidad-home').hide();
+   $('#myModal').modal('show');
   //IMG Home
   $("#servicio-home-btn").click(function(){
      $('#servicio-home').show();
@@ -66,9 +67,15 @@ $(window).on('load', function () {
    
    $('.popupLogicDatalist').click(function(){
     //  document.querySelector('#descripcionServicio').textContent = datalistValue.value;
-      document.querySelector('#rubroSeleccionado').value=datalistValue.value;
-      console.log(datalistValue)
+      let rubrosCompleto = ["Plomero", "Gasista", "Electricista","Destapacion" ,"Persianas" , "Cerrajeria","Vidrios" ,"Heladera" ,"Cocina" ,"Lavadora" ,"Tv" ,"Service electronico" ,"Computadora", "Herreria","Empapelado" ,"Toldos" ,"Enlozado" ,"Pulido y plastificado" ,"Plaguicidas" ,"Tapiceria", "Jardineria","Limpieza de alfombras" ,"Lustrado de muebles" ]
+      console.log(datalistValue.value)
+      if(rubrosCompleto.includes(datalistValue.value)){
+         document.querySelector('#rubroSeleccionado').value=datalistValue.value;
       $('#pruebaPopup').modal('show');
+         
+      }else{
+         document.querySelector('.error-busqueda').style.display = "block"
+   }
    });
    $('.popupLogic').click(function(){
     //  document.querySelector('#descripcionServicio').textContent = this.dataset.type
@@ -95,7 +102,7 @@ $(window).on('load', function () {
 
   $(".nosocioBtndif").click(function(){
    
-   $('#myModal').modal('show');
+  /* $('#myModal').modal('show');*/
   
   
    $('.contratarServicio').href="contratar.php"; 

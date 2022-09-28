@@ -90,6 +90,10 @@
     .mainmenu-area #mainmenu {
         overflow: auto;
     }
+
+    .navbar-section{
+        display: block;
+    }
     .mainmenu-area #mainmenu ul.nav.navbar-nav li {
         display: block;
     }
@@ -98,7 +102,7 @@
         margin: 0 10px;
     }
     .mainmenu-area #mainmenu ul.nav.navbar-nav li a {
-        padding: 15px 10px;
+        padding: 50px 10px;
     }
     .filter-controls li {
         display: block;
@@ -114,6 +118,8 @@
         background: linear-gradient(to right, #87b5ff 0%, #99d4ef 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87b5ff', endColorstr='#99d4ef', GradientType=1);
         text-align: center;
+        
+        border-radius: 25px;
     }
     .mainmenu-area .navbar-toggle {
         border: 1px solid #ffffff;
@@ -128,9 +134,12 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
     .mainmenu-area .navbar-toggle .icon-bar {
         background-color: #ffffff;
     }
+    .mainmenu-area #mainmenu ul.nav.navbar-nav li a{
+        font-size: 1.8rem;
+    }
 
     .bttn.bttn-lg {
-        padding: 15px 30px;
+        padding: 15px 35px;
         font-size: 20px;
     }
     .header-area .header-text .header-title {
@@ -190,6 +199,11 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
         font-size: 14px;
     }
     /*=====Home=====*/
+
+    .logIn{
+        width: 96vw;
+        z-index: 999;
+    }
     .carrouselServicios{
         width: 100%;
         
@@ -221,6 +235,19 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
     #section1L h4{
         text-align: center;
     }
+    #section1R{
+        margin-top: 250px;
+    margin-left: 0px;
+    height: 277px;
+    }
+
+    #section1R img:nth-child(2){
+        width: 100px;
+        height: 200px;
+        position: absolute;
+        top: 74px;
+        right: 62px;
+    }
 
     /*=====Preservicios====*/
     .btndifer{
@@ -229,7 +256,7 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
     .btndif{
         height: 30vh;
         width: 80vw;
-        padding: 24px 41px;
+        padding: 20px -24px;
     }
     .btndif span{
         line-height: 33px;
@@ -291,17 +318,17 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
     }
     /*=====Quien Somos=====*/
     .sidebar{
-        width: 250px;
+        width: 100vw;
     }
     .sidebar a {
-        padding: 35px 24px;
+        padding: 45px 24px;
     }
     .sidebar-arrow{
         display: block;
     }
 
     .section-padding {
-        padding: 122px 0;
+        padding: 67px 0;
     }
     .quote-slider li {
         font-size: 30px;
@@ -323,6 +350,20 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
         
         .mb-0 .btn{
             text-align: center;
+        }
+
+        .video-presentacion{
+            width: 120vw;
+        height: fit-content;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: 58px 0;
+        margin-left: -40px;
+        }
+
+        .col-md-6.col-xs-12.servicios-de-informacion{
+            width: 100%;
         }
     
     /*======  Registrarse  ======*/

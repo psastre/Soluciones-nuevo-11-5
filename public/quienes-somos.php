@@ -36,6 +36,11 @@
     <![endif]-->
     <style>
       .speech-bubble {color: #9e9e9e;}
+      .mainmenu-area #mainmenu ul.nav.navbar-nav.primary-menu li.active a,
+      .mainmenu-area #mainmenu ul.nav.navbar-nav.primary-menu li a:hover {
+        border-bottom: 2px solid #9e9e9e;
+      }
+      .mainmenu-area #mainmenu ul.nav.navbar-nav li a{color:#9e9e9e;}
     </style>
 </head>
 
@@ -159,7 +164,7 @@
               <div class="row">
                 
                 <div class="col-sm-3 sec-quienes">
-                  <img src="img/icon-1.png" alt="">
+                  <img src="img/icon-11.png" alt="">
                   <h4>Cuenta con un Centro de Atención especializado permanente (de lunes a viernes, de 8 a 21 hs. y sábados de 8 a 13 hs.) y un servicio de Emergencias las 24 horas.</h4>
                 </div>
 

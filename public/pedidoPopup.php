@@ -9,7 +9,7 @@
                               <img src="img/electricidad.jpg" alt="" class="imgServicioBox">
                             </div>
                             <div class="col-sm-6 servicioBox">
-                              <h1 class="tituloServicio"></h1>
+                              
                               <?php
                                 if(isset($_SESSION["userEmail"])){
                                     if($_SESSION["userStatus"] === 1){

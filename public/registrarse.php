@@ -28,57 +28,22 @@
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style>
+      .speech-bubble {color: #9e9e9e;}
+      .mainmenu-area #mainmenu ul.nav.navbar-nav.primary-menu li.active a,
+      .mainmenu-area #mainmenu ul.nav.navbar-nav.primary-menu li a:hover {
+        border-bottom: 2px solid #9e9e9e;
+      }
+      .mainmenu-area #mainmenu ul.nav.navbar-nav li a{color:#9e9e9e;}
+      #menuFijo{position: static;}
+    </style>
 </head>
 
-<body data-spy="scroll" data-target=".mainmenu-area">
-    
-<?php 
-    if(isset($_SESSION["userEmail"])){
-       
-    }
-    else{
-        include_once('btndifer.php');
-    }
-    ?>
-  <div id="myModal" class="modal fade" role="dialog" style="justify-content:center;">
-    <div class="modal-dialog" style="width:70%; margin: auto;">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">IMPORTANTE</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
+<body data-spy="scroll" data-target=".mainmenu-area" >
 
-            <div class="col-sm-4">
-              <img class="img-modal" src="img/icon-14.png" alt="">
-              <h4 class="texto-modal">Nuestro servicio se brinda en toda la Capital Federal.</h4>
-            </div>
 
-            <div class="col-sm-4">
-              <img class="img-modal" src="img/icon-17.png" alt="">
-              <h4 class="texto-modal">Recepcion de pedidos, de lunes a viernes de 8 a 20hs</b></h4>
-            </div>
 
-            <div class="col-sm-4">
-              <img class="img-modal" src="img/icon-1.png" alt="">
-              <h4 class="texto-modal">Una vez hecho el pedido el tecnico se comunicara con usted a la brevedad</h4>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Entendido</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!--POP UP SOCIO NO registrado-->
-    <?php
-      include_once("socioNoregPopup.php");
-    ?>
 
     <!--Preloader-->
     <div class="preloader">
@@ -87,8 +52,19 @@
 
     <!-- Mainmenu-Area -->
     
-    <?php include_once("navbar.php"); ?>
+    
     <!-- Mainmenu-Area-/ -->
+    <?php 
+    if(isset($_SESSION["userEmail"])){
+       
+    }
+    else{
+        include_once('btndifer.php');
+    }
+    ?>
+    <?php include_once("navbar.php"); ?>
+  <!--POP UP SOCIO NO registrado-->
+  
 
     <!-- Como asociarse -->
     <div class="explicacion-primer-pedido">
@@ -138,32 +114,35 @@
     <section class="section-padding gray-bg" id="como-asociarse" style="padding: 0;">
         <div class="container">
         
-            <section class="section-padding gray-bg" id="como-asociarse">
+            <section class="section-padding gray-bg" id="como-asociarse" style="background-color:#898989;">
                 <div class="container">
                
                     <div class="row">
-                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        
+                        <div class="col-xs-12 col-md-12">
+                            <div class="contact-form contact-form-registro">
+                            <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 100%;margin:0">
                             <div class="page-title text-center">
                                 <h1 class="title">Completa el formulario y empeza tu mes gratis</h1>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-12">
-                            <div class="contact-form contact-form-registro">
                                 <form action="backend/signup.inc.php" method="post" id="contact-form" >
                                     <div class="form-double">
-                                        <input type="text" id="form-name" name="firstName" placeholder="Nombre" required="required">
-                                        <input type="text" name="lastName" placeholder="Apellido" >
+                                        <input type="text" id="form-name" name="firstName" class="firstName" placeholder="Nombre" required="required">
+                                        <input type="text" name="lastName" class="lastName" placeholder="Apellido">
+                                    </div>
+                                    
+                                    <div class="form-double">
+                                      <input type="text" name="telephoneNumberCode" class="telephoneNumberCode" id="phone" placeholder="Codigo" required="required">
+                                      <input type="text" name="telephoneNumber" class="telephoneNumber" id="phone" placeholder="Celular" required="required" >
+                                      <input type="text" name="cellphoneNumberCode" class="cellphoneNumberCode" id="phone" placeholder="Codigo" required="required">
+                                        <input type="text" name="cellphoneNumber" class="cellphoneNumber" id="phone" placeholder="Teléfono" required="required">
                                     </div>
                                     <div class="form-double">
-                                        <input type="email"  name="email" id="form-email" placeholder="Correo Electrónico" required="required">
-                                        <input type="text" name="telephoneNumber" id="phone" placeholder="Celular" required="required">
-                                        <input type="text" name="cellphoneNumber" id="phone" placeholder="Teléfono" required="required">
-                                    </div>
-                                    <div class="form-double">
-                                        <input type="text"  name="addressName" id="form-email" placeholder="Direccion" required="required">
-                                        <input type="text" name="addressNumber" id="phone" placeholder="Numero " required="required">
-                                        <input type="text" name="floorNumber" id="phone" placeholder="Piso" required="required">
-                                        <input type="text"  name="deptNumber" id="phone" placeholder="Depto." required="required">
+                                        <input type="text"  name="addressName" class="addressName" id="form-email" placeholder="Direccion" required="required" >
+                                        <input type="text" name="addressNumber" class="addressNumber"id="phone" placeholder="Numero " required="required" >
+                                        <input type="text" name="floorNumber" class="floorNumber"id="phone" placeholder="Piso" required="required">
+                                        <input type="text"  name="deptNumber" class="deptNumber"id="phone" placeholder="Depto." required="required">
                                         <!--<select style="width: 40%; margin: 0 auto;" class="form-control" placeholder="Barrio">
                                                     <option value="barrio" disabled selected>Barrio</option>    
                                                     <option>Agronomía</option>
@@ -217,8 +196,11 @@
                                                   </select> -->
                                     </div>
                                     <div class="form-double">
-                                        <input type="password" id="password" name="password" placeholder="Contraseña" required="required">
-                                        <input type="password" id="password" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
+                                        <input type="email"  name="email" class="email-input"id="form-email" placeholder="Correo Electrónico" required="required" >
+                                    </div>
+                                    <div class="form-double">
+                                        <input type="password" id="password" class="password-input" name="password" placeholder="Contraseña" required="required">
+                                        <input type="password" id="password" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
                                     </div>
                                     
                                     <!--<div class="col-md-12">
@@ -226,19 +208,20 @@
                                             <label style="margin-bottom:20px;" class="custom-control-label" for="defaultUnchecked">Acepto los <a style="color:#034783;" href="terminos-y-condiciones.html">términos y condiciones</a></label>
                                     </div>-->
                                     
-                                    <button type="submit" name="submit" class="bttn bttn-primary">Enviar</button>
+                                    <button type="submit" name="submit" class="bttn bttn-primary" style="margin:20px 45% 25px 45%;">Enviar</button>
                                     
     
                                 </form>
                             </div>
                         </div>
     
-                        <div style="margin-top:50px;" class="btnLogin">
+                        <!--<div style="margin-top:50px;" class="btnLogin">
                             <div class="contact-form-registro">
                                 <p>¿Ya estás registrado?</p>
                                 <a class="bttn bttn-primary" href="iniciar-sesion.html">Iniciar sesión</a>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
             </section>

@@ -341,6 +341,12 @@ input:-webkit-autofill:focus {
   position: inherit;
 }
 
+.navbar-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .mainmenu-area #mainmenu ul.nav.navbar-nav li a {
   color: #ffffff;
   background: none;
@@ -2044,6 +2050,14 @@ a.scrolldown {
   z-index: -1;
   border-radius: 5px;
 }
+.form-double{
+  width: 100%;
+}
+.form-double input{
+  border-radius: 10px;
+
+}
+
 
 .contact-form input[type="text"],
 .contact-form input[type="number"],
@@ -2052,13 +2066,14 @@ a.scrolldown {
 .contact-form textarea {
   padding: 15px;
   margin-bottom: 20px;
-  width: 100%;
+  
   display: block;
   border: none;
   border-bottom: 1px solid #e8e8e8;
   outline: none;
+  float: left;
 }
-
+/*
 .contact-form .form-double input[type="text"],
 .contact-form .form-double input[type="number"],
 .contact-form .form-double input[type="email"],
@@ -2067,7 +2082,7 @@ a.scrolldown {
   width: calc(50% - 15px);
   float: left;
 }
-
+*/
 .contact-form .form-double input[type="text"]:last-child,
 .contact-form .form-double input[type="number"]:last-child,
 .contact-form .form-double input[type="email"]:last-child,
@@ -2075,11 +2090,60 @@ a.scrolldown {
 .contact-form .form-double textarea {
   float: right;
 }
+.firstName{
+  width: 45%; 
+  margin:15px 2.5%;
+}
+.lastName{
+  width: 45%;
+  margin:15px 2.5%;
+}
+.telephoneNumberCode{
+  width: 10%;
+  margin: 15px 0 15px 2.5%;
+}
+.telephoneNumber{
+  width: 32.5%;
+  margin: 15px 2.5%;
+}
+.cellphoneNumberCode{
+  width: 10%;
+  margin: 15px 0 15px 2.5%;
+}
+.cellphoneNumber{
+  width: 32.5%;
+  margin: 15px 2.5%;
+}
+.addressName{
+  width: 45%;
+  margin: 15px 2.5%;
+}
+.addressNumber{
+  width: 20%;
+  margin: 15px 1% 15px 2.5%;
+}
+.floorNumber{
+  width: 11%;
+  margin: 15px 1%;
+}
+.deptNumber{
+  width: 10%;
+  margin: 15px 2.5% 15px 1%;
+}
+
+.email-input{
+  width: 95%;
+  margin:40px 2.5% 10px 2.5%;
+}
+.password-input{
+  width: 45%; 
+  margin:15px 2.5%;
+}
 
 .contact-form-registro {
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
-  background-color: white;
   padding: 40px;
   border-radius: 10px;
 }
@@ -3109,7 +3173,7 @@ form i {
   display: block;
   z-index: 10000;
   position: fixed;
-  left: 0px;
+  left: -250px;
   width: 250px;
   height: 100%;
   margin-left: -250px;

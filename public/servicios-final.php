@@ -57,8 +57,43 @@
 
       </div>
     </div>
+    <div id="myModal" class="modal fade" role="dialog" style="justify-content:center; ">
+    <div class="modal-dialog" style="width:70%; margin: auto;">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">IMPORTANTE</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-sm-4">
+              <img class="img-modal" src="img/icon-14.png" alt="">
+              <h4 class="texto-modal">Nuestro servicio se brinda en toda la Capital Federal.</h4>
+            </div>
+
+            <div class="col-sm-4">
+              <img class="img-modal" src="img/icon-17.png" alt="">
+              <h4 class="texto-modal">Recepcion de pedidos, de lunes a viernes de 8 a 20hs</b></h4>
+            </div>
+
+            <div class="col-sm-4">
+              <img class="img-modal" src="img/icon-1.png" alt="">
+              <h4 class="texto-modal">Una vez hecho el pedido el tecnico se comunicara con usted a la brevedad</h4>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
     <!--Header-Area-->
+
     <header class="header-area overlay" id="headerServicios">
         
         
@@ -91,14 +126,15 @@
       </div>
       <!-- Inicio de sesión -->
 
+    
         <div class="vcenter">
             <div class="container" id="containerHeader">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="header-text">
 
-                            <h2 class="header-title wow fadeInUp" style="text-align:center; margin-bottom: 50px;">SERVICIOS PARA EL HOGAR</h2>
-
+                            <h2 class="header-title wow fadeInUp" style="text-align:center; margin-bottom: 50px;">BUSCA EL SERVICIO QUE NECESITAS</h2>
+                            <div  style="height:50px;margin:20px"> <p class="error-busqueda" style="text-align: center;display: none;">Tenes que seleccionar uno de los rubro ofrecidos antes de hacer el pedido</p> </div>
                             <form action="/action_page.php">
 
                               <input list="browser" class="browser" placeholder="Buscar..." id="datalistValue">
@@ -110,8 +146,8 @@
                                       <option value="Destapacion"></option>
                                       <option value="Persianas"></option>
                                       <option value="Cerrajeria"></option>
-                                      <option value="Vidrios">Vidrios</option>
-                                      <option value="Heladera">Heladera</option>
+                                      <option value="Vidrios"></option>
+                                      <option value="Heladera"></option>
                                       <option value="Cocina"></option>
                                       <option value="Lavadora"></option>
                                       <option value="Tv"></option>
