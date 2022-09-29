@@ -118,7 +118,7 @@
         background: linear-gradient(to right, #87b5ff 0%, #99d4ef 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87b5ff', endColorstr='#99d4ef', GradientType=1);
         text-align: center;
-        
+        z-index: 999;
         border-radius: 25px;
     }
     .mainmenu-area .navbar-toggle {
@@ -127,8 +127,11 @@
         position: fixed;
         right: 20px;
         margin-top: 23px;
-        -webkit-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4); 
-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
+        -webkit-box-shadow:3px 3px 3px 1px rgba(0,0,0,0.4); 
+        box-shadow:3px 3px 3px 1px rgba(0,0,0,0.4);
+        }
+        .navbar-toggle .icon-bar{
+            box-shadow: 3px 3px 3px 1px rgb(0 0 0 / 41%);
         }
 
     .mainmenu-area .navbar-toggle .icon-bar {
@@ -378,12 +381,82 @@ box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.4);
     }
 
     .contact-form{
-        width: calc(100% - 15px);
+        width: 100%;
+    }
+    .page-title h2.subtitle-registro{
+        font-size: 1.5rem;
+      } 
+      
+    .pasos-como{
+        margin-top: 6px !important;
+        width: 50%;
+        height: 111px;
+    }
+    .pasos-como img {
+        width: 35px;
+        margin: -8px auto 9px;
+    }
+    .pasos-como h4 {
+        font-size: 1rem; 
+    }  
+    #como-asociarse{
+        width: 100%;
+    }
+    #conteneder-form{
+        padding: 0;
+    }
+    .page-title .title{
+        font-size: 17px;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+    .contact-form-registro{
+        padding: 0;
+    }
+    .form-double{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-      
-    
-}
+    .form-double .firstName{
+        width: 100%; 
+        margin:15px 2.5%;
+      }
+      .form-double .lastName{
+        width: 100%;
+        margin:15px 2.5%;
+      }
+
+    .form-double .telephoneNumberCode{
+        width: 25%;
+        margin: 15px 2.5%;
+      }
+      .form-double .telephoneNumber{
+        width: 65%;
+        margin: 15px 2.5%;
+      }
+      .form-double .cellphoneNumberCode{
+        width: 25%;
+        margin: 15px 2.5%;
+      }
+      .form-double .cellphoneNumber{
+        width: 65%;
+        margin: 15px 2.5%;
+      }
+      .form-double .addressNumber{
+        width: 45%;
+        margin: 15px 2.5% 15px 2.5%;
+      }
+      .form-double .floorNumber{
+        width: 21%;
+        margin: 15px 2.5% 15px 1.5%;
+      }
+      .form-double .deptNumber{
+        width: 21%;
+        margin: 15px 1.5% 15px 2.5%;
+      }
+    }
 
 @media only screen and (max-width: 480px) {
     .mix,

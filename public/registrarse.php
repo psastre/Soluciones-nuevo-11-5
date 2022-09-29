@@ -68,35 +68,36 @@
 
     <!-- Como asociarse -->
     <div class="explicacion-primer-pedido">
-    <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+    <div class="row titulo_registro">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="margin: 0;">
                     <div class="page-title text-center">
-                        <h1 class="title">Soluciones Hogar es un servicio por suscripcion
- en el que te garantizamos que todos tus trabajos  se realizaran con exito, pero porque ?</h1>
+                        <h1 style="font-size: 3rem;">Primera vez?</h1>
+                        <h2 class="title subtitle-registro" >Soluciones Hogar es un servicio por suscripcion
+ en el que te garantizamos que todos tus trabajos  se realizaran con exito, pero porque ?</h2>
 
                     </div>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row beneficio_registro">
               <div class="col-sm-2 pasos-como">
                 <img src="img/icon-9.png" alt="">
-                <h4>Hacé tu pedido telefónicamente o vía web.</h4>
+                <h4>Centro de Atención especializado  un servicio de Emergencias las 24 horas.</h4>
               </div>
 
               <div class="col-sm-2 pasos-como">
                 <img src="img/icon-10.png" alt="">
-                <h4>Asignamos al profesional adecuado por su idoneidad y disponibilidad para tu pedido.</h4>
+                <h4>Doble garantía de 3 meses, una por parte del profesional y otra por parte de Soluciones.</h4>
               </div>
 
               <div class="col-sm-2 pasos-como">
                 <img src="img/icon-11.png" alt="">
-                <h4>El profesional se comunica a tu teléfono para concretar horario y día.</h4>
+                <h4>Cubrimos mas de 30 rubros</h4>
               </div>
 
               <div class="col-sm-2 pasos-como">
                 <img src="img/icon-5.png" alt="">
-                <h4>Antes de realizar el trabajo, el técnico ofrecerá un presupuesto de acuerdo a la tarea.</h4>
+                <h4>Los mejores profesionales independientes seleccionados por su honestidad y capacidades.</h4>
               </div>
 
               <div class="col-sm-2 pasos-como">
@@ -106,7 +107,7 @@
 
               <div class="col-sm-2 pasos-como">
                 <img src="img/icon-13.png" alt="">
-                <h4>Todos tus pedidos quedarán registrados en tu historial.</h4>
+                <h4>Presupuestos sin cargo en tu domicilio.</h4>
               </div>
             </div>
         
@@ -114,7 +115,7 @@
     <section class="section-padding gray-bg" id="como-asociarse" style="padding: 0;">
         <div class="container">
         
-            <section class="section-padding gray-bg" id="como-asociarse" style="background-color:#898989;">
+            <section class="section-padding gray-bg" id="como-asociarse" >
                 <div class="container">
                
                     <div class="row">

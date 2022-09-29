@@ -227,7 +227,7 @@ input:-webkit-autofill:focus {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c11120', endColorstr='#c11120', GradientType=1);
   -webkit-box-shadow: 0 2px 0 0 rgb(121, 17, 26), 0 4px 0 0 #a73333;
   box-shadow: 0 2px 0 0 rgb(121, 17, 26), 0 4px 0 0 #a73333;
-  z-index: 1;
+  z-index: 0;
   -webkit-transform: translateY(0);
   transform: translateY(0);
   border: none;
@@ -3362,13 +3362,44 @@ form i {
 
 .explicacion-primer-pedido{
   width: 90%;
-  height: 70vh;
-  margin: 50px;
-  
+  height: fit-content;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.titulo_registro{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.page-title .subtitle-registro{
+  font-size: 2rem;
+}
+
+.beneficio_registro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+#como-asociarse{
+  background-color:#898989;
+  border-radius: 25px;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
 }
 
 
