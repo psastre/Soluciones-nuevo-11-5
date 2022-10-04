@@ -65,72 +65,7 @@
     <?php include_once("navbar.php"); ?>
     <?php include_once("socioNoregPopup.php"); ?>
   <!--POP UP SOCIO NO registrado-->
- 
-        
-            <section class="section-padding gray-bg" id="como-asociarse" >
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 100%;margin:0">
-                            <div class="page-title text-center">
-                                <h1 class="title">Completa el formulario y empeza tu mes gratis</h1>
-                            </div>
-                        </div>
-                <div class="container" id="container-form">
-               
-                    <div class="row">
-                        
-                        <div class="col-xs-12 col-md-12" id="conteneder-form">
-                            <div class="contact-form contact-form-registro">
-                            
-                                <form action="backend/signup.inc.php" method="post" id="contact-form" >
-                                    <div class="form-double">
-                                        <input type="text" id="form-name" name="firstName" class="firstName" placeholder="Nombre" required="required">
-                                        <input type="text" name="lastName" class="lastName" placeholder="Apellido">
-                                    </div>
-                                    
-                                    <div class="form-double">
-                                      <input type="text" name="telephoneNumberCode" class="telephoneNumberCode" id="phone" placeholder="Codigo" required="required">
-                                      <input type="text" name="telephoneNumber" class="telephoneNumber" id="phone" placeholder="Celular" required="required" >
-                                     
-                                    </div>
-                                    <div class="form-double">
-                                        <input type="email"  name="email" class="email-input"id="form-email" placeholder="Correo Electrónico" required="required" >
-                                    </div>
-                                    <div class="form-double">
-                                        <input type="password" id="password" class="password-input" name="password" placeholder="Contraseña" required="required">
-                                        <input type="password" id="password" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
-                                    </div>
-                                    
-                                    <!--<div class="col-md-12">
-                                            <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                            <label style="margin-bottom:20px;" class="custom-control-label" for="defaultUnchecked">Acepto los <a style="color:#034783;" href="terminos-y-condiciones.html">términos y condiciones</a></label>
-                                    </div>-->
-                                    
-                                    <button type="submit" name="submit" class="bttn bttn-primary" style="margin:20px 45% 25px 45%;">Enviar</button>
-                                    
-    
-                                </form>
-                            </div>
-                        </div>
-    
-                        <!--<div style="margin-top:50px;" class="btnLogin">
-                            <div class="contact-form-registro">
-                                <p>¿Ya estás registrado?</p>
-                                <a class="bttn bttn-primary" href="iniciar-sesion.html">Iniciar sesión</a>
-                            </div>
-                        </div>
-                        -->
-                    </div>
-                </div>
-               
-            </section>
-
-           
-
-              <!-- Registro -->
-    
-        
-    
-<!-- Registro -->
-
+  
 
     <!-- Como asociarse -->
     <div class="explicacion-primer-pedido">
@@ -178,7 +113,130 @@
             </div>
         
     </div>
-   
+    <section class="section-padding gray-bg" id="como-asociarse" style="padding: 0;">
+        <div class="container">
+        
+            <section class="section-padding gray-bg" id="como-asociarse" >
+                <div class="container">
+               
+                    <div class="row">
+                        
+                        <div class="col-xs-12 col-md-12" id="conteneder-form">
+                            <div class="contact-form contact-form-registro">
+                            <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 100%;margin:0">
+                            <div class="page-title text-center">
+                                <h1 class="title">Completa el formulario y empeza tu mes gratis</h1>
+                            </div>
+                        </div>
+                                <form action="backend/signup.inc.php" method="post" id="contact-form" >
+                                    <div class="form-double">
+                                        <input type="text" id="form-name" name="firstName" class="firstName" placeholder="Nombre" required="required">
+                                        <input type="text" name="lastName" class="lastName" placeholder="Apellido">
+                                    </div>
+                                    
+                                    <div class="form-double">
+                                      <input type="text" name="telephoneNumberCode" class="telephoneNumberCode" id="phone" placeholder="Codigo" required="required">
+                                      <input type="text" name="telephoneNumber" class="telephoneNumber" id="phone" placeholder="Celular" required="required" >
+                                      <input type="text" name="cellphoneNumberCode" class="cellphoneNumberCode" id="phone" placeholder="Codigo" required="required">
+                                        <input type="text" name="cellphoneNumber" class="cellphoneNumber" id="phone" placeholder="Teléfono" required="required">
+                                    </div>
+                                    <div class="form-double">
+                                        <input type="text"  name="addressName" class="addressName" id="form-email" placeholder="Direccion" required="required" >
+                                        <input type="text" name="addressNumber" class="addressNumber"id="phone" placeholder="Numero " required="required" >
+                                        <input type="text" name="floorNumber" class="floorNumber"id="phone" placeholder="Piso" required="required">
+                                        <input type="text"  name="deptNumber" class="deptNumber"id="phone" placeholder="Depto." required="required">
+                                        <!--<select style="width: 40%; margin: 0 auto;" class="form-control" placeholder="Barrio">
+                                                    <option value="barrio" disabled selected>Barrio</option>    
+                                                    <option>Agronomía</option>
+                                                    <option>Almagro</option>
+                                                    <option>Balvanera</option>
+                                                    <option>Barracas</option>
+                                                    <option>Belgrano</option>
+                                                    <option>Boedo</option>
+                                                    <option>Caballito</option>
+                                                    <option>Chacarita</option>
+                                                    <option>Coghlan</option>
+                                                    <option>Colegiales</option>
+                                                    <option>Constitución</option>
+                                                    <option>Flores</option>
+                                                    <option>Floresta</option>
+                                                    <option>La Boca</option>
+                                                    <option>La Paternal</option>
+                                                    <option>Liniers</option>
+                                                    <option>Mataderos</option>
+                                                    <option>Monte Castro</option>
+                                                    <option>Montserrat</option>
+                                                    <option>Nueva Pompeya</option>
+                                                    <option>Núñez</option>
+                                                    <option>Palermo</option>
+                                                    <option>Parque Avellaneda</option>
+                                                    <option>Parque Chacabuco</option>
+                                                    <option>Parque Chas</option>
+                                                    <option>Parque Patricios</option>
+                                                    <option>Puerto Madero</option>
+                                                    <option>Recoleta</option>
+                                                    <option>Retiro</option>
+                                                    <option>Saavedra</option>
+                                                    <option>San Cristóbal</option>
+                                                    <option>San Nicolás</option>
+                                                    <option>San Telmo</option>
+                                                    <option>Velez Sársfield</option>
+                                                    <option>Versalles</option>
+                                                    <option>Villa Crespo</option>
+                                                    <option>Villa del Parque</option>
+                                                    <option>Villa Devoto</option>
+                                                    <option>Villa General Mitre</option>
+                                                    <option>Villa Lugano</option>
+                                                    <option>Villa Luro</option>
+                                                    <option>Villa Ortúzar</option>
+                                                    <option>Villa Pueyerredón</option>
+                                                    <option>Villa Real</option>
+                                                    <option>Villa Riachuelo</option>
+                                                    <option>Villa Santa Rita</option>
+                                                    <option>Villa Soldati</option>
+                                                    <option>Villa Urquiza</option>
+                                                  </select> -->
+                                    </div>
+                                    <div class="form-double">
+                                        <input type="email"  name="email" class="email-input"id="form-email" placeholder="Correo Electrónico" required="required" >
+                                    </div>
+                                    <div class="form-double">
+                                        <input type="password" id="password" class="password-input" name="password" placeholder="Contraseña" required="required">
+                                        <input type="password" id="password" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
+                                    </div>
+                                    
+                                    <!--<div class="col-md-12">
+                                            <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                            <label style="margin-bottom:20px;" class="custom-control-label" for="defaultUnchecked">Acepto los <a style="color:#034783;" href="terminos-y-condiciones.html">términos y condiciones</a></label>
+                                    </div>-->
+                                    
+                                    <button type="submit" name="submit" class="bttn bttn-primary" style="margin:20px 45% 25px 45%;">Enviar</button>
+                                    
+    
+                                </form>
+                            </div>
+                        </div>
+    
+                        <!--<div style="margin-top:50px;" class="btnLogin">
+                            <div class="contact-form-registro">
+                                <p>¿Ya estás registrado?</p>
+                                <a class="bttn bttn-primary" href="iniciar-sesion.html">Iniciar sesión</a>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </section>
+
+           
+
+              <!-- Registro -->
+    
+        
+    </div>
+</section>
+<!-- Registro -->
+
 <!-- Footer-Area -->
     <footer class="footer-area">
         <div class="footer-top section-padding">

@@ -22,9 +22,11 @@
       <p>¿Todavía no estás registrado?</p>
       <!--<a href="registrarse.php" id="registrarse">Registrarse</a>-->
       <div class="btndifer-login">
-      <a href="#" class="btndif btndif-login nosocioBtndif"> <span> Es mi 1er pedido</span><br/>Es la primera vez que hago un pedido a Soluciones.</a>
+      <a href="registrarse.php" class="btndif btndif-login nosocioBtndif"> <span> Es mi 1er pedido</span><br/>Es la primera vez que hago un pedido a Soluciones.</a>
     <a href="#" class="btndif btndif-login socioBtndif"><span>Soy cliente registrado</span><br/>Ya era cliente y ahora quiero hacer pedido de forma online</a>
       </div>
       
     </div>
     <!-- Inicio de sesión -->
+
+    <?php include_once("socioNoregPopup.php"); ?>

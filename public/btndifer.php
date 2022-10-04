@@ -3,3 +3,5 @@
     <a href="#" class="btndif socioBtndif"><span>Soy cliente registrado</span><br/>Ya era cliente y ahora quiero hacer pedido de forma online</a>
 
   </div>
+
+  <?php include_once("socioNoregPopup.php"); ?>

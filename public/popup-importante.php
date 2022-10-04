@@ -16,12 +16,12 @@
 
             <div class="col-sm-4">
               <img class="img-modal" src="img/icon-17.png" alt="">
-              <h4 class="texto-modal">Recepcion de pedidos, de lunes a viernes de 8 a 20hs</b></h4>
+              <h4 class="texto-modal">Recepcion de pedidos online, de lunes a viernes de 8 a 20hs</b></h4>
             </div>
 
             <div class="col-sm-4">
               <img class="img-modal" src="img/icon-1.png" alt="">
-              <h4 class="texto-modal">Una vez hecho el pedido el tecnico se comunicara con usted a la brevedad</h4>
+              <h4 class="texto-modal">Una vez tomado el pedido el tecnico se comunicara con usted a la brevedad</h4>
             </div>
           </div>
         </div>

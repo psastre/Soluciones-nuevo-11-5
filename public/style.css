@@ -150,7 +150,7 @@ input:-webkit-autofill:focus {
 }
 
 .page-title .title {
-  font-size: 32px;
+  font-size: 22px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -175,6 +175,12 @@ input:-webkit-autofill:focus {
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
   padding: 12px;
+}
+
+.explicacion-form{
+  background-color: burlywood;
+  width: 43%;
+  height: 100%;
 }
 
 .emergenciasFooter {
@@ -2091,20 +2097,20 @@ a.scrolldown {
   float: right;
 }
 .firstName{
-  width: 45%; 
-  margin:15px 2.5%;
+  width: 40%; 
+  margin:15px 5%;
 }
 .lastName{
-  width: 45%;
-  margin:15px 2.5%;
+  width: 40%;
+  margin:15px 5%;
 }
 .telephoneNumberCode{
-  width: 10%;
-  margin: 15px 0 15px 2.5%;
+  width: 20%;
+  margin: 15px 2.5% 15px 5%;
 }
 .telephoneNumber{
-  width: 32.5%;
-  margin: 15px 2.5%;
+  width: 65%;
+  margin: 15px 5% 15px 2.5%;
 }
 .cellphoneNumberCode{
   width: 10%;
@@ -2132,17 +2138,17 @@ a.scrolldown {
 }
 
 .email-input{
-  width: 95%;
-  margin:40px 2.5% 10px 2.5%;
+  width: 90%;
+  margin:40px 5% 10px 5%;
 }
 .password-input{
-  width: 45%; 
-  margin:15px 2.5%;
+  width: 40%; 
+  margin:15px 5%;
 }
 
 .contact-form-registro {
   width: 100%;
-  height: 100vh;
+  
   margin: 0 auto;
   padding: 40px;
   border-radius: 10px;
@@ -3392,9 +3398,9 @@ form i {
 }
 
 #como-asociarse{
-  background-color:#898989;
-  border-radius: 25px;
-  width: 75%;
+  background-color: white;
+  width: 100%;
+  height: fit-content;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -3402,6 +3408,37 @@ form i {
   padding-top: 0;
 }
 
+#container-form{
+  width: 50%;
+}
+#conteneder-form{
+  width: 100%;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+
+.header-area .header-text .error-busqueda{
+  text-align: center;
+  display: none;
+  font-size: 1.5rem;
+  
+  animation: error-busqueda-animate 1s ease  ;
+}
+
+@keyframes error-busqueda-animate {
+  from {transform: translateY(-15px);
+  opacity: 0;}
+  to {transform: translateY(0px);
+  opacity: 1;}
+}
+
+#myModal2{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-backdrop{
+  display: none !important;
+}
 
 @media only screen and (max-width: 767px){
 body {
