@@ -108,7 +108,7 @@ $(window).on('load', function () {
    $('.contratarServicio').href="contratar.php"; 
 });
   $(".socioBtndif").click(function(){
-  
+  $('.modal-backdrop').css("display", "none");
    $('#myModal2').modal('show');
   
   
