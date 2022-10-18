@@ -3,11 +3,11 @@
 if(isset($_POST["submit"])){
    $firstName = $_POST["firstName"];
    $lastName = $_POST["lastName"];
-   $addressName = "prueba";
-   $addressNumber = "prueba";
-   $floorNumber = "prueba";
-   $deptNumber = "prueba";
-   $cellphoneNumber = "prueba";
+   $addressName = $_POST["addressName"];
+   $addressNumber = $_POST["addressNumber"];
+   $floorNumber = $_POST["floorNumber"];
+   $deptNumber = $_POST["deptNumber"];
+   $cellphoneNumber = $_POST["cellphoneNumber"];
    $telephoneNumber = $_POST["telephoneNumber"];
    $email = $_POST["email"];
    $pwd = $_POST["password"];

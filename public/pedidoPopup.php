@@ -43,7 +43,7 @@
                                 <?php
                                 if(isset($_SESSION["userEmail"])){
                                     
-                                  echo "<button name='submit' type='submit' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</button>";
+                                  echo "<button name='submit' type='submit' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' > Hacer pedido </button>";
                                 }
                                 else{
                                   echo "<button name='submit' type='submit' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</button>";

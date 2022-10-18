@@ -153,6 +153,7 @@ input:-webkit-autofill:focus {
   font-size: 22px;
   margin-bottom: 20px;
   margin-top: 20px;
+  text-align: center;
 }
 
 .bar-title {
@@ -441,7 +442,7 @@ a.scrolldown {
   right: 2%;
   width: 450px;
   background-color: #e3e3e3;
-  z-index: 2;
+  z-index: 99;
   border-radius: 20px;
   padding: 20px;
   display: none;
@@ -2109,8 +2110,8 @@ a.scrolldown {
   margin: 15px 2.5% 15px 5%;
 }
 .telephoneNumber{
-  width: 65%;
-  margin: 15px 5% 15px 2.5%;
+  width: 90%;
+  margin:40px 5% 10px 5%;
 }
 .cellphoneNumberCode{
   width: 10%;
@@ -3403,19 +3404,65 @@ form i {
   height: fit-content;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-top: 0;
 }
 
 #container-form{
-  width: 50%;
+  width: 40%;
+  margin: 0;
+  margin-right: 25px;
 }
 #conteneder-form{
   width: 100%;
     background-color: aliceblue;
     border-radius: 25px;
 }
+
+.funcionamiento-form{
+  width: 100%;
+  display: flex;
+  
+}
+
+.funcionamiento-form::after {
+  content: "";
+  width: 84%;
+  margin-left: 25px;
+  height: 4px;
+  background-color: #abc9eb;
+  position: absolute;
+  bottom: 93px;
+}
+.funcionamiento-form-element{
+  z-index: 9;
+  width: calc(100% /3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 20px;
+  margin-top: 0px;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: #abc9eb;
+  border-radius: 25px;
+}
+
+
+.funcionamiento-form-element img{
+  width: 33%;
+  margin-bottom: 20px;
+}
+.funcionamiento-form-element h4{
+  font-size: 10px;
+  text-align: center;
+}
+
+
+
 
 .header-area .header-text .error-busqueda{
   text-align: center;

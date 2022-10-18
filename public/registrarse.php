@@ -68,11 +68,7 @@
  
         
             <section class="section-padding gray-bg" id="como-asociarse" >
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 100%;margin:0">
-                            <div class="page-title text-center">
-                                <h1 class="title">Completa el formulario y empeza tu mes gratis</h1>
-                            </div>
-                        </div>
+           
                 <div class="container" id="container-form">
                
                     <div class="row">
@@ -80,23 +76,22 @@
                         <div class="col-xs-12 col-md-12" id="conteneder-form">
                             <div class="contact-form contact-form-registro">
                             
-                                <form action="backend/signup.inc.php" method="post" id="contact-form" >
+                                <form action="backend/signup.inc.php" method="post" >
                                     <div class="form-double">
                                         <input type="text" id="form-name" name="firstName" class="firstName" placeholder="Nombre" required="required">
                                         <input type="text" name="lastName" class="lastName" placeholder="Apellido">
                                     </div>
                                     
                                     <div class="form-double">
-                                      <input type="text" name="telephoneNumberCode" class="telephoneNumberCode" id="phone" placeholder="Codigo" required="required">
-                                      <input type="text" name="telephoneNumber" class="telephoneNumber" id="phone" placeholder="Celular" required="required" >
-                                     
+                                      
+                                      <input type="text" name="telephoneNumber" class="telephoneNumber" id="phone-code" placeholder="Celular" required="required" >
                                     </div>
                                     <div class="form-double">
                                         <input type="email"  name="email" class="email-input"id="form-email" placeholder="Correo Electrónico" required="required" >
                                     </div>
                                     <div class="form-double">
                                         <input type="password" id="password" class="password-input" name="password" placeholder="Contraseña" required="required">
-                                        <input type="password" id="password" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
+                                        <input type="password" id="password-code" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
                                     </div>
                                     
                                     <!--<div class="col-md-12">
@@ -104,7 +99,8 @@
                                             <label style="margin-bottom:20px;" class="custom-control-label" for="defaultUnchecked">Acepto los <a style="color:#034783;" href="terminos-y-condiciones.html">términos y condiciones</a></label>
                                     </div>-->
                                     
-                                    <button type="submit" name="submit" class="bttn bttn-primary" style="margin:20px 45% 25px 45%;">Enviar</button>
+                                    <button type="submit" name="submit" class="bttn bttn-primary" style="margin: 20px 40% 25px 40%;">Enviar</button>
+                                    <a href="" style="text-align:center;margin: 20px 24% 25px 38%;">Ya estoy registrado</a>
                                     
     
                                 </form>
@@ -120,6 +116,39 @@
                         -->
                     </div>
                 </div>
+
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2"  style="width: 40%;margin:0; margin-left:25px;">
+                <div style="height:100%;">
+                <div class="page-title text-center">
+                                <h1 class="title" style="text-align: left;">Completa el formulario para hacer tu pedido y empeza tu mes gratis.</h1>
+                            </div>
+                            <h3 style="font-size: 1.5rem;">Despues de completarlo te llamaremos para:</h3>
+                            <ul>
+                                <li>Avisarte que tecnico profesional asignamos.</li>
+                                <li>Pedirte informacion para concretar y asegurar tu pedido. </li>
+                                <li>Contarte mas detalles sobre funcionamiento del sistema.</li>
+                                <li>Aclarar cualquier duda que tengas.</li>
+                            </ul>
+                </div>
+                <h3 style="font-size: 1.5rem;margin:25px 0 0 0;">Funcionamiento una vez hecho el pedido:</h3><br/>
+                <div class="funcionamiento-form">
+                
+                    <div class="funcionamiento-form-element">
+                        <img src="img/icon-11.png" alt="">
+                        <h4>El tecnico se comunicara con usted para coordinar dia y horaria de la visita.</h4>
+                    </div>
+                    <div class="funcionamiento-form-element">
+                        <img src="img/icon-10.png" alt="">
+                        <h4>El tecnico realizara y cobrara el trabajo que pidio.</h4>
+                    </div>
+                    <div class="funcionamiento-form-element">
+                        <img src="img/icon-3.png" alt="">
+                        <h4>El centro de atencion de Soluciones hara un seguimiento de su trabajo.</h4>
+                    </div>
+                    
+                </div>
+                           
+                        </div>
                
             </section>
 

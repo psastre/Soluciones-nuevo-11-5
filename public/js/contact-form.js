@@ -9,7 +9,7 @@ Ajax Contact Form
 + Copyright 2016 Mehedi Hasan Nahid
 + Licensed under the MIT license
 + https://github.com/mehedidb/Ajax_Contact_Form
-*/
+
 
 (function ($, window, document, undefined) {
     'use strict';
@@ -70,3 +70,4 @@ Ajax Contact Form
         e.preventDefault();
     });
 }(jQuery, window, document));
+*/

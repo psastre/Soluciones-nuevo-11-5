@@ -1,5 +1,18 @@
 <?php
-    session_start()
+    session_start();
+
+    include_once 'backend/dbh.inc.php';
+
+    $userquery = "SELECT * FROM rubros";
+    $userquery_result = mysqli_query($conn,$userquery);
+
+    $rubros = array();
+    if(mysqli_num_rows($userquery_result) > 0){
+        while($row = mysqli_fetch_assoc($userquery_result)){
+            $rubros[] = $row;
+        }
+    }
+
 ?>
 
 <!doctype html>
@@ -101,11 +114,22 @@
 
                             <h2 class="header-title wow fadeInUp" style="text-align:center; margin-bottom: 50px;">BUSCA EL SERVICIO QUE NECESITAS</h2>
                             <div  style="height:50px;margin:20px"> <p class="error-busqueda">Tenes que seleccionar uno de los rubro ofrecidos antes de hacer el pedido</br> y si no sabes a que rubro pertence tu pedido, selecciona la opcion Varios.</p> </div>
-                            <form action="/action_page.php">
+                            <form>
 
                               <input list="browser" class="browser" placeholder="Buscar..." id="datalistValue">
                                   <datalist id="browser">
+                                    <?php   
+                                        foreach($rubros as $rubro){
+                                    ?>
+
+                                      <option value="<?php echo $rubro['rubro'];?>" style="text-transform:uppercase;"></option>
                                     
+                                    <?php
+                                        }
+                                    ?>
+
+
+                                     <!-- <option value="Varios"></option>
                                       <option value="Plomero"></option>
                                       <option value="Gasista"></option>
                                       <option value="Electricista"></option>
@@ -129,6 +153,7 @@
                                       <option value="Jardineria"></option>
                                       <option value="Limpieza de alfombras"></option>
                                       <option value="Lustrado de muebles"></option>
+                                    -->
                                   </datalist>
                                   
                             <a class="bttn bttn-lg bttn-primary top-service popupLogicDatalist" style="display: block; margin: 40px auto 0;  cursor:pointer;">Hacer pedido</a>
@@ -155,16 +180,19 @@
             <div class="row box-servicios" id="filtering">
 
                 <!-- Reparaciones -->
-
+                <?php   
+                    foreach($rubros as $rubro){
+                        if($rubro['id'] <= 6) {
+                ?>               
                 
                 <!-- Box Electricidad -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Electricidad" id="electricidad">
+                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="<?php echo $rubro['rubro'];?>" id="electricidad">
                     <div class="filter-box">
                         <div class="filter-image">
                             <img src="img/electricidad.jpg" alt="">
                         </div>
                         <div class="filter-hover">
-                            <h5>Electricidad</h5>
+                            <h5><?php echo $rubro['rubro'];?></h5>
                             <p id="minimizarElectricidad"></p>
                             <a href="img/electricidad.jpg" data-effect="mfp-zoom-in"></a>
                         </div>
@@ -172,84 +200,10 @@
                 </div>
                 <!-- Box Electricidad -->
 
+                 <?php }} ?>
+               
                  
                
-                <!-- Box plomeria -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Plomeria" id="Plomeria">
-                    <div class="filter-box">
-                        <div class="filter-image">
-                            <img src="img/plomeria.jpg" alt="">
-                        </div>
-                        <div class="filter-hover">
-                            <h5>Plomería</h5>
-                            <a href="img/plomeria.jpg" data-effect="mfp-zoom-in"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Box Albañilería -->
-
-               
-                <!-- Box Gas -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Gas" id="gas">
-                    <div class="filter-box">
-                        <div class="filter-image">
-                            <img src="img/gas.jpg" alt="">
-                        </div>
-                        <div class="filter-hover">
-                            <h5>Gas</h5>
-                            <a href="img/gas.jpg" data-effect="mfp-zoom-in"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Box Gas -->
-
-              
-
-               
-                <!-- Box Destapacion -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Destapacion" id="destapacion">
-                    <div class="filter-box">
-                        <div class="filter-image">
-                            <img src="img/destapaciones.jpg" alt="">
-                        </div>
-                        <div class="filter-hover">
-                            <h5>Destapacion</h5>
-                            <a href="img/destapacion.jpg" data-effect="mfp-zoom-in"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Box  Destapacion -->
-
-                
-
-                <!-- Box Persiana -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Persiana" id="persiana">
-                    <div class="filter-box">
-                        <div class="filter-image">
-                            <img src="img/persiana.jpg" alt="">
-                        </div>
-                        <div class="filter-hover">
-                            <h5>Persiana</h5>
-                            <a href="img/persiana.jpg" data-effect="mfp-zoom-in"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Box Persiana -->
-
-               
-
-                <!-- Box Cerrajería -->
-                <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="Cerrajeria" id="cerrajeria">
-                    <div class="filter-box">
-                        <div class="filter-image">
-                            <img src="img/cerrajeria.jpg" alt="">
-                        </div>
-                        <div class="filter-hover">
-                            <h5>Cerrajería</h5>
-                            <a href="img/cerrajeria.jpg" data-effect="mfp-zoom-in"></a>
-                        </div>
-                    </div>
-                </div>
                
                 <!---------PRUIEBA -->
                 <?php include_once 'pedidoPopup.php'?>
@@ -271,17 +225,14 @@
                     <h3 class="title">Service</h3>
                 </div>
             </div>
-            
+            <?php   
+                    foreach($rubros as $rubro){
+                        if($rubro['id'] > 6 && $rubro['id'] <= 12) {
+                ?> 
 
-            <a class="col-md-6  servicios-extra popupLogic" data-type="Heladera"><h4>Heladera</h4></a>
-            <a class="col-md-6  servicios-extra popupLogic"  data-type="Cocina"><h4>Cocina</h4></a>
-            <a class="col-md-6  servicios-extra popupLogic"  data-type="Aire acondicionado"><h4>Aire acondicionado</h4></a>
-            <a class="col-md-6  servicios-extra popupLogic"  data-type="Lavarropa"><h4>Lavarropa</h4></a>
-            <a class="col-md-6  servicios-extra popupLogic"  data-type="TV"><h4>TV</h4></a>
-            <a class="col-md-6  servicios-extra popupLogic"  data-type="Service electronico"><h4>Service electronico</h4></a>
-            <a class="col-md-6  servicios-extra popupLogic"  data-type="Computadora"><h4>Computadora</h4></a>
-            
-
+            <a class="col-md-6  servicios-extra popupLogic" data-type="<?php echo $rubro['rubro'];?>"><h4><?php echo $rubro['rubro'];?></h4></a>
+          
+            <?php }} ?>
 
 
            
@@ -292,20 +243,14 @@
                 </div>
             </div>
 
-            <a class="col-md-6  servicios-extra"><h4>Herrería</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Carpintería</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Albañileria</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Pintura</h4></a>
-            <a class="col-md-6  servicios-extra"><h4> Empapelado</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Toldos</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Enlozado</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Pulido y plastificado</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Plaguicidas</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Tapicería</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Jardinería</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Lustrado de muebles</h4></a>
-            <a class="col-md-6  servicios-extra"><h4>Limpieza de alfombras
-            </h4></a>
+            <?php   
+                    foreach($rubros as $rubro){
+                        if($rubro['id'] > 12 ) {
+                ?> 
+
+            <a class="col-md-6  servicios-extra popupLogic" data-type="<?php echo $rubro['rubro'];?>"><h4><?php echo $rubro['rubro'];?></h4></a>
+          
+            <?php }} ?>
 
             
       </div>
