@@ -31,6 +31,12 @@
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style>
+        .bttn-hacer-pedido-nav-index{
+            display: none;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area">
@@ -61,7 +67,7 @@
             </div>
         </div>
         <div id="buttomcust"class="wow fadeInUp" data-wow-delay="0.7s">
-            <a href="servicios-final.php" class="bttn bttn-lg bttn-primary" style="margin-right: 45px;">Hacer pedido</a>
+            <a href="servicios-final.php" class="bttn bttn-lg bttn-primary"     >Hacer pedido</a>
         </div>
         <p class="carrouselServicios marquee">
           <span><b>Electricidad</b> - Cerrajería - <b>Albañilería</b> - Carpintería - Pintura - Vidrios - <b>Destapaciones</b> - Plomería - <b>Gas</b> - Empapelado - <b>Calefacción</b> - Restauraciones - <b>Aire acondicionado</b> - Audio, TV, video caseteras y DVD - <b>Jardinería</b> - Computadoras e impresoras - <b>Cocinas, heladeras, lavarropas y microondas</b> - Plomería - <b>Limpieza de alfombras y tapicería</b> - Plaguicidas - Pulido - Plastificado <b>Electricidad</b> - Cerrajería - <b>Albañilería</b> - Carpintería - Pintura - Vidrios - <b>Destapaciones</b> - Cortinas de enrollar - <b>Gas</b> - Empapelado - <b>Calefacción</b> - Restauraciones - <b>Aire acondicionado</b> - Audio, TV, video caseteras, DVD - <b>Jardinería</b> - Computadoras e impresoras - <b>Cocinas, heladeras, lavarropas, microondas</b> - <b>Limpieza de alfombras y tapicería</b> - Plaguicidas - Pulido y plastificado - <b>Electricidad</b> - Cerrajería - <b>Albañilería</b> - Carpintería - Pintura - Vidrios - <b>Destapaciones</b> - Cortinas de enrollar - <b>Gas</b> - Empapelado - <b>Calefacción</b> - Restauraciones - <b>Aire acondicionado</b> - Audio, TV, video caseteras, DVD - <b>Jardinería</b> - Computadoras e impresoras - <b>Cocinas, heladeras, lavarropas, microondas</b> - <b>Limpieza de alfombras y tapicería</b> - Plaguicidas - Pulido - Plastificado - <b>Electricidad</b> - Cerrajería - <b>Albañilería</b> - Carpintería - Pintura - Vidrios - <b>Destapaciones</b> - Cortinas de enrollar - <b>Gas</b> - Empapelado - <b>Calefacción</b> - Restauraciones - <b>Aire acondicionado</b> - Audio, TV, video caseteras, DVD - <b>Jardinería</b> - Computadoras e impresoras - <b>Cocinas, heladeras, lavarropas, microondas</b> - <b>Limpieza de alfombras y tapicería</b> - Plaguicidas - Pulido - Plastificado -&nbsp;</span>

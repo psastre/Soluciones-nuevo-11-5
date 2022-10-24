@@ -120,6 +120,7 @@
         text-align: center;
         z-index: 999;
         border-radius: 25px;
+        overflow: hidden;
     }
     .mainmenu-area .navbar-toggle {
         border: 1px solid #ffffff;
@@ -231,7 +232,6 @@
         height: fit-content;
       }
     .bttn.bttn-lg.bttn-primary{
-        margin-left: 59px;
         top: 0px;
         text-align: center;
     }

@@ -33,6 +33,14 @@
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .speech-bubble {color: #9e9e9e;}
+      .mainmenu-area #mainmenu ul.nav.navbar-nav.primary-menu li.active a,
+      .mainmenu-area #mainmenu ul.nav.navbar-nav.primary-menu li a:hover {
+        border-bottom: 2px solid #9e9e9e;
+      }
+      .mainmenu-area #mainmenu ul.nav.navbar-nav li a{color:#9e9e9e;}
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area">
@@ -42,36 +50,7 @@
     </div>
 
     <!-- Mainmenu-Area -->
-    <nav class="navbar mainmenu-area" id="menuFijo" data-spy="affix" data-offset-top="197">
-        <div class="container" id="navbar1">
-            <div class="row">
-                <div class="col-xs-12">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="navbar-header smoth">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainmenu">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="" id="logoMenu"></a>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-right" id="mainmenu">
-                        <ul class="nav navbar-nav navbar-right help-menu">
-                            <li><a href="#" id="user-btn"><i class="icofont icofont-user-alt-4"></i></a></li>
-                        </ul>
-                        <ul class="nav navbar-nav primary-menu">
-                            <li><a class="active black" href="#">Mi perfil</a></li>
-                            <li><a class="black" href="pedidos.html">Mis pedidos</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include_once("navbar.php"); ?>
     <!-- Mainmenu-Area-/ -->
 
     <!-- Inicio de sesión -->

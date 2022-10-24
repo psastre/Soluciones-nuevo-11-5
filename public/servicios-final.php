@@ -1,18 +1,6 @@
 <?php
     session_start();
 
-    include_once 'backend/dbh.inc.php';
-
-    $userquery = "SELECT * FROM rubros";
-    $userquery_result = mysqli_query($conn,$userquery);
-
-    $rubros = array();
-    if(mysqli_num_rows($userquery_result) > 0){
-        while($row = mysqli_fetch_assoc($userquery_result)){
-            $rubros[] = $row;
-        }
-    }
-
 ?>
 
 <!doctype html>
@@ -122,38 +110,14 @@
                                         foreach($rubros as $rubro){
                                     ?>
 
-                                      <option value="<?php echo $rubro['rubro'];?>" style="text-transform:uppercase;"></option>
+                                      <option value="<?php echo $rubro['rubro'];?>" style="text-transform: uppercase;"></option>
                                     
                                     <?php
                                         }
                                     ?>
 
 
-                                     <!-- <option value="Varios"></option>
-                                      <option value="Plomero"></option>
-                                      <option value="Gasista"></option>
-                                      <option value="Electricista"></option>
-                                      <option value="Destapacion"></option>
-                                      <option value="Persianas"></option>
-                                      <option value="Cerrajeria"></option>
-                                      <option value="Vidrios"></option>
-                                      <option value="Heladera"></option>
-                                      <option value="Cocina"></option>
-                                      <option value="Lavadora"></option>
-                                      <option value="Tv"></option>
-                                      <option value="Service electronico"></option>
-                                      <option value="Computadora"></option>
-                                      <option value="Herreria"></option>
-                                      <option value="Empapelado"></option>
-                                      <option value="Toldos"></option>
-                                      <option value="Enlozado"></option>
-                                      <option value="Pulido y plastificado"></option>
-                                      <option value="Plaguicidas"></option>
-                                      <option value="Tapiceria"></option>
-                                      <option value="Jardineria"></option>
-                                      <option value="Limpieza de alfombras"></option>
-                                      <option value="Lustrado de muebles"></option>
-                                    -->
+                                    
                                   </datalist>
                                   
                             <a class="bttn bttn-lg bttn-primary top-service popupLogicDatalist" style="display: block; margin: 40px auto 0;  cursor:pointer;">Hacer pedido</a>
@@ -189,7 +153,7 @@
                 <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="<?php echo $rubro['rubro'];?>" id="electricidad">
                     <div class="filter-box">
                         <div class="filter-image">
-                            <img src="img/electricidad.jpg" alt="">
+                            <img src="img/<?php echo $rubro['rubro'];?>.jpg" alt="">
                         </div>
                         <div class="filter-hover">
                             <h5><?php echo $rubro['rubro'];?></h5>

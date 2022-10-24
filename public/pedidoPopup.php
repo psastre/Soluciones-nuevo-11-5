@@ -1,3 +1,13 @@
+  <?php
+
+include_once 'backend/dbh.inc.php';
+include_once 'bacjend/countOrder.inc.php'
+
+
+
+?>
+
+
 <div id="pruebaPopup" class="modal fade" role="dialog">
                   <div class="modal-dialog" >
                     <!-- Modal content-->
@@ -15,7 +25,11 @@
                                     if($_SESSION["userStatus"] === 1){
                                         echo " <form action='backend/orderCreationSocio.inc.php' method='post' id='sample'>";
                                     }else if($_SESSION["userStatus"] === 0 ){
-                                        echo " <form action='backend/orderCreationNoSocio.inc.php' method='get' id='sample'>";
+                                      if($numPedidos > 1){
+                                        echo " <form action='index.php' method='post' id='sample'>";
+                                      }else{
+                                        echo " <form action='backend/orderCreationSocio.inc.php' method='post' id='sample'>";
+                                      }
                                 }}else{
                                   echo " <form action='backend/orderCreationNoSocio.inc.php' method='get' id='sample55'>";
                                 }
@@ -39,16 +53,13 @@
 
                               <div class="row">
 
-                                <div class="col-sm-12">
-                                <?php
-                                if(isset($_SESSION["userEmail"])){
+                                <div class="col-sm-12 btn_pedido_section">
+                               
                                     
-                                  echo "<button name='submit' type='submit' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' > Hacer pedido </button>";
-                                }
-                                else{
-                                  echo "<button name='submit' type='submit' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</button>";
-                                }
-                                ?>
+                                  <button name='submit' type='submit' class='blue-ar-l-rn-none bttn bttn-lg bttn-primary contratarServicio' >Hacer pedido</button>
+                                
+                                  
+                                
                                   </form>
                                 </div>
                               </div>

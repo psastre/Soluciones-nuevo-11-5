@@ -80,8 +80,19 @@
        mysqli_stmt_bind_param($stmt, "ssssssssss", $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $hashedPwd);
        mysqli_stmt_execute($stmt);
        mysqli_stmt_close($stmt);
-       header("location:../index.php");
-       exit();
+
+       session_start();
+           $_SESSION["userEmail"]= $email;
+           
+   
+           $_SESSION["userName"] = $firstName;
+           $_SESSION["userLastName"] = $lastName;
+          
+       
+       if(emptyOrder($detalle) !== false){
+        header("location:../servicios-final.php?error=emptyinput");
+        exit();
+       }
     }
       // LOGIN
     function emptyInputLogin($email, $pwd){
@@ -144,8 +155,8 @@
        return $result;
     }
    
-    function createOrder($conn, $userid, $rubro, $detalle){
-       $sql = "INSERT INTO  pedidos (category, detail, userid) VALUES (?,?,?);";
+    function createOrder($conn, $userid, $rubro, $detalle, $codigoRubro){
+       $sql = "INSERT INTO  pedidos (category, detail, userid, codigoRubro) VALUES (?,?,?,?);";
        $stmt = mysqli_stmt_init($conn);
        if(!mysqli_stmt_prepare($stmt, $sql)){
            header("location:../contratar.php?error=errorcreateorder");
@@ -154,7 +165,7 @@
    
        
    
-       mysqli_stmt_bind_param($stmt, "sss", $rubro,  $detalle, $userid);
+       mysqli_stmt_bind_param($stmt, "ssss", $rubro,  $detalle, $userid, $codigoRubro);
        mysqli_stmt_execute($stmt);
        mysqli_stmt_close($stmt);
        header("location:../usuario.php?error=none");

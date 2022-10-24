@@ -67,10 +67,11 @@ $(window).on('load', function () {
    
    $('.popupLogicDatalist').click(function(){
     //  document.querySelector('#descripcionServicio').textContent = datalistValue.value;
-      let rubrosCompleto = ["Varios", "Plomero", "Gasista", "Electricista","Destapacion" ,"Persianas" , "Cerrajeria","Vidrios" ,"Heladera" ,"Cocina" ,"Lavadora" ,"Tv" ,"Service electronico" ,"Computadora", "Herreria","Empapelado" ,"Toldos" ,"Enlozado" ,"Pulido y plastificado" ,"Plaguicidas" ,"Tapiceria", "Jardineria","Limpieza de alfombras" ,"Lustrado de muebles" ]
+      let rubrosCompleto = ["Electricista", "Carpintería", "Plomería", "Albañileria","Cerrajería" ,"Empapelado" , "Gasista","Herrería" ,"Jardinería" ,"Lustrado de muebles" ,"Persiana" ,"Pintura" ,"Pulido y plastificado" ,"Destapación", "Televisión","Lavarropa" ,"Heladera" ,"Aire acondicionado" ,"Tapicería" ,"Computación" ,"Enlozado", "Toldos","Limpieza de alfombras" ,"Fumigación", "Cocina" ]
       console.log(datalistValue.value)
       if(rubrosCompleto.includes(datalistValue.value)){
          document.querySelector('#rubroSeleccionado').value=datalistValue.value;
+         document.querySelector(".imgServicioBox").src=`img/${datalistValue.value}.jpg`;
       $('#pruebaPopup').modal('show');
          
       }else{
@@ -80,6 +81,7 @@ $(window).on('load', function () {
    $('.popupLogic').click(function(){
     //  document.querySelector('#descripcionServicio').textContent = this.dataset.type
       document.querySelector('#rubroSeleccionado').value= this.dataset.type;
+      document.querySelector(".imgServicioBox").src=`img/${this.dataset.type}.jpg`;
       $('#pruebaPopup').modal('show');
    });
    $(".closePopupButton").click(function(){

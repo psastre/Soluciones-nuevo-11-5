@@ -5,7 +5,9 @@
       </div>
       
 
-      <a type="submit" name="submit" href="backend/logout.inc.php" class="bttn bttn-primary">Salir</a>
+      <a type="submit" name="submit" href="usuario.php" class="bttn bttn-primary">Mi perfil</a>
+      <a type="submit" name="submit" href="usuario.php" class="bttn bttn-primary">Mis pedidos</a>
+      <a type="submit" name="submit" href="backend/logout.inc.php" class="bttn bttn-primary">Salir de mi perfil</a>
     
       
     </div>

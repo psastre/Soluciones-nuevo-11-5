@@ -25,16 +25,34 @@
                            
                         </ul>
                         <ul class="nav navbar-nav primary-menu">
-                            <li><a href="quienes-somos.php">¿Qué es Soluciones?</a></li>
+
+                           
                             <?php
+
+
+                                if(isset($_SESSION["userEmail"])){
+                                    if($_SESSION["userStatus"] === 1){
+                                        echo " <a href='servicios-final.php'><button class='bttn bttn-mesgratis bttn-hacer-pedido-nav-index' >Hacer Pedido</button></a>";
+                                    }else if($_SESSION["userStatus"] === 0 ){
+                                    /*CONDICION DE SI TIENE MAS DE TRES PEDIDOS ESTE USUARIO LLEVA A PAG CON CARTEL*/
+                                    echo " <a href='quienes-somos.php'><button class='bttn bttn-mesgratis' style='margin-right:25px;' >Hacerme Socio</button></a>";
+                                }}else{
+                                    echo " <a href='quienes-somos.php'><button class='bttn bttn-mesgratis'  style='margin-right:25px;' >Prueba mes gratis</button></a>";
+                                }
+
+                                echo  "<li><a href='quienes-somos.php'>¿Qué es Soluciones?</a></li>";
+
+
                                 if(isset($_SESSION["userEmail"])){
                                     echo"<li><a href='usuario.php'>" . $_SESSION["userName"] ."</a></li>";
+                                    echo "<li><a id='user-btn' onclick='myFunction()'>Perfil</a></li>";
                                 }
                                 else{
                                     echo "<li><a  href='registrarse.php'>Registrarse</a></li>";
+                                    echo "<li><a id='user-btn' onclick='myFunction()'>Iniciar sesión</a></li>";
                                 }
                                 ?>
-                            <li><a id="user-btn" onclick="myFunction()"><!--<img src="img/user-white.png" alt="">-->Iniciar sesión</a></li>
+                            
                         </ul>
                     </div>
                 </div>

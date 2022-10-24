@@ -63,7 +63,7 @@
     }
     ?>
     <?php include_once("navbar.php"); ?>
-    <?php include_once("socioNoregPopup.php");?>
+    <?php include_once("socioNoregPopup.php"); ?>
   <!--POP UP SOCIO NO registrado-->
  
         
@@ -71,15 +71,12 @@
            
                 <div class="container" id="container-form">
                
-                    <div class="row"> 
+                    <div class="row">
                         
                         <div class="col-xs-12 col-md-12" id="conteneder-form">
                             <div class="contact-form contact-form-registro">
                             
                                 <form action="backend/signup.inc.php" method="post" >
-                                <input  type='text' name='rubro' value='<?php echo $_GET["rubro"] ?>' readonly style="display:none;">
-                                <input  type='text' name='detalle' value='<?php echo $_GET["detalle"] ?>' readonly style="display:none;" >
-
                                     <div class="form-double">
                                         <input type="text" id="form-name" name="firstName" class="firstName" placeholder="Nombre" required="required">
                                         <input type="text" name="lastName" class="lastName" placeholder="Apellido">

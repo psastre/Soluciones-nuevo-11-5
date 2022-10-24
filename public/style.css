@@ -455,8 +455,8 @@ a.scrolldown {
 
 .logIn .bttn {
   margin-top: 15px;
-  
-  width: 50%;
+  width: 100%;
+  text-align: center;
 }
 
 .logIn p {
@@ -1119,14 +1119,20 @@ a.scrolldown {
   cursor: pointer;
 }
 
-.contratarServicio {
-  margin: 15px 122px -21px 0;
+.bttn.bttn-lg.contratarServicio {
+  margin: 25px 0;
+  margin-left: 0;
   display: block;
   width: 200px;
   position: absolute;
-  bottom: -36px;
+  
 
   padding: 15px 25px !important;
+}
+.btn_pedido_section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .servicioBox {
@@ -3471,6 +3477,12 @@ form i {
   
   animation: error-busqueda-animate 1s ease  ;
 }
+
+.bttn-hacer-pedido-nav-index{
+  margin-right: 25px;
+}
+
+
 
 @keyframes error-busqueda-animate {
   from {transform: translateY(-15px);
