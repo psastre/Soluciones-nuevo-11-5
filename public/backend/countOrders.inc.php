@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 include_once 'backend/dbh.inc.php';
 if(isset($_SESSION["userEmail"])){
   $userid= $_SESSION["userId"];

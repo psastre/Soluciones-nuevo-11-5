@@ -118,6 +118,13 @@ $(window).on('load', function () {
 });
   
 
+ $("#general-btn").click(function(){
+  $('#general-btn').classList.remove(active);
+   $('#mis-pedidos-btn').classList.add(active);
+  
+  
+  
+});
   
 
     

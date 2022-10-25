@@ -1,11 +1,6 @@
   <?php
-
-include_once 'backend/dbh.inc.php';
-include_once 'bacjend/countOrder.inc.php'
-
-
-
-?>
+    include_once 'backend/countOrders.inc.php'
+  ?>
 
 
 <div id="pruebaPopup" class="modal fade" role="dialog">

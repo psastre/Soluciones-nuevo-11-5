@@ -1,5 +1,26 @@
 <?php 
-  session_start()
+  session_start();
+
+  
+
+
+include_once 'backend/dbh.inc.php';
+if(isset($_SESSION["userEmail"])){
+  $userid= $_SESSION["userId"];
+
+  $useridquery = "SELECT category, detail, date FROM pedidos WHERE userid = '$userid'";
+  $useridquery_result = mysqli_query($conn,$useridquery);
+  
+  $userPedidosList = array();
+  if(mysqli_num_rows($useridquery_result) > 0){
+      while($row = mysqli_fetch_assoc($useridquery_result)){
+          $userPedidosList[] = $row;
+      }
+  }
+  
+  }
+
+  
   ?>
 <!doctype html>
 <html class="no-js" lang="es">
@@ -27,7 +48,7 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/custom.js"></script>
-    <script src="js/custom2.js"></script>
+    <script src="js/custom22.js"></script>
 
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -40,6 +61,7 @@
         border-bottom: 2px solid #9e9e9e;
       }
       .mainmenu-area #mainmenu ul.nav.navbar-nav li a{color:#9e9e9e;}
+      #menuFijo{position: static;}
     </style>
 </head>
 
@@ -83,7 +105,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-12 col-md-12" >
                     <div class="page-title text-center">
                         
                         <script>userTitle();</script>
@@ -106,17 +128,17 @@
                             <img src="" alt="">
                           </div>
 
-                          <a href="#generalSpace"> <div id="general-btn" class="menuSection active">General</div> </a>
-                          <a href="#misPedidosSpace"> <div id="mis-pedidos-btn" class="menuSection">Mis pedidos</div> </a>
-                          <a href="#datosDeFacuracionSpace"> <div id="datos-de-facturacion-btn" class="menuSection">Datos de facturación</div> </a>
+                          <a href="#"> <div id="general-btn" class="menuSection active">General</div> </a>
+                          <a href="#"> <div id="mis-pedidos-btn" class="menuSection">Mis pedidos</div> </a>
+                          
 
 
                         </div>
 
-                        <div class="col-xs-12 col-sm-12 col-md-9">
+                        <div class="col-xs-12 col-sm-12 col-md-9 info_dashboard">
 
                           <div class="userSpace" id="generalSpace">
-                            <h2>General</h2>
+                            <h2>Información General</h2>
 
                             <form action="backend/userEdit.php" method="post">
 
@@ -252,61 +274,32 @@
                                 </label>
                               </div>
                             </div>
-                          </div>
-                                <button type="submit" name="submit" class="bttn bttn-primary">Cambiar Datos</button>
+                            <button type="submit" name="submit" class="bttn bttn-primary">Cambiar Datos</button>
                           </form>
+                          </div>
+                               
+
+                          <!--PEDIDOS-->
                           <div class="userSpace" id="misPedidosSpace">
+                          <h2>Ultimos pedidos</h2>
 
                             <div class="containerPedidos">
-                              <div class="col-md-12 pedidosDiv">
+                              <?php 
+                                foreach($userPedidosList as $pedido){
+                                  
+                              ?>
+                              <div class="col-md-12 pedidosDiv" style="display: flex;">
+                                <p> <?php echo $pedido['category'];?></p>
+                                <p> <?php echo $pedido['detail'];?></p>
+                                <p> <?php echo $pedido['date'];?></p>
 
                               </div>
-                              <div class="col-md-12 pedidosDiv2">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv2">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv2">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv2">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv2">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv2">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv">
-
-                              </div>
-                              <div class="col-md-12 pedidosDiv2">
-
-                              </div>
+                              <?php } ?>
                             </div>
 
                           </div>
 
-                          <div class="userSpace" id="datosDeFacuracionSpace">
-
-                          </div>
+                         
 
 
 

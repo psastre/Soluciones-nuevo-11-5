@@ -1,6 +1,6 @@
 <?php
     session_start();
-
+    include_once 'backend/rubrosList.inc.php'
 ?>
 
 <!doctype html>
