@@ -84,10 +84,13 @@
        session_start();
            $_SESSION["userEmail"]= $email;
            
+           $_SESSION["userEmail"]= $email;
+           $_SESSION["userStatus"]= 0 ;
    
-           $_SESSION["userName"] = $firstName;
+           $_SESSION["userName"] =  $firstName;
            $_SESSION["userLastName"] = $lastName;
-          
+           $_SESSION["userId"] = mysqli_insert_id($conn);
+        
        
        if(emptyOrder($detalle) !== false){
         header("location:../servicios-final.php?error=emptyinput");

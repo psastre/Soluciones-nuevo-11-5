@@ -35,9 +35,9 @@
                                         echo " <a href='servicios-final.php'><button class='bttn bttn-mesgratis bttn-hacer-pedido-nav-index' >Hacer Pedido</button></a>";
                                     }else if($_SESSION["userStatus"] === 0 ){
                                     /*CONDICION DE SI TIENE MAS DE TRES PEDIDOS ESTE USUARIO LLEVA A PAG CON CARTEL*/
-                                    echo " <a href='quienes-somos.php'><button class='bttn bttn-mesgratis' style='margin-right:25px;' >Hacerme Socio</button></a>";
+                                    echo " <a href='quienes-somos.php'><button class='bttn bttn-mesgratis'  >Hacerme Socio</button></a>";
                                 }}else{
-                                    echo " <a href='quienes-somos.php'><button class='bttn bttn-mesgratis'  style='margin-right:25px;' >Prueba mes gratis</button></a>";
+                                    echo " <a href='quienes-somos.php'><button class='bttn bttn-mesgratis'  >Prueba mes gratis</button></a>";
                                 }
 
                                 echo  "<li><a href='quienes-somos.php'>¿Qué es Soluciones?</a></li>";

@@ -2927,8 +2927,13 @@ a.scrolldown {
 }
 
 .pedidosDiv {
-  height: 50px;
+  height: 60px;
   background-color: #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px 15px 10px;
+  border: aliceblue solid 2px;
 }
 
 .pedidosDiv2 {
@@ -2938,9 +2943,10 @@ a.scrolldown {
 
 .containerPedidos {
   width: 90%;
-  margin: 75px auto 20px;
-  overflow: auto;
-  height: 500px;
+  margin: 20px auto 0px;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 450px;
 }
 
 #btnAsociarse {
