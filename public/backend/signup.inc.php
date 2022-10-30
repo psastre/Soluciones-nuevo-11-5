@@ -1,6 +1,5 @@
 <?php
-$rubro = $_GET["rubro"];
-$detalle = $_GET["detalle"];
+
 if(isset($_POST["submit"])){
    $firstName = $_POST["firstName"];
    $lastName = $_POST["lastName"];
@@ -39,8 +38,9 @@ if(isset($_POST["submit"])){
    if(emailExists($conn, $email) !== false){
     header("location: ../usuario.php?error=usernametaken");
    }
-   createUser($conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd);
+   createUser($detalle, $conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd);
    
+ 
    
 
    $userid = mysqli_insert_id($conn);
@@ -51,13 +51,18 @@ if(isset($_POST["submit"])){
    $codigoRubro = (mysqli_fetch_row($rubroCodeQuery_result))[0];
    
  
+   
+    createOrder($conn,$userid, $rubro, $detalle, $codigoRubro);
+   
+    
+    
+  
+   
+   
 
-   createOrder($conn,$userid, $rubro, $detalle, $codigoRubro);
-   header("location: ../usuario.php");
 
 
-
-}
-else{
+    
+}else{
     header("location:../index.php");
 }

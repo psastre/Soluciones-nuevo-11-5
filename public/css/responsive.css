@@ -214,6 +214,13 @@
         bottom: 15vh;
         left: 0vw;
     }
+    #buttomcust{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+    }
     .arrow2{
         bottom: 7vh;
         left: 50%;
@@ -383,6 +390,14 @@
     .contact-form{
         width: 100%;
     }
+    #container-form{
+        width: 90%;
+        margin: 0; 
+    }
+    #info-form{
+        width: 90%;
+        margin: 0; 
+      }
     .page-title h2.subtitle-registro{
         font-size: 1.5rem;
       } 
@@ -433,7 +448,7 @@
         margin: 15px 2.5%;
       }
       .form-double .telephoneNumber{
-        width: 65%;
+        width: 100%;
         margin: 15px 2.5%;
       }
       .form-double .cellphoneNumberCode{
@@ -456,6 +471,25 @@
         width: 21%;
         margin: 15px 1.5% 15px 2.5%;
       }
+      .funcionamiento-form{
+        overflow-x: scroll;
+      }
+      .funcionamiento-form-element{
+        width: 100%;
+        padding: 20px 20%;
+      }
+      .funcionamiento-form-element img {
+        width: 83%;
+    }
+      .funcionamiento-form-element h4 {
+        width: 83%;
+        width: 100px;
+        font-size: 15px;
+    }
+    .funcionamiento-form::after {
+        content: "";
+         width: 0%;
+    }
     }
 
 @media only screen and (max-width: 480px) {

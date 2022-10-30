@@ -120,7 +120,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2"  style="width: 40%;margin:0; margin-left:25px;">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2" id="info-form" >
                 <div style="height:100%;">
                 <div class="page-title text-center">
                                 <h1 class="title" style="text-align: left;">Completa el formulario para hacer tu pedido y empeza tu mes gratis.</h1>

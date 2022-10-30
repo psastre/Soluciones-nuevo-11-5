@@ -67,7 +67,7 @@
     }
    
    
-    function createUser($conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd){
+    function createUser($detalle, $conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd){
        $sql = "INSERT INTO  usuarios (firstName, lastName, addressName, addressNumber,floorNumber, deptNumber, cellphoneNumber, telephoneNumber, email, pwd) VALUES (?,?,?,?,?,?,?,?,?,?);";
        $stmt = mysqli_stmt_init($conn);
        if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -82,18 +82,19 @@
        mysqli_stmt_close($stmt);
 
        session_start();
-           $_SESSION["userEmail"]= $email;
-           
-           $_SESSION["userEmail"]= $email;
-           $_SESSION["userStatus"]= 0 ;
-   
-           $_SESSION["userName"] =  $firstName;
-           $_SESSION["userLastName"] = $lastName;
-           $_SESSION["userId"] = mysqli_insert_id($conn);
+            $_SESSION["userEmail"]= $email;
+            
+            $_SESSION["userEmail"]= $email;
+            $_SESSION["userStatus"]= 0 ;
+        
+            $_SESSION["userName"] =  $firstName;
+            $_SESSION["userLastName"] = $lastName;
+            $_SESSION["userId"] = mysqli_insert_id($conn);
+        
         
        
        if(emptyOrder($detalle) !== false){
-        header("location:../servicios-final.php?error=emptyinput");
+        header("location:../usuario.php?error=emptyinput");
         exit();
        }
     }

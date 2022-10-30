@@ -41,9 +41,9 @@ if (isset($_POST["reset-password-submit"])){
                 echo "Hubo un error, intenta de nuevo";
                 exit();
             }elseif($tokenCheck === true ){
-                $tokenEmail = $row['pwdRestEmail'];
+                $tokenEmail = $row['pwdResetEmail'];
 
-                $sql = "SELECT * FROM user WHERE emailUSers = ?;";
+                $sql = "SELECT * FROM usuarios WHERE email = ?;";
                 $stmt = mysqli_stmt_init($conn);
                 if(!mysqli_stmt_prepare($stmt, $sql)){
                     echo "Hibo un error.";
@@ -57,7 +57,7 @@ if (isset($_POST["reset-password-submit"])){
                         exit();
             
                     }else{
-                        $sql = "UPDATE usuarios SET pwdUsers=? WHERE emailUsers=?";
+                        $sql = "UPDATE usuarios SET pwd=? WHERE email=?";
                         $stmt= mysqli_stmt_init($conn);
                         if(!mysqli_stmt_prepare($stmt, $sql)){
                             echo "Error dew conexion";
@@ -67,7 +67,7 @@ if (isset($_POST["reset-password-submit"])){
                             mysqli_stmt_bind_param($stmt, "ss", $newPwdHash, $tokenEmail);
                             mysqli_stmt_execute($stmt);
 
-                            $sql = "DELETE FROM pwdReset WHERE pwdResetEmail = ?";
+                            $sql = "DELETE FROM pwdreset WHERE pwdResetEmail = ?";
                             $stmt = mysqli_stmt_init($conn);
                             if(!mysqli_stmt_prepare($stmt, $sql)){
                                 echo "Error en la conexion";

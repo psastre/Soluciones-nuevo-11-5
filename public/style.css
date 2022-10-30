@@ -273,6 +273,7 @@ input:-webkit-autofill:focus {
 }
 .bttn.bttn-lg.bttn-primary{
   top: -10px;
+  margin: auto;
 }
 .bttn.bttn-lg.bttn-primary.bttn-hacer-pedido{
   width:233px;
@@ -3426,6 +3427,11 @@ form i {
   width: 40%;
   margin: 0;
   margin-right: 25px;
+}
+#info-form{
+  width: 40%;
+  margin:0; 
+  margin-left:25px;
 }
 #conteneder-form{
   width: 100%;
