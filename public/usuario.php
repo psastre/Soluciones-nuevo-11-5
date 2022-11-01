@@ -8,7 +8,7 @@ include_once 'backend/dbh.inc.php';
 if(isset($_SESSION["userEmail"])){
   $userid= $_SESSION["userId"];
 
-  $useridquery = "SELECT category, detail, date FROM pedidos WHERE userid = '$userid'";
+  $useridquery = "SELECT category, detail, createDate FROM pedidos WHERE userid = '$userid'";
   $useridquery_result = mysqli_query($conn,$useridquery);
   
   $userPedidosList = array();
@@ -66,6 +66,18 @@ if(isset($_SESSION["userEmail"])){
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area">
+    <!-- POPUP PEDIDO REALIZADO-->
+      
+        
+        <?php if(isset($_GET["pedido"])){
+          if($_GET["pedido"]=="realizado"){ ?>
+          <div class="section_popup_pedido_realizado">
+            <div class="popup_pedido_realizado">
+              <p>Pedido Realizado</p>
+            </div>
+          </div>
+        <?php }};?> 
+
     <!--Preloader-->
     <div class="preloader">
         <div class="spinner"></div>
@@ -106,27 +118,13 @@ if(isset($_SESSION["userEmail"])){
             <div class="row">
 
                 <div class="col-xs-12 col-sm-12 col-md-12" >
-                    <div class="page-title text-center">
-                        
-                        <script>userTitle();</script>
-                        <?php
-                                if(isset($_SESSION["userName"])){
-                                    echo "<h1 id='userTitle'>" . $_SESSION["userName"] ." ". $_SESSION["userLastName"]. "</span>";
-                                    
-                                }
-                                else{
-                                    echo "<span class='placeholder'>Nombre</span>";
-                                }
-                                ?>
-                    </div>
+                 
 
                     <div class="col-xs-12 col-sm-12 col-md-12" id="userBox">
-                      <div class="row">
+                      <div class="row"  id="userRow">
                         <div class="col-xs-12 col-sm-12 col-md-3" id="userMenu">
 
-                          <div class="profilePic">
-                            <img src="" alt="">
-                          </div>
+                         
 
                           <a href="#"> <div id="general-btn" class="menuSection active">General</div> </a>
                           <a href="#"> <div id="mis-pedidos-btn" class="menuSection">Mis pedidos</div> </a>
@@ -139,149 +137,50 @@ if(isset($_SESSION["userEmail"])){
 
                           <div class="userSpace" id="generalSpace">
                             <h2>Información General</h2>
-
-                            <form action="backend/userEdit.php" method="post">
-
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="form-input">
-                                <label>
-                                
-                                  <?php
-                                if(isset($_SESSION["userName"])){
-                                  echo "<input type='text' name='firstName' value='". $_SESSION["userName"] ."'>";
-                                    
-                                }
-                                else{
-                                    echo "<span class='placeholder'>Nombre</span>";
-                                }
-                                ?>
-                                 
-                                </label>
+                            <div class="user_info_general">
+                              <div class="user_info_row">
+                                <div class="user_info_name">
+                                  <p>Nombre</p>
+                                  <h4><?php echo $_SESSION["userName"]; ?></h4>
+                                </div>
+                                <div class="user_info_lastname">
+                                  <p>Apellido</p>
+                                  <h4><?php echo $_SESSION["userLastName"]; ?></h4>
+                                </div>
+                              
+                              
+                              <div class="user_info_address">
+                                  <p>Dirección</p>
+                                  <h4><?php echo $_SESSION["userAddressName"]; ?>  <?php echo $_SESSION["userAddressNumber"]; ?>  <?php echo $_SESSION["userFloorNumber"]; ?></h4>
+                                </div>
+                                </div>
+                              
+                              <div class="user_info_row">
+                              <div class="user_info_name">
+                                  <p>Mail</p>
+                                  <h4><?php echo $_SESSION["userEmail"]; ?></h4>
+                                </div>
+                                <div class="user_info_lastname">
+                                  <p>Teléfono</p>
+                                  <h4><?php echo $_SESSION["userCellphone"]; ?></h4>
+                                </div>
                               </div>
                             </div>
 
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="form-input">
-                                <label>
-                                
-                                  <?php
-                                if(isset($_SESSION["userLastName"])){
-                                  echo "<input type='text' name='lastName' value='". $_SESSION["userLastName"] ."'>";
-                                   
-                                    
-                                  }
-                                else{
-                                    echo "<span class='placeholder'>Apellido</span>";
-                                }
-                                ?>
-                                </label>
-                              </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="form-input">
-                                <label>
-                                  
-                                  <?php
-                                if(isset($_SESSION["userEmail"])){
-                                  echo "<input type='text' name='email' value='". $_SESSION["userEmail"] ."'  readonly>";
-                                    
-                                  }
-                                else{
-                                    echo "<span class='placeholder'>Direccion</span>";
-                                }
-                                ?>
-                                </label>
-                              </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="form-input">
-                                <label>
-                                
-                                  <?php
-                                if(isset($_SESSION["userAddressName"])){
-                                  echo "<input type='text' name='addressName' value='". $_SESSION["userAddressName"] ."'>";
-                                    
-                                  }
-                                else{
-                                    echo "<span class='placeholder'>Direccion</span>";
-                                }
-                                ?>
-                                </label>
-                              </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="form-input">
-                                <label>
-                                
-                                  <?php
-                                if(isset($_SESSION["userAddressNumber"])){
-                                  echo "<input type='text' name='addressNumber' value='". $_SESSION["userAddressNumber"] ."'>";
-                                }
-                                else{
-                                    echo "<span class='placeholder'>Numero</span>";
-                                }
-                                ?>
-                                </label>
-                              </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-4">
-                              <div class="form-input">
-                                <label>
-                                
-                                  <?php
-                                if(isset($_SESSION["userFloorNumber"])){
-                                  echo "<input type='text' name='floorNumber' value='". $_SESSION["userFloorNumber"] ."'>";
-                                }
-                                else{
-                                    echo "<span class='placeholder'>Piso</span>";
-                                }
-                                ?>
-                                </label>
-                              </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-6 ">
-                              <div class="form-input">
-                                <label>
-                                  <?php
-                                if(isset($_SESSION["userDeptNumber"])){
-                                  echo "<input type='text' name='deptNumber' value='". $_SESSION["userDeptNumber"] ."'>";
-                                }
-                                else{
-                                    echo "<span class='placeholder'>Departamento</span>";
-                                }
-                                ?>
-                                </label>
-                              </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-6">
-                              <div class="form-input">
-                                <label>
-                                <input type="text" name="cellphoneNumber">
-                                  <?php
-                                if(isset($_SESSION["userCellphone"])){
-                                  echo "<input type='text' name='cellphoneNumber' value='". $_SESSION["userCellphone"] ."'>";
-                                }
-                                else{
-                                    echo "<span class='placeholder'>Telefono</span>";
-                                }
-                                ?>
-                                </label>
-                              </div>
-                            </div>
-                            <button type="submit" name="submit" class="bttn bttn-primary">Cambiar Datos</button>
-                          </form>
+                          
                           </div>
                                
 
                           <!--PEDIDOS-->
                           <div class="userSpace" id="misPedidosSpace">
                           <h2>Ultimos pedidos</h2>
+                            <div class="containerPedidos" style="height: fit-content; overflow:auto;">
+                            <div class="col-md-12 pedidosDiv" style="display: flex;">
+                            <div class="columna_pedidos columna_rubro"><p> RUBRO</p></div>
+                                <div class="columna_pedidos columna_detalle"><p class="listado_detalle">DETALLE</p></div>
+                                <div class="columna_pedidos columna_fecha" > <p> FECHA</p></div>
+                            </div>
+                            </div>
 
                             <div class="containerPedidos">
                               <?php 
@@ -289,9 +188,9 @@ if(isset($_SESSION["userEmail"])){
                                   
                               ?>
                               <div class="col-md-12 pedidosDiv" style="display: flex;">
-                                <p> <?php echo $pedido['category'];?></p>
-                                <p> <?php echo $pedido['detail'];?></p>
-                                <p> <?php echo $pedido['date'];?></p>
+                                <div class="columna_pedidos columna_rubro"><p> <?php echo $pedido['category'];?></p></div>
+                                <div class="columna_pedidos columna_detalle"><p class="listado_detalle"> <?php echo $pedido['detail'];?></p></div>
+                                <div class="columna_pedidos columna_fecha" > <p> <?php echo $pedido['createDate'];?></p></div>
 
                               </div>
                               <?php } ?>

@@ -7,6 +7,13 @@ if(isset($_POST["submit"])){
     $userid = $_POST["userid"];
     $rubro = $_POST["rubro"];
     $detalle = $_POST["detalle"];
+    
+    $createDate = new DateTime();
+    $createDate -> setTimezone(new DateTimeZone('America/Argentina/Buenos_Aires'));
+    $createTime = new DateTime();
+    $createTime -> setTimezone(new DateTimeZone('America/Argentina/Buenos_Aires'));
+    $createDate = $createDate->format('d/m/Y') . PHP_EOL;
+    $createTime = $createTime->format('H:i:s') . PHP_EOL;
 
     require_once "dbh.inc.php";
     require_once "function.inc.php";
@@ -21,7 +28,7 @@ if(isset($_POST["submit"])){
         exit();
        }
     
-       createOrder($conn,$userid, $rubro, $detalle, $codigoRubro);
+       createOrder($conn,$userid, $rubro, $detalle, $codigoRubro, $createDate, $createTime);
        header("location: ../usuario.php");
     }
     else{

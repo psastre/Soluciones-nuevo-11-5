@@ -60,12 +60,11 @@
       <div class="menuQuienes">
         <a href="index.php" style="padding: 0; height: 0;"><img src="img/logo.png" alt="" id="logoMenu"></a>
         
-          <a class="sidebar-options" href="#servicios">Servicios</a>
-        
-        
+         
           <a class="sidebar-options" href="#beneficios">Beneficios</a>
-        
-        
+          
+          <a class="sidebar-options" href="#servicios">Servicios</a>
+          
           <a class="sidebar-options" href="#funcionamiento">Funcionamiento</a>
         
         
@@ -155,12 +154,12 @@
                     <a href="https://www.youtube.com/watch?v=G8A0bsZ7V2M" class="video-bttn"><img src="images/video-button.png" alt=""></a>
                 </div>
               </div>-->
-              <div class="col-sm-12" id="servicios">
+              <div class="col-sm-12"id="beneficios">
                       <h2 class="text-center text-quienes">Beneficios</h2>
                       <p>Porque te conviene?</p>
                   </div>
     
-              <div class="col-sm-12" id="beneficios">
+              <div class="col-sm-12" >
                   <h4 class="text-center text-quienes titulo-beneficios-quienes">Soluciones Hogar nace en 1993 y brinda todo la asistencia al hogar que necesita una persona, familia u oficina, en Capital Federal.</h4>
               </div>
               <section class="seccion-beneficios-quienes">
@@ -224,7 +223,7 @@
               
 
               <section>
-                  <div class="col-sm-12" id="servicios">
+                  <div class="col-sm-12" id="servicios" >
                       <h2 class="text-center text-quienes">Servicios</h2>
                   </div>
     
