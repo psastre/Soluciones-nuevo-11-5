@@ -455,7 +455,7 @@ a.scrolldown {
 }
 
 .logIn .bttn {
-  margin-top: 15px;
+  
   width: 100%;
   text-align: center;
 }
@@ -492,6 +492,14 @@ a.scrolldown {
   align-items: center;
   flex-direction: column;
   gap: 25px;
+}
+
+.socioNoregPopup input{
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 3px solid rgb(137, 174, 218);
+  width: 50%;
+  text-align: center;
 }
 /*-- 6. Header-Area --*/
 
@@ -1292,8 +1300,9 @@ a.scrolldown {
   border: none;
   background-color:  #fff; z-index: 99;
   font-size: 2rem;
-  padding: 0 5px 5px 0;
+  padding: 18px 30px 0px 0;
   cursor: pointer;
+  border-radius: 25px;
 }
 /* Popup box END */
 
@@ -3581,38 +3590,111 @@ form i {
   display: none !important;
 }
 
-.section_popup_pedido_realizado{
+.complete_popup_notice{
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  animation: 1s ease;
   
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: pedidoRealizado 2s ease forwards;
 }
-.popup_pedido_realizado{
+#desactivar{
+  display: none;
+}
+
+.section_popup_notice{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 150px;
-  border: 2px solid black;
+  width: 650px;
+  height: fit-content;
+ 
   background-color: rgb(235, 237, 241);
-  border-radius: 40px;
+  border-radius: 20px;
+  padding: 50px;
 }
+
+.section_popup_notice img{
+  width: 80px;
+  height: 80px;
+}
+.section_popup_notice h2{
+  margin: 25px 0;
+}
+
 .popup_pedido_realizado p{
   font-size: 2rem;
   color: #000;
 }
-
-@keyframes pedidoRealizado {
-  0%   {visibility: visible;}
-  100% {visibility: hidden;}
+.funcionamiento-popup{
+  display: flex;
+  margin: 30px 0;
+}
+.funcionamiento_popup_order{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 33%;
+  margin: 25px 15px;
+  text-align: center;
+}
+.funcionamiento_popup_order img{
+  height: 40px;
+  width: 40px;
+  margin-bottom: 25px;
+}
+.funcionamiento_popup_order h4{
+  font-size: 1.5rem;
+  font-weight: 400;
+  
 }
 
+.closebar_popup_notice{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+
+}
+
+.closebar_popup_notice button{
+  border-radius: 15px;
+  background-color: #21a849;
+  width: 75%;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 0px;
+  margin: auto;
+  padding: 10px;
+  -webkit-box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.54);
+-moz-box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.54);
+box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.54);
+}
+
+.login_buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 20px;
+  margin-top: 15px;
+}
+
+.login_buttons .password_forgot{
+  border: none;
+  background-color: #e3e3e3;
+transition: 0.5s ease;}
+.login_buttons .password_forgot:hover{
+  color: #000;
+}
 
 
 

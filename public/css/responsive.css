@@ -404,8 +404,8 @@
       
     .pasos-como{
         margin-top: 6px !important;
-        width: 50%;
-        height: 111px;
+        width: 100%;
+        height: fit-content;
     }
     .pasos-como img {
         width: 35px;

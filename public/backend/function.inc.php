@@ -89,14 +89,12 @@
         
             $_SESSION["userName"] =  $firstName;
             $_SESSION["userLastName"] = $lastName;
+            $_SESSION["userTelephone"] = $telephoneNumber;
             $_SESSION["userId"] = mysqli_insert_id($conn);
         
         
        
-       if(emptyOrder($detalle) !== false){
-        header("location:../usuario.php?error=emptyinput");
-        exit();
-       }
+       
     }
       // LOGIN
     function emptyInputLogin($email, $pwd){

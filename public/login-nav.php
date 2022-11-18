@@ -12,12 +12,17 @@
       </div>
       <div class="form-input">
         <label>
+        
           <input name="pwd"type="password" required>
           <span class="placeholder">Contraseña</span>
+         
+          
         </label>
       </div>
-
-      <button type="submit" name="submit" href="#" class="bttn bttn-primary">Entrar</button>
+      <div class="login_buttons">
+        <button class="password_forgot">Olvide mi contraseña</button>
+      <button type="submit" name="submit" href="#" class="bttn bttn-primary" style="width: 25%;">Entrar</button>
+      </div>
     </form>
       <p>¿Todavía no estás registrado?</p>
       <!--<a href="registrarse.php" id="registrarse">Registrarse</a>-->

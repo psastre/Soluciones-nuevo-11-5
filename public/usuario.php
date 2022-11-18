@@ -71,9 +71,60 @@ if(isset($_SESSION["userEmail"])){
         
         <?php if(isset($_GET["pedido"])){
           if($_GET["pedido"]=="realizado"){ ?>
-          <div class="section_popup_pedido_realizado">
-            <div class="popup_pedido_realizado">
-              <p>Pedido Realizado</p>
+          <div class="complete_popup_notice" >
+            <div class="section_popup_notice" >
+              <img class="tick_popup" src="img/tick.png" alt="">
+            <h2>Pedido Realizado</h2>
+              <div class="content_popup_order">
+
+                
+                <div class="funcionamiento-popup">
+                
+                <div class="funcionamiento_popup_order">
+                    <img src="img/icon-11.png" alt="">
+                    <h4>El tecnico se comunicara con usted para coordinar dia y horaria de la visita.</h4>
+                </div>
+                <div class="funcionamiento_popup_order">
+                    <img src="img/icon-10.png" alt="">
+                    <h4>El tecnico realizara y cobrara el trabajo que pidio.</h4>
+                </div>
+                <div class="funcionamiento_popup_order">
+                    <img src="img/icon-3.png" alt="">
+                    <h4>El centro de atencion de Soluciones hara un seguimiento de su trabajo.</h4>
+                </div>
+                
+            </div>
+              </div>
+              <div class="closebar_popup_notice" >
+                <button class="closebutton_popup_notice" id="closebutton_popup_notice">Entendido</button>
+              </div>
+              
+            </div>
+          </div>
+        <?php }};?> 
+        <?php if(isset($_GET["usuario"])){
+          if($_GET["usuario"]=="realizado"){ ?>
+          <div class="complete_popup_notice" >
+            <div class="section_popup_notice" >
+              <img class="tick_popup" src="img/tick.png" alt="">
+            <h2>Bienvenido <?php echo $_SESSION["userName"]; ?></h2>
+              <div class="content_popup_order">
+
+                
+                <div class="funcionamiento-popup" style="justify-content: center;">
+                
+                <div class="funcionamiento_popup_order">
+                    <img src="img/icon-11.png" alt="">
+                    <h4>Dentro de los proximos minutos un representanste se estara comunicando con vos.</h4>
+                </div>
+               
+                
+            </div>
+              </div>
+              <div class="closebar_popup_notice" >
+                <button class="closebutton_popup_notice" id="closebutton_popup_notice">Entendido</button>
+              </div>
+              
             </div>
           </div>
         <?php }};?> 
@@ -151,7 +202,14 @@ if(isset($_SESSION["userEmail"])){
                               
                               <div class="user_info_address">
                                   <p>Dirección</p>
+                                  <?php
+                                if(isset($_SESSION["userAddressName"])){?>
                                   <h4><?php echo $_SESSION["userAddressName"]; ?>  <?php echo $_SESSION["userAddressNumber"]; ?>  <?php echo $_SESSION["userFloorNumber"]; ?></h4>
+                                <?php }
+                                else{?>
+                                  <h4>-</h4>                                
+                                <?php }?>
+                                 
                                 </div>
                                 </div>
                               
@@ -162,7 +220,7 @@ if(isset($_SESSION["userEmail"])){
                                 </div>
                                 <div class="user_info_lastname">
                                   <p>Teléfono</p>
-                                  <h4><?php echo $_SESSION["userCellphone"]; ?></h4>
+                                  <h4><?php echo $_SESSION["userTelephone"]; ?></h4>
                                 </div>
                               </div>
                             </div>

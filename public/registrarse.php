@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/custom.js"></script>
@@ -77,9 +78,14 @@
                             <div class="contact-form contact-form-registro">
                             
                                 <form action="backend/signup.inc.php" method="post" >
+                                <?php if(isset($_GET["rubro"])){?>
                                 <input  type='text' name='rubro' value='<?php echo $_GET["rubro"] ?>' readonly style="display:none;">
                                 <input  type='text' name='detalle' value='<?php echo $_GET["detalle"] ?>' readonly style="display:none;" >
+                                <?php }else{?> 
+                                    <input  type='text' name='rubro' value='' readonly style="display:none;">
+                                <input  type='text' name='detalle' value='' readonly style="display:none;" >
 
+                                <?php };?> 
                                     <div class="form-double">
                                         <input type="text" id="form-name" name="firstName" class="firstName" placeholder="Nombre" required="required">
                                         <input type="text" name="lastName" class="lastName" placeholder="Apellido">
@@ -94,8 +100,10 @@
                                     </div>
                                     <div class="form-double">
                                         <input type="password" id="password" class="password-input" name="password" placeholder="Contraseña" required="required">
+
                                         <input type="password" id="password-code" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
                                     </div>
+                                    <input type="checkbox" onclick="togglePassword()" style="margin-left:5%;"> Mostrar Contraseña
                                     
                                     <!--<div class="col-md-12">
                                             <input type="checkbox" class="custom-control-input" id="defaultUnchecked">

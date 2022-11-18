@@ -156,7 +156,7 @@
               </div>-->
               <div class="col-sm-12"id="beneficios">
                       <h2 class="text-center text-quienes">Beneficios</h2>
-                      <p>Porque te conviene?</p>
+                     
                   </div>
     
               <div class="col-sm-12" >

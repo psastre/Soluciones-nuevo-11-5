@@ -121,12 +121,26 @@ $(window).on('load', function () {
  $("#general-btn").click(function(){
   $('#general-btn').classList.remove(active);
    $('#mis-pedidos-btn').classList.add(active);
-  
-  
-  
+ 
+});
+ $(".closebutton_popup_notice").click(function(){
+  $('.complete_popup_notice').css("display", "none");
+   
 });
   
 
     
 
 });
+
+function togglePassword() {
+   var password = document.querySelector(".password-input");
+   var passwordConfirm = document.querySelector("#password-code");
+   if (password.type === "password") {
+     password.type = "text";
+     passwordConfirm.type = "text";
+   } else {
+     password.type = "password";
+     passwordConfirm.type = "password";
+   }
+ }
