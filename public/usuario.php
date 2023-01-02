@@ -8,8 +8,12 @@ include_once 'backend/dbh.inc.php';
 if(isset($_SESSION["userEmail"])){
   $userid= $_SESSION["userId"];
 
-  $useridquery = "SELECT category, detail, createDate FROM pedidos WHERE userid = '$userid'";
+  $useridquery = "SELECT  rubros.rubro, pedidos.detail, pedidos.createDate FROM pedidos 
+                  INNER JOIN rubros
+                  ON pedidos.codigoRubro = rubros.codigoRubro
+                   WHERE pedidos.userid = '$userid'" ;
   $useridquery_result = mysqli_query($conn,$useridquery);
+  
   
   $userPedidosList = array();
   if(mysqli_num_rows($useridquery_result) > 0){
@@ -164,14 +168,14 @@ if(isset($_SESSION["userEmail"])){
     <!-- Inicio de sesión -->
 
     <!-- User management -->
-    <section class="section-padding gray-bg" id="servicios-area">
+    <section class="section-padding gray-bg" id="servicios-area" style="margin-top: 0;">
         <div class="container">
             <div class="row">
 
                 <div class="col-xs-12 col-sm-12 col-md-12" >
                  
 
-                    <div class="col-xs-12 col-sm-12 col-md-12" id="userBox">
+                    <div class="col-xs-12 col-sm-12 col-md-12" id="userBox" style="height: 560px;">
                       <div class="row"  id="userRow">
                         <div class="col-xs-12 col-sm-12 col-md-3" id="userMenu">
 
@@ -184,7 +188,7 @@ if(isset($_SESSION["userEmail"])){
 
                         </div>
 
-                        <div class="col-xs-12 col-sm-12 col-md-9 info_dashboard">
+                        <div class="col-xs-12 col-sm-12 col-md-9 info_dashboard" style="width: 100%;">
 
                           <div class="userSpace" id="generalSpace">
                             <h2>Información General</h2>
@@ -246,7 +250,7 @@ if(isset($_SESSION["userEmail"])){
                                   
                               ?>
                               <div class="col-md-12 pedidosDiv" style="display: flex;">
-                                <div class="columna_pedidos columna_rubro"><p> <?php echo $pedido['category'];?></p></div>
+                                <div class="columna_pedidos columna_rubro"><p> <?php echo $pedido['rubro'];?></p></div>
                                 <div class="columna_pedidos columna_detalle"><p class="listado_detalle"> <?php echo $pedido['detail'];?></p></div>
                                 <div class="columna_pedidos columna_fecha" > <p> <?php echo $pedido['createDate'];?></p></div>
 
@@ -261,6 +265,10 @@ if(isset($_SESSION["userEmail"])){
 
 
                         </div>
+                      </div>
+                      <div class="privacidad-section">
+                          <a href="privacidad.php">Privacidad</a>
+                      
                       </div>
                     </div>
 

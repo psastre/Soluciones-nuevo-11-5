@@ -1,5 +1,5 @@
 <div id="myModal2" class="modal fade" role="dialog" >
-    <div class="modal-dialog" style="width:70%; margin: auto;">
+    <div class="modal-dialog sectionSocioNoregPopup" >
     <div class="modal-content socioNoregPopup">
       <!-- Modal content-->
       <div class="closePopup"><button class="closePopupButton closeSocioNoReg">x</button></div>

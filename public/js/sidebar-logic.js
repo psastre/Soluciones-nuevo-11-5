@@ -1,6 +1,7 @@
 const arrow = document.querySelector(".sidebar-arrow");
 const sidebar= document.querySelector(".sidebar");
 const sidebarOptions= document.querySelectorAll(".sidebar-options");
+const mediaQueryLaptop = window.matchMedia('(min-width: 768px)');
 
 
 arrow.addEventListener('click', function(){
@@ -22,3 +23,12 @@ options.addEventListener('click', function(){
     
 })
 })
+
+function activeSidebarLaptop(){
+    if (mediaQueryLaptop.matches) {
+        sidebar.classList.remove("sidebar-out");
+    arrow.classList.remove("sidebararrow-out");
+}}
+
+activeSidebarLaptop();
+

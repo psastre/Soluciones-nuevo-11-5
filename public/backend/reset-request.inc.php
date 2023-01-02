@@ -4,15 +4,16 @@ if(isset($_POST["reset-request-submit"])){
     $selector = bin2hex(random_bytes(8));
     $token = random_bytes(32);
 
-    $url = "https://www.solucioneshogar.com/nueva_plat_backend/public/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
+    $url = "https://www.solucioneshogar.com/nueva_plat_edit/public/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
 
     $expires = date("U") + 1800;
 
-    require 'dbh.inc.php';
+    require_once  'dbh.inc.php';
 
     $userEmail=($_POST["email"]);
 
     $sql = "DELETE FROM pwdReset WHERE pwdResetEmail=?;";
+    
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
         echo "There was an error!";
@@ -40,7 +41,7 @@ if(isset($_POST["reset-request-submit"])){
 
     $subject = "Reestablecer mi contraseña";
 
-    $message = "<p>Hemos recibido el pedido de reestablecer la contrase;a del usuario asociado a su mail. El siguiente link lo llevara a la pagina para reestablecer su contrase;a </p>";
+    $message = "<p>Hemos recibido el pedido de reestablecer la contraseña del usuario asociado a su mail. El siguiente link lo llevara a la pagina para reestablecer su contraseña </p>";
     $message .= "<p> Este es el link: </p>";
     $message .= '<a href="' .$url . '">' . $url . '</a></p>';
 
@@ -50,7 +51,7 @@ if(isset($_POST["reset-request-submit"])){
 
     mail($to, $subject, $message, $headers);
 
-    header("Location:../servicios-final.php?reset=succes");
+    header("Location:../index.php?reset=sended");
 
 }else{
     header("Location: ../index.php");

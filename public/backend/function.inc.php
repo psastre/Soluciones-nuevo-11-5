@@ -157,8 +157,8 @@
        return $result;
     }
    
-    function createOrder($conn, $userid, $rubro, $detalle, $codigoRubro, $createDate, $createTime){
-       $sql = "INSERT INTO  pedidos (category, detail, userid, codigoRubro, createDate, createTime) VALUES (?,?,?,?,?,?);";
+    function createOrder($conn, $userid,  $detalle, $codigoRubro, $createDate, $createTime){
+       $sql = "INSERT INTO  pedidos ( detail, userid, codigoRubro, createDate, createTime) VALUES (?,?,?,?,?);";
        $stmt = mysqli_stmt_init($conn);
        if(!mysqli_stmt_prepare($stmt, $sql)){
            header("location:../contratar.php?error=errorcreateorder");
@@ -167,7 +167,7 @@
    
        
    
-       mysqli_stmt_bind_param($stmt, "ssssss", $rubro,  $detalle, $userid, $codigoRubro, $createDate, $createTime);
+       mysqli_stmt_bind_param($stmt, "sssss",  $detalle, $userid, $codigoRubro, $createDate, $createTime);
        mysqli_stmt_execute($stmt);
        mysqli_stmt_close($stmt);
        header("location:../usuario.php?pedido=realizado");

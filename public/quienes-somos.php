@@ -44,6 +44,9 @@
         border-bottom: 2px solid #9e9e9e;
       }
       .mainmenu-area #mainmenu ul.nav.navbar-nav li a{color:#9e9e9e;}
+      @media only screen and (max-width: 767px) {
+        .mainmenu-area #mainmenu ul.nav.navbar-nav li a{color:#ffffff;}
+      }
     </style>
 </head>
 
@@ -54,8 +57,8 @@
     </div>
 
     <!-- Mainmenu-Area -->
-    <div class="sidebar-arrow"></div>
-    <div class="container sidebar">
+    <div class="sidebar-arrow sidebararrow-out"></div>
+    <div class="container sidebar sidebar-out">
       
       <div class="menuQuienes">
         <a href="index.php" style="padding: 0; height: 0;"><img src="img/logo.png" alt="" id="logoMenu"></a>
@@ -113,6 +116,10 @@
         
         <div class="container quienescompleto">
             <div class="row">
+            <div class="col-sm-12"id="conocenos">
+                      <h2 class="text-center text-quienes" >Conocenos</h2>
+                     
+                  </div>
               <div class="video-presentacion">
               <video width="75%" controls
               poster="images/blog-md-2.jpg">

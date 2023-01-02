@@ -1,4 +1,4 @@
-<div id="myModal" class="modal fade in" role="dialog" style="justify-content:center;">
+<div id="myModal" class="modal fade in" role="dialog" style="justify-content:center;background-color: rgba(0, 0, 0, 0.59);">
     <div class="modal-dialog" style="width:70%; margin: auto;">
       <!-- Modal content-->
       <div class="modal-content">

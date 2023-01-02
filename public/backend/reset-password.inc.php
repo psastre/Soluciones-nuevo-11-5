@@ -19,10 +19,10 @@ if (isset($_POST["reset-password-submit"])){
 
     require "dbh.inc.php";
 
-     $sql = "SELECT * FROM pwdreset WHERE pwdResetSelector=? AND pwdResetExpires >= ? ;";
+     $sql = "SELECT * FROM pwdReset WHERE pwdResetSelector=? AND pwdResetExpires >= ? ;";
      $stmt = mysqli_stmt_init($conn);
      if(!mysqli_stmt_prepare($stmt, $sql)){
-        echo "Hibo un error.";
+        echo "Hubo un error.";
         exit();
      }else{
         mysqli_stmt_bind_param($stmt, "ss", $selector, $currentDate);
@@ -30,7 +30,7 @@ if (isset($_POST["reset-password-submit"])){
 
         $result = mysqli_stmt_get_result($stmt);
         if(!$row = mysqli_fetch_assoc($result)){
-            echo "Hubo un error, intenta de nuevo";
+            echo "Necesitas volver a mandar tu solicitud";
             exit();
 
         }else{
@@ -38,7 +38,7 @@ if (isset($_POST["reset-password-submit"])){
             $tokenCheck = password_verify($tokenBin, $row["pwdResetToken"]);
 
             if($tokenCheck === false){
-                echo "Hubo un error, intenta de nuevo";
+                echo "Necesitas volver a mandar tu solicitud";
                 exit();
             }elseif($tokenCheck === true ){
                 $tokenEmail = $row['pwdResetEmail'];
@@ -67,7 +67,7 @@ if (isset($_POST["reset-password-submit"])){
                             mysqli_stmt_bind_param($stmt, "ss", $newPwdHash, $tokenEmail);
                             mysqli_stmt_execute($stmt);
 
-                            $sql = "DELETE FROM pwdreset WHERE pwdResetEmail = ?";
+                            $sql = "DELETE FROM pwdReset WHERE pwdResetEmail = ?";
                             $stmt = mysqli_stmt_init($conn);
                             if(!mysqli_stmt_prepare($stmt, $sql)){
                                 echo "Error en la conexion";
@@ -75,7 +75,7 @@ if (isset($_POST["reset-password-submit"])){
                             }else{
                                 mysqli_stmt_bind_param($stmt, "s", $tokenEmail);
                                 mysqli_stmt_execute($stmt);
-                                header("Location: ../servicios-final.php?todopiola");
+                                header("Location: ../index.php?reset=succes");
                             }
                         }
                     

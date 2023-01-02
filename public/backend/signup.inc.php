@@ -62,7 +62,7 @@ if(isset($_POST["submit"])){
     
   
     
-     createOrder($conn,$userid, $rubro, $detalle, $codigoRubro, $createDate, $createTime);
+     createOrder($conn,$userid, $detalle, $codigoRubro, $createDate, $createTime);
     
    
 

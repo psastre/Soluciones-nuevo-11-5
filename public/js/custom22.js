@@ -1,34 +1,131 @@
+
 $(window).on('load', function () {
    $('#tranquilidad-home').hide();
    $('#myModal').modal('show');
   //IMG Home
-  $("#servicio-home-btn").click(function(){
-     $('#servicio-home').show();
-     $('#confianza-home').hide();
-     $('#transparencia-home').hide();
-     $('#tranquilidad-home').hide();
-     
-  });
 
-  $("#confianza-home-btn").click(function(){
-     $('#servicio-home').hide();
-     $('#confianza-home').show();
-     $('#transparencia-home').hide();
-     $('#tranquilidad-home').hide();
-  });
 
-  $("#transparencia-home-btn").click(function(){
-     $('#servicio-home').hide();
-     $('#confianza-home').hide();
-     $('#transparencia-home').show();
-     $('#tranquilidad-home').hide();
-  });
-  $("#tranquilidad-home-btn").click(function(){
+
+   
+
+   
+  const funcionamientoTimeOut1 =  setTimeout(function(){
+   $('#servicio-home').hide();
+   $('#confianza-home').show();
+   $('#transparencia-home').hide();
+   $('#tranquilidad-home').hide();
+   document.querySelector('.tabs-list :nth-child(1)').classList.remove("active_motion");
+   document.querySelector('.tabs-list :nth-child(2)').classList.add("active_motion");
+   document.querySelector('.tabs-list :nth-child(1)').classList.remove("active");
+   document.querySelector('.tabs-list :nth-child(2)').classList.add("active");
+   document.querySelector('#variedad').classList.toggle("active");
+   document.querySelector('#variedad').classList.toggle("in");
+   document.querySelector('#confianza').classList.toggle("active");
+   document.querySelector('#confianza').classList.toggle("in");
+}, 5000);
+
+const funcionamientoTimeOut2 = setTimeout(function(){
+   $('#servicio-home').hide();
+   $('#confianza-home').hide();
+   $('#transparencia-home').show();
+   $('#tranquilidad-home').hide();
+   document.querySelector('.tabs-list :nth-child(2)').classList.toggle("active_motion");
+   document.querySelector('.tabs-list :nth-child(3)').classList.toggle("active_motion");
+   document.querySelector('.tabs-list :nth-child(2)').classList.toggle("active");
+   document.querySelector('.tabs-list :nth-child(3)').classList.toggle("active");
+   document.querySelector('#confianza').classList.toggle("active");
+   document.querySelector('#confianza').classList.toggle("in");
+   document.querySelector('#transparencia').classList.toggle("active");
+   document.querySelector('#transparencia').classList.toggle("in");
+}, 10000);
+const funcionamientoTimeOut3 = setTimeout(function(){
    $('#servicio-home').hide();
    $('#confianza-home').hide();
    $('#transparencia-home').hide();
    $('#tranquilidad-home').show();
+   document.querySelector('.tabs-list :nth-child(3)').classList.toggle("active_motion");
+   document.querySelector('.tabs-list :nth-child(4)').classList.toggle("active_motion");
+   document.querySelector('.tabs-list :nth-child(3)').classList.toggle("active");
+   document.querySelector('.tabs-list :nth-child(4)').classList.toggle("active");
+   document.querySelector('#transparencia').classList.toggle("active");
+   document.querySelector('#transparencia').classList.toggle("in");
+   document.querySelector('#tranquilidad').classList.toggle("active");
+   document.querySelector('#tranquilidad').classList.toggle("in");
+}, 15000);
+
+
+
+
+
+
+  $("#servicio-home-btn").click(function(){
+   clearTimeout(funcionamientoTimeOut1);
+   clearTimeout(funcionamientoTimeOut2);
+   clearTimeout(funcionamientoTimeOut3);
+
+   
+   
+  
+     $('#servicio-home').show();
+     $('#confianza-home').hide();
+     $('#transparencia-home').hide();
+     $('#tranquilidad-home').hide();
+     document.querySelector('.tabs-list :nth-child(1)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(2)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(3)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(4)').classList.remove("active_motion");
+     
+  });
+
+  $("#confianza-home-btn").click(function(){
+   clearTimeout(funcionamientoTimeOut1);
+   clearTimeout(funcionamientoTimeOut2);
+   clearTimeout(funcionamientoTimeOut3);
+
+   
+ 
+     $('#servicio-home').hide();
+     $('#confianza-home').show();
+     $('#transparencia-home').hide();
+     $('#tranquilidad-home').hide();
+     document.querySelector('.tabs-list :nth-child(1)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(2)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(3)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(4)').classList.remove("active_motion");
+
+  });
+
+  $("#transparencia-home-btn").click(function(){
+   clearTimeout(funcionamientoTimeOut1);
+   clearTimeout(funcionamientoTimeOut2);
+   clearTimeout(funcionamientoTimeOut3);
+
+     $('#servicio-home').hide();
+     $('#confianza-home').hide();
+     $('#transparencia-home').show();
+     $('#tranquilidad-home').hide();
+
+     document.querySelector('.tabs-list :nth-child(1)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(2)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(3)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(4)').classList.remove("active_motion");
+  });
+  $("#tranquilidad-home-btn").click(function(){
+   clearTimeout(funcionamientoTimeOut1);
+   clearTimeout(funcionamientoTimeOut2);
+   clearTimeout(funcionamientoTimeOut3);
+  
+   $('#servicio-home').hide();
+   $('#confianza-home').hide();
+   $('#transparencia-home').hide();
+   $('#tranquilidad-home').show();
+
+   document.querySelector('.tabs-list :nth-child(1)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(2)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(3)').classList.remove("active_motion");
+     document.querySelector('.tabs-list :nth-child(4)').classList.remove("active_motion");
 });
+
 
   $("#general-btn").click(function(){
     $('#mis-pedidos-btn').removeClass('active');
@@ -37,6 +134,7 @@ $(window).on('load', function () {
      $('#datosDeFacuracionSpace').hide();
      $('#misPedidosSpace').hide();
      $('#generalSpace').show();
+     $('.privacidad-section').show();
   });
 
   $("#mis-pedidos-btn").click(function(){
@@ -46,6 +144,8 @@ $(window).on('load', function () {
      $('#datosDeFacuracionSpace').hide();
      $('#misPedidosSpace').show();
      $('#generalSpace').hide();
+     $('.privacidad-section').hide();
+
   });
 
   $("#datos-de-facturacion-btn").click(function(){
@@ -79,8 +179,9 @@ $(window).on('load', function () {
    }
    });
    $('.popupLogic').click(function(){
+      
     //  document.querySelector('#descripcionServicio').textContent = this.dataset.type
-      document.querySelector('#rubroSeleccionado').value= this.dataset.type;
+      document.querySelector('#rubroSeleccionado').value= this.querySelector(':scope > .rubro_logica_js').dataset.type;
       document.querySelector(".imgServicioBox").src=`img/${this.dataset.type}.jpg`;
       $('#pruebaPopup').modal('show');
    });
@@ -127,6 +228,29 @@ $(window).on('load', function () {
   $('.complete_popup_notice').css("display", "none");
    
 });
+
+
+$(".consulta_general").click(function(){  
+   $('.popup_consulta').modal('show');
+  });
+$(".close_popup_privacidad_button").click(function(){  
+   $('.popup_consulta').modal('hide');
+  });
+
+
+$(".solicitud_cambio_info").click(function(){ 
+   $('.popup_cambio_info').modal('show');
+  });
+  $(".close_popup_privacidad_button").click(function(){  
+    $('.popup_cambio_info').modal('hide');
+   });
+  
+$(".solicitud_baja").click(function(){  
+   $('.popup_baja').modal('show');
+  });
+  $(".close_popup_privacidad_button").click(function(){  
+    $('.popup_baja').modal('hide');
+   });
   
 
     
@@ -134,7 +258,7 @@ $(window).on('load', function () {
 });
 
 function togglePassword() {
-   var password = document.querySelector(".password-input");
+   var password = document.querySelector("#password");
    var passwordConfirm = document.querySelector("#password-code");
    if (password.type === "password") {
      password.type = "text";
@@ -144,3 +268,56 @@ function togglePassword() {
      passwordConfirm.type = "password";
    }
  }
+
+ //animacion de Funcionamiento en Home
+
+ const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+ const funcionamiento1 = document.querySelector('.funcionamiento_paso.paso_uno');
+ const funcionamiento2 = document.querySelector('.funcionamiento_paso.paso_dos');
+ const funcionamiento3 = document.querySelector('.funcionamiento_paso.paso_tres');
+ const funcionamiento4 = document.querySelector('.funcionamiento_paso.paso_cuatro');
+ const funcionamientoAll = document.querySelectorAll('.funcionamiento_paso');
+
+ funcionamientoAll.forEach(elem => {elem.addEventListener("click", function(){
+   if (mediaQuery.matches) {
+      
+      funcionamiento1.classList.remove('funcionamiento_start_open');
+      
+    }
+   })})
+
+ funcionamiento1.addEventListener("click", function(){
+   if (mediaQuery.matches) {
+      funcionamiento1.classList.add('funcionamiento_open');
+      funcionamiento2.classList.remove('funcionamiento_open');
+      funcionamiento3.classList.remove('funcionamiento_open');
+      funcionamiento4.classList.remove('funcionamiento_open');
+    }
+   })
+ funcionamiento2.addEventListener("click", function(){
+   if (mediaQuery.matches) {
+      funcionamiento2.classList.add('funcionamiento_open');
+      funcionamiento1.classList.remove('funcionamiento_open');
+      funcionamiento3.classList.remove('funcionamiento_open');
+      funcionamiento4.classList.remove('funcionamiento_open');
+    }
+   })
+ funcionamiento3.addEventListener("click", function(){
+   if (mediaQuery.matches) {
+      funcionamiento3.classList.add('funcionamiento_open');
+      funcionamiento1.classList.remove('funcionamiento_open');
+      funcionamiento2.classList.remove('funcionamiento_open');
+      funcionamiento4.classList.remove('funcionamiento_open');
+    }
+   })
+ funcionamiento4.addEventListener("click", function(){
+   if (mediaQuery.matches) {
+      funcionamiento4.classList.add('funcionamiento_open');
+      funcionamiento1.classList.remove('funcionamiento_open');
+      funcionamiento3.classList.remove('funcionamiento_open');
+      funcionamiento2.classList.remove('funcionamiento_open');
+    }
+   })
+   
+ 

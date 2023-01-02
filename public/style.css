@@ -61,6 +61,7 @@ a {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   color: #898989;
+  cursor: pointer;
 }
 
 input:focus,
@@ -136,13 +137,18 @@ input:-webkit-autofill:focus {
   height: 100%;
   display: flex;
   align-items: center;
+  padding-top: 0;
+}
+#queEsSoluciones h2{
+  margin: 0 0 50px;
 }
 
 .gray-bg {
   background-color: #f9f9f9;
 }
 .beneficios-screen{
-  background-color: #f9f9f9;
+  background-color: #e3f2ff;
+  border-radius: 25px;
 }
 
 .page-title {
@@ -352,7 +358,7 @@ input:-webkit-autofill:focus {
 .navbar-section{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  
 }
 
 .mainmenu-area #mainmenu ul.nav.navbar-nav li a {
@@ -505,7 +511,7 @@ a.scrolldown {
 
 .header-area {
   position: relative;
-  background: url("img/bg1.png") no-repeat scroll center center / cover;
+  background: url("img/bg1low.jpg") no-repeat scroll center center / cover;
   width: 100%;
   height: 100%;
 }
@@ -724,6 +730,9 @@ a.scrolldown {
 .video-box {
   position: relative;
 }
+.video-box img{
+  border-radius: 25px;
+}
 
 .video-box .video-bttn {
   position: absolute;
@@ -760,6 +769,28 @@ a.scrolldown {
 
 .tabs-list li.active a {
   border-bottom: 2px solid #024d99;
+  position: relative;
+
+}
+
+.tabs-list li.active_motion a:before {
+  content: "";
+  position: absolute;
+  
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #23527c;
+  visibility: visible;
+  animation: underlineani 5s linear ;
+  
+}
+
+
+
+@keyframes underlineani {
+from {width: 0%; }
+to {width: 100%; } 
 }
 
 .tabs-list-2 li a {
@@ -1681,6 +1712,11 @@ a.scrolldown {
   line-height: 2.5;
 }
 
+#conocenos .text-quienes{
+  font-size: 6rem;
+  margin: 30px auto 30px;
+}
+
 /*-- 16. Count-Box --*/
 
 .count-box {
@@ -2057,6 +2093,13 @@ a.scrolldown {
   margin-bottom: -250px;
 }
 
+.contact-area input{
+  width: 100%;
+}
+.contact-area textarea{
+  width: 100%;
+}
+
 .contact-area:before {
   content: "";
   position: absolute;
@@ -2127,7 +2170,7 @@ a.scrolldown {
 }
 .telephoneNumber{
   width: 90%;
-  margin:40px 5% 10px 5%;
+  margin:20px 5% 10px 5%;
 }
 .cellphoneNumberCode{
   width: 10%;
@@ -2156,19 +2199,28 @@ a.scrolldown {
 
 .email-input{
   width: 90%;
-  margin:40px 5% 10px 5%;
+  margin:20px 5% 10px 5%;
 }
 .password-input{
   width: 40%; 
   margin:15px 5%;
 }
+input[type="checkbox"]{
+  margin-left: 5%;
+}
+
+
+.sectionSocioNoregPopup{
+  width:70%; 
+  margin: auto;
+}
 
 .contact-form-registro {
   width: 100%;
-  
+  box-shadow: 0px 0px 16px -4px rgb(0 0 0 / 30%);
   margin: 0 auto;
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 
 .contact-info {
@@ -2382,7 +2434,12 @@ a.scrolldown {
   box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.38);
   height: 600px;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
 #userMenu{
   width: 100%;
   display: flex;
@@ -2405,13 +2462,12 @@ a.scrolldown {
   justify-content: space-around;
   margin-top: 50px;
 }
-.user_info_row{
-  
-}
+
 #userRow{
   display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .profilePic {
@@ -3006,10 +3062,10 @@ a.scrolldown {
   margin: 15px 0  ;
 }
 .columna_rubro{
-  width: 20%;
+  width: 25%;
 }
 .columna_fecha{
-  width: 20%;
+  width: 25%;
 }
 .columna_detalle{
   width: 55%;
@@ -3027,6 +3083,44 @@ a.scrolldown {
 
 .containerPedidos::-webkit-scrollbar-thumb {
   background: #888; 
+}
+
+.privacidad-section{
+  width: 100%;
+  height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  position: absolute
+}
+
+.privacidad_tab{
+  width: 95%;
+  height: 30%;
+  border-radius: 25px;
+  margin: 10px 0;
+  box-shadow: 0px 0px 17px 0px rgb(0 0 0 / 38%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 25px;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.privacidad_tab:hover{
+  box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 38%);
+}
+
+.userBox_privacidad{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  height: 560px !important;
 }
 
 #btnAsociarse {
@@ -3502,6 +3596,11 @@ form i {
   padding-top: 0;
 }
 
+#como-asociarse .title-cel{
+  display: none;
+
+}
+
 #container-form{
   width: 40%;
   margin: 0;
@@ -3514,7 +3613,7 @@ form i {
 }
 #conteneder-form{
   width: 100%;
-    background-color: aliceblue;
+    
     border-radius: 25px;
 }
 
@@ -3558,6 +3657,111 @@ form i {
   text-align: center;
 }
 
+
+#funcionamiento2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  
+}
+
+.funcionamiento_pasos{
+  height: 90%;
+  width: 100%;
+  display: flex;
+}
+
+.funcionamiento_paso{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.funcionamiento_pasos .paso_uno{
+  
+  background-image: url("img/funcionamiento1.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.funcionamiento_pasos .paso_dos{
+  background-image: url("img/funcionamiento2low.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.funcionamiento_pasos .paso_tres{
+  background-image: url("img/funcionamiento3low.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.funcionamiento_pasos .paso_cuatro{
+  background-image: url("img/funcionamiento4low.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.funcionamiento_detalle{
+  display: flex;
+  flex-direction: column;
+  
+  margin-top: auto;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(251, 251, 251, 0.8);
+  border-radius: 50px 50px 0 0;
+  padding: 40px;
+  transition-delay: 250ms;
+  transition: 0.5s ease-in;
+
+}
+
+.funcionamiento_num_title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.funcionamiento_detalle_texto{
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.5s ease;
+  transform: translateY(-70px);
+  
+  
+}
+.funcionamiento_detalle h3{
+  padding: 10px 20px;
+  
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+ .funcionamiento_paso:hover > .funcionamiento_detalle{
+  height: 100%;
+  justify-content: space-around;
+  border-radius: 0;
+ }
+
+ .funcionamiento_detalle:hover > .funcionamiento_detalle_texto{
+  display: block;
+  opacity: 1;
+ }
+ .funcionamiento_detalle:hover > .funcionamiento_detalle_numero{
+  margin-bottom: 25px;
+ }
+
+
+ 
 
 
 
@@ -3604,6 +3808,52 @@ form i {
   animation: 1s ease;
   
 }
+.popup_consulta{
+  display: none;
+  position: absolute;
+  margin: 0 !important;
+}
+.popup_cambio_info{
+  display: none;
+  position: absolute;
+  margin: 0 !important;
+}
+.popup_baja{
+  display: none;
+  position: absolute;
+  margin: 0 !important;
+}
+
+.close_popup_privacidad{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  padding: 25px;
+}
+.popup_privacidad_form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popup_privacidad_form form textarea{
+  resize: none;
+  margin: 25px 0;
+}
+.close_popup_privacidad button{
+  border: none;
+  background-color: #ffffff;
+}
+
+
+
+
+
+
+
 #desactivar{
   display: none;
 }
@@ -3627,6 +3877,7 @@ form i {
 }
 .section_popup_notice h2{
   margin: 25px 0;
+  text-align: center;
 }
 
 .popup_pedido_realizado p{
@@ -3695,6 +3946,51 @@ transition: 0.5s ease;}
 .login_buttons .password_forgot:hover{
   color: #000;
 }
+
+#container_new_password{
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new_password_form{
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.54);
+-moz-box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.54);
+box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.54);
+}
+
+.new_password_form form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+.new_password_form form input{
+  padding: 15px;
+  
+  margin-bottom: 20px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #e8e8e8;
+  outline: none;
+  float: left;
+}
+.new_password_form form button{
+  margin-top: 25px;
+}
+
+
 
 
 

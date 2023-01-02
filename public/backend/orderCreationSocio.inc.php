@@ -28,7 +28,7 @@ if(isset($_POST["submit"])){
         exit();
        }
     
-       createOrder($conn,$userid, $rubro, $detalle, $codigoRubro, $createDate, $createTime);
+       createOrder($conn,$userid, $detalle, $codigoRubro, $createDate, $createTime);
        header("location: ../usuario.php");
     }
     else{

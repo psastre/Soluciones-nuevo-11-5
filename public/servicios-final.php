@@ -151,12 +151,13 @@
                 
                 <!-- Box Electricidad -->
                 <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="<?php echo $rubro['rubro'];?>" id="electricidad">
-                    <div class="filter-box">
+                <h5 class="rubro_logica_js" data-type="<?php echo $rubro['rubro'];?>"><?php echo $rubro['rubro'];?></h5>
+                <div class="filter-box">
                         <div class="filter-image">
                             <img src="img/<?php echo $rubro['rubro'];?>.jpg" alt="">
                         </div>
                         <div class="filter-hover">
-                            <h5><?php echo $rubro['rubro'];?></h5>
+                            
                             <p id="minimizarElectricidad"></p>
                             <a href="img/electricidad.jpg" data-effect="mfp-zoom-in"></a>
                         </div>
@@ -194,8 +195,8 @@
                         if($rubro['id'] > 6 && $rubro['id'] <= 12) {
                 ?> 
 
-            <a class="col-md-6  servicios-extra popupLogic" data-type="<?php echo $rubro['rubro'];?>"><h4><?php echo $rubro['rubro'];?></h4></a>
-          
+            <a class="col-md-6  servicios-extra popupLogic" data-type="tecnico-general"><h4 class="rubro_logica_js" data-type="<?php echo $rubro['rubro'];?>"><?php echo $rubro['rubro'];?></h4></a>
+            <a class="popupLogicGeneral"></a>              
             <?php }} ?>
 
 
@@ -212,7 +213,7 @@
                         if($rubro['id'] > 12 ) {
                 ?> 
 
-            <a class="col-md-6  servicios-extra popupLogic" data-type="<?php echo $rubro['rubro'];?>"><h4><?php echo $rubro['rubro'];?></h4></a>
+            <a class="col-md-6  servicios-extra popupLogic" data-type="tecnico-general"><h4 class="rubro_logica_js" data-type="<?php echo $rubro['rubro'];?>"><?php echo $rubro['rubro'];?></h4></a>
           
             <?php }} ?>
 

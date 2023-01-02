@@ -38,6 +38,9 @@
       }
       .mainmenu-area #mainmenu ul.nav.navbar-nav li a{color:#9e9e9e;}
       #menuFijo{position: static;}
+      @media only screen and (max-width: 767px) {
+        .mainmenu-area #mainmenu ul.nav.navbar-nav li a{color:#ffffff;}
+      }
     </style>
 </head>
 
@@ -69,7 +72,7 @@
  
         
             <section class="section-padding gray-bg" id="como-asociarse" >
-           
+            <h1 class="title-cel" style="text-align: left;">Completa el formulario para hacer tu pedido y empeza tu mes gratis.</h1>
                 <div class="container" id="container-form">
                
                     <div class="row"> 
@@ -103,15 +106,15 @@
 
                                         <input type="password" id="password-code" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
                                     </div>
-                                    <input type="checkbox" onclick="togglePassword()" style="margin-left:5%;"> Mostrar Contraseña
+                                    <input type="checkbox" onclick="togglePassword()" > Mostrar Contraseña
                                     
                                     <!--<div class="col-md-12">
                                             <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
                                             <label style="margin-bottom:20px;" class="custom-control-label" for="defaultUnchecked">Acepto los <a style="color:#034783;" href="terminos-y-condiciones.html">términos y condiciones</a></label>
                                     </div>-->
                                     
-                                    <button type="submit" name="submit" class="bttn bttn-primary" style="margin: 20px 40% 25px 40%;">Enviar</button>
-                                    <a href="" style="text-align:center;margin: 20px 24% 25px 38%;">Ya estoy registrado</a>
+                                    <button type="submit" name="submit" class="bttn bttn-primary" style="margin: 30px 40% 15px 40%;">Enviar</button>
+                                    <a onclick='myFunction()'  style="text-align:center;margin: 20px 24% 25px 38%;">Ya estoy registrado</a>
                                     
     
                                 </form>
@@ -173,6 +176,7 @@
 
 
     <!-- Como asociarse -->
+    <!--
     <div class="explicacion-primer-pedido">
     <div class="row titulo_registro">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="margin: 0;">
@@ -218,7 +222,7 @@
             </div>
         
     </div>
-   
+   -->
 <!-- Footer-Area -->
     <footer class="footer-area">
         <div class="footer-top section-padding">

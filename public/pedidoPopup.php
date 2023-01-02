@@ -1,5 +1,6 @@
   <?php
-    include_once 'backend/countOrders.inc.php'
+    include_once 'backend/countOrders.inc.php';
+
   ?>
 
 
@@ -20,7 +21,7 @@
                                     if($_SESSION["userStatus"] === 1){
                                         echo " <form action='backend/orderCreationSocio.inc.php' method='post' id='sample'>";
                                     }else if($_SESSION["userStatus"] === 0 ){
-                                      if($numPedidos > 1){
+                                      if($numPedidos > 5){
                                         echo " <form action='index.php' method='post' id='sample'>";
                                       }else{
                                         echo " <form action='backend/orderCreationSocio.inc.php' method='post' id='sample'>";
@@ -31,13 +32,12 @@
                             
                                 ?>
                               <input id="rubroSeleccionado" type="text" name="rubro" readonly>
+                              <input  type='text' name='userid' value='" . $_SESSION["userId"] . "' readonly style='display:none'>
                               <?php
                               if(isset($_SESSION["userEmail"])){
-
                                     echo "<input  type='text' name='userid' value='" . $_SESSION["userId"] . "' readonly style='display:none'>";
-
                                 }
-                               
+
                                 ?>
                                
                                

@@ -83,6 +83,9 @@
     }
     .page-title {
         margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .page-title h2.title {
         font-size: 30px;
@@ -235,8 +238,16 @@
         font-size: 31px;
     }
 
+    .navbar-section .bttn{
+        display: none;
+    }
+
     #queEsSoluciones{
         height: fit-content;
+        padding-top: 40px;
+      }
+    #queEsSoluciones h2{
+        margin: 0 0 15px;
       }
     .bttn.bttn-lg.bttn-primary{
         top: 0px;
@@ -244,11 +255,30 @@
     }
     #section1L h4{
         text-align: center;
+        
+    }
+    #section1L{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        
+    }
+    #section1L p{
+        text-align: center;
+        
+    }
+    #section1L .bttn.bttn-lg{
+        margin: auto !important;
+        padding: 36px 40px;
+        padding-top: 19px;
+        
     }
     #section1R{
-        margin-top: 250px;
-    margin-left: 0px;
-    height: 277px;
+        margin-top: 130px;
+        margin-left: 0px;
+        height: 277px;
     }
 
     #section1R img:nth-child(2){
@@ -258,6 +288,76 @@
         top: 74px;
         right: 62px;
     }
+
+    .funcionamiento_pasos{
+        flex-direction: column;
+    }
+    .funcionamiento_paso{
+        width: 100%;
+        margin: 0;
+        transition:ease-in 0.5s;
+    }
+
+    .funcionamiento_paso.paso_uno{
+        height: 10%;
+
+    }
+    .funcionamiento_paso.paso_dos{
+        height: 10%;
+
+    }
+    .funcionamiento_paso.paso_tres{
+        height: 10%;
+
+    }
+    .funcionamiento_paso.paso_cuatro{
+        height: 10%;
+
+    }
+
+    .funcionamiento_paso.funcionamiento_open{
+        height: 70%;
+    }
+
+    .funcionamiento_detalle{
+        height: 100%;
+        padding: 20px;
+        border-radius: 0;
+        overflow: hidden;
+       }
+    .funcionamiento_detalle h3{
+        padding: 10px 20px;
+        
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.88);
+        display: none;
+        opacity: 0;
+        transition: 2.5s ease-in;
+      }
+      .funcionamiento_detalle:hover h3{
+        display: inline;
+        opacity: 1;
+       }
+
+       .funcionamiento_detalle_texto{
+        
+        transition: 0.5s ease-in;
+      }
+      .funcionamiento_start_open .funcionamiento_detalle_texto{
+        display: block;
+        opacity: 1;
+       
+      }
+      .funcionamiento_start_open h3{
+        display: block;
+        opacity: 1;
+        margin-bottom: 30px;
+      }
+      .funcionamiento_start_open .funcionamiento_detalle{
+        height: 100%;
+        justify-content: space-around;
+        border-radius: 0;
+      }
 
     /*=====Preservicios====*/
     .btndifer{
@@ -371,11 +471,18 @@
         margin: 58px 0;
         margin-left: -40px;
         }
+        .video-presentacion video {
+            height: 238px;
+        }
 
         .col-md-6.col-xs-12.servicios-de-informacion{
             width: 100%;
         }
     
+        #conocenos .text-quienes{
+            font-size: 4rem;
+            margin: 30px auto 30px;
+        }
     /*======  Registrarse  ======*/
 
     .form-double{
@@ -384,7 +491,7 @@
         
     }
     .form-double input{
-        width: calc(100% - 15px);
+       
     }
 
     .contact-form{
@@ -417,6 +524,17 @@
     #como-asociarse{
         width: 100%;
     }
+    #como-asociarse .title-cel{
+        display: block;
+        padding: 0 35px;
+        align-items: center;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    #como-asociarse .title{
+        display: none;
+    }
+
     #conteneder-form{
         padding: 0;
     }
@@ -426,7 +544,7 @@
         padding: 0 20px;
     }
     .contact-form-registro{
-        padding: 0;
+        padding: 15px 5px;
     }
     .form-double{
         display: flex;
@@ -436,11 +554,11 @@
 
     .form-double .firstName{
         width: 100%; 
-        margin:15px 2.5%;
+        margin: 20px 5% 10px 5%;
       }
       .form-double .lastName{
         width: 100%;
-        margin:15px 2.5%;
+        margin: 20px 5% 10px 5%;
       }
 
     .form-double .telephoneNumberCode{
@@ -449,7 +567,7 @@
       }
       .form-double .telephoneNumber{
         width: 100%;
-        margin: 15px 2.5%;
+        margin: 20px 5% 10px 5%;
       }
       .form-double .cellphoneNumberCode{
         width: 25%;
@@ -490,6 +608,16 @@
         content: "";
          width: 0%;
     }
+    input[type="checkbox"]{
+        margin: 10px 5% 10px 30px;
+      }
+    .sectionSocioNoregPopup{
+        width:100%; 
+        
+      }
+    .socioNoregPopup input{
+        width: 100%;
+      }
     }
 
 @media only screen and (max-width: 480px) {

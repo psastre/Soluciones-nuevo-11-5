@@ -47,9 +47,50 @@
         <div class="spinner"></div>
     </div>
 
-    
+    <!--Popup para resetear password-->
+     <?php if(isset($_GET["reset"])){
+          if($_GET["reset"]=="sended"){ ?>
+          <div class="complete_popup_notice" >
+            <div class="section_popup_notice" >
+              <img class="tick_popup" src="img/tick.png" alt="">
+            <h2>Solicitud de cambio de contraseña enviada</h2>
+              <div class="content_popup_order">
+
+                
+                <div class="funcionamiento-popup" style="justify-content: center;">
+                
+                <div class="funcionamiento_popup_order" style="width: 55%;">
+                    <img src="img/icon-9.png" alt="">
+                    <h4>Se envio un mail a su correo, con un link para reestablecer su contraseña. Si no le llego, puede volver a intentarlo o llamarnos para consultarlo.</h4>
+                </div>
+                
+                
+            </div>
+              </div>
+              <div class="closebar_popup_notice" >
+                <button class="closebutton_popup_notice" id="closebutton_popup_notice">Entendido</button>
+              </div>
+              
+            </div>
+          </div>
+        <?php }};?> 
+     <?php if(isset($_GET["reset"])){
+          if($_GET["reset"]=="succes"){ ?>
+          <div class="complete_popup_notice" >
+            <div class="section_popup_notice" >
+              <img class="tick_popup" src="img/tick.png" alt="">
+            <h2>Se reestablecio la contraseña con exito</h2>
+              
+              <div class="closebar_popup_notice" >
+                <button class="closebutton_popup_notice" id="closebutton_popup_notice">Entendido</button>
+              </div>
+              
+            </div>
+          </div>
+        <?php }};?> 
 
     <!--Header-Area-->
+    
 
     <header class="header-area overlay" id="inicio">
         <!-- Mainmenu-Area -->
@@ -97,7 +138,7 @@ Si no estas suscripto podes probar un mes totalmente gratis.
             <a href="quienes-somos.php" class="bttn bttn-lg bttn-primary" style="margin-right: 45px;">Mas Informacion</a>
         </div>
           <div class="col-xs-12 col-sm-6" id="section1R">
-            <img src="images/mockuplaptop.png" alt="">
+            <img src="images/mockuplaptoplow.jpg" alt="">
             <img src="images/mockupcelu.png" alt="">
           </div>
         </div>
@@ -107,7 +148,7 @@ Si no estas suscripto podes probar un mes totalmente gratis.
      <!-- BENEFICIOS -->
      <section class="section-padding gray-bg beneficios-screen" id="que-es">
         <div class="container">
-            <div class="row">
+            <div class="row" >
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="page-title text-center">
                     <h2 class="title">Un sistema diferente</h2>
@@ -115,7 +156,7 @@ Si no estas suscripto podes probar un mes totalmente gratis.
                 </div>
             </div>
         </div>
-            <div class="row">
+            <div class="row" style="padding-bottom: 20px;">
                 <div class="col-xs-12 col-sm-6">
                     <div class="video-box">
                         <img id="servicio-home" src="img/Servicios.jpg" alt="">
@@ -128,7 +169,7 @@ Si no estas suscripto podes probar un mes totalmente gratis.
                 <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1  fadeInUp"style="visibility: visible;">
                     <div class="page-title">
                         <ul class="tabs-list">
-                            <li class="active"><a id="servicio-home-btn" data-toggle="pill" href="#variedad">Servicio</a></li>
+                            <li class="active active_motion"><a id="servicio-home-btn" data-toggle="pill" href="#variedad">Servicio</a></li>
                             <li><a id="confianza-home-btn" data-toggle="pill" href="#confianza">Confianza</a></li>
                             <li><a id="transparencia-home-btn" data-toggle="pill" href="#transparencia">Transparencia</a></li>
                             <li><a id="tranquilidad-home-btn" data-toggle="pill" href="#tranquilidad">Tranquilidad</a></li>
@@ -160,7 +201,7 @@ Si no estas suscripto podes probar un mes totalmente gratis.
     </section>
     <!-- BENEFICIOS -->
 
-<!-- Funcionamiento -->
+<!-- Funcionamiento 
 <section class="section-padding" id="funcionamiento">
     <div class="container" style="width:80%;">
         <div class="row">
@@ -216,8 +257,63 @@ Si no estas suscripto podes probar un mes totalmente gratis.
     </div>
 
 </section>
-<!-- Funcionamiento -->
-   
+ Funcionamiento -->
+<!--Funcionamiento Prueba2 -->
+    <section class="section-padding" id="funcionamiento2">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" style="margin-left: 0; width:100%;">
+                <div class="page-title text-center">
+                    <h2 class="title">Funcionamiento</h2>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="funcionamiento_pasos">
+            <div class="funcionamiento_paso paso_uno funcionamiento_open funcionamiento_start_open">
+                <div class="funcionamiento_detalle">
+                <div class="funcionamiento_num_title">
+                        <h3 class="funcionamiento_detalle_numero">1</h3>
+                        <h4>Selecciona el servicio</h4>
+                    </div>
+                    <p class="funcionamiento_detalle_texto">Selecciona el rubro y escribi el detalle de tu pedido a realizar</p>
+                    
+                </div>
+            </div>
+            <div class="funcionamiento_paso paso_dos">
+                <div class="funcionamiento_detalle">
+                    <div class="funcionamiento_num_title">
+                        <h3>2</h3>
+                        <h4>Recepcion de pedidos</h4>
+                    </div>
+                    
+                    <p class="funcionamiento_detalle_texto">Soluciones recibe el pedido, selecciona y asigna el profesional adecuado.</p>
+                </div>
+            </div>
+            <div class="funcionamiento_paso paso_tres">
+                <div class="funcionamiento_detalle">
+                    <div class="funcionamiento_num_title">  
+                        <h3>3</h3>
+                        <h4>Trabajo realizado</h4>
+                    </div>
+                    <p class="funcionamiento_detalle_texto">El profesional se contactará a la brevedad para combinar horario y fecha de visita adecuado a tu necesidad que luego  presupuesta el trabajo, lo realiza y él es quien cobra y factura por el mismo.
+                    
+                    </p>
+                </div>
+            </div>
+            <div class="funcionamiento_paso paso_cuatro">
+                <div class="funcionamiento_detalle">
+                    <div class="funcionamiento_num_title"> 
+                            <h3>4</h3>
+                            <h4>Garantia</h4>
+                    </div>
+                    <p class="funcionamiento_detalle_texto"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--Funcionamiento Prueba2 -->
     
 <!--
     <-- Guia de precios ->
@@ -287,7 +383,7 @@ Si no estas suscripto podes probar un mes totalmente gratis.
     <-- Guia de precios/ ->
 -->
     <!-- Contact-Area -->
-    <section class="section-padding" id="contact-area" style="padding-top: 0;">
+    <section class="section-padding" id="contact-area" style="padding-top: 0; margin-bottom:200px">
         <div class="contact-area">
             <div class="container">
                 <div class="row">
@@ -307,9 +403,9 @@ Si no estas suscripto podes probar un mes totalmente gratis.
                                 </div>
                                 <div class="form-double">
                                     <input type="email" name="form-email" name="email" id="form-email" placeholder="Correo Electrónico" required="required">
-                                    <input type="text" name="form-subject" id="form-subject" placeholder="Asunto" required="required">
+                                    <textarea name="form-message" id="message" id="form-message" rows="2" required="required" placeholder="Mensaje"></textarea>
                                 </div>
-                                <textarea name="form-message" id="message" id="form-message" rows="5" required="required" placeholder="Mensaje"></textarea>
+                               
                                 <button class="bttn bttn-primary">Enviar</button>
                             </form>
                         </div>
@@ -333,9 +429,11 @@ Si no estas suscripto podes probar un mes totalmente gratis.
                                     </span> info@solucioneshogar.com
                                 </li>
                                 <li>
+                                    <a href="quienes-somos.php" style="color:white;">
                                     <span class="info-icon">
                                         <img src="img/question.svg" alt="">
                                     </span> Conocer mas del servicio
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -345,8 +443,9 @@ Si no estas suscripto podes probar un mes totalmente gratis.
         </div>
     </section>
     <!-- Contact-Area / -->
+    <!--
     <div id="maps"></div>
-
+    -->  
 
     <!-- Footer-Area -->
     <footer class="footer-area">
@@ -420,6 +519,7 @@ Si no estas suscripto podes probar un mes totalmente gratis.
     <script src="js/scrollUp.min.js"></script>
     <script src="js/magnific-popup.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <!--Main-active-JS-->
     <script src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXZ3vJtdK6aKAEWBovZFe4YKj1SGo9V20&callback=initMap"></script>
