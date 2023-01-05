@@ -24,6 +24,9 @@
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/validations.js"></script>
+
 
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -82,29 +85,31 @@
                             
                                 <form action="backend/signup.inc.php" method="post" >
                                 <?php if(isset($_GET["rubro"])){?>
-                                <input  type='text' name='rubro' value='<?php echo $_GET["rubro"] ?>' readonly style="display:none;">
-                                <input  type='text' name='detalle' value='<?php echo $_GET["detalle"] ?>' readonly style="display:none;" >
+                                    
+                                <input  type='text' id="rubro" name='rubro' value='<?php echo $_GET["rubro"] ?>' readonly style="display:none;">
+                                <input  type='text' id="detalle" name='detalle' value='<?php echo $_GET["detalle"] ?>' readonly style="display:none;" >
                                 <?php }else{?> 
-                                    <input  type='text' name='rubro' value='' readonly style="display:none;">
-                                <input  type='text' name='detalle' value='' readonly style="display:none;" >
+                                    <input  type='text' id="rubro" name='rubro' value='-' readonly style="display:none;">
+                                <input  type='text' id="detalle" name='detalle' value='-' readonly style="display:none;" >
 
                                 <?php };?> 
+                                <p id="form-message"></p>
                                     <div class="form-double">
-                                        <input type="text" id="form-name" name="firstName" class="firstName" placeholder="Nombre" required="required">
-                                        <input type="text" name="lastName" class="lastName" placeholder="Apellido">
+                                        <input type="text" id="form-name" name="name" class="firstName" placeholder="Nombre" >
+                                        <input type="text" id="form-lastname" name="lastname" class="lastName" placeholder="Apellido">
                                     </div>
                                     
                                     <div class="form-double">
                                       
-                                      <input type="text" name="telephoneNumber" class="telephoneNumber" id="phone-code" placeholder="Celular" required="required" >
+                                      <input type="number" pattern="[0-9]{7,15}" name="phone" class="telephoneNumber" id="phone-code" placeholder="Celular"  >
                                     </div>
                                     <div class="form-double">
-                                        <input type="email"  name="email" class="email-input"id="form-email" placeholder="Correo Electrónico" required="required" >
+                                        <input type="text"  name="email" class="email-input"id="form-email" placeholder="Correo Electrónico"  >
                                     </div>
                                     <div class="form-double">
-                                        <input type="password" id="password" class="password-input" name="password" placeholder="Contraseña" required="required">
+                                        <input type="password" id="password" class="password-input" name="password" placeholder="Contraseña" >
 
-                                        <input type="password" id="password-code" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" required="required">
+                                        <input type="password" id="password-code" class="password-input" name="passwordRepeat" placeholder="Confirmar contraseña" >
                                     </div>
                                     <input type="checkbox" onclick="togglePassword()" > Mostrar Contraseña
                                     
@@ -113,7 +118,7 @@
                                             <label style="margin-bottom:20px;" class="custom-control-label" for="defaultUnchecked">Acepto los <a style="color:#034783;" href="terminos-y-condiciones.html">términos y condiciones</a></label>
                                     </div>-->
                                     
-                                    <button type="submit" name="submit" class="bttn bttn-primary" style="margin: 30px 40% 15px 40%;">Enviar</button>
+                                    <button type="submit" name="submit" id="form-submit" class="bttn bttn-primary" style="margin: 30px 40% 15px 40%;">Enviar</button>
                                     <a onclick='myFunction()'  style="text-align:center;margin: 20px 24% 25px 38%;">Ya estoy registrado</a>
                                     
     
@@ -296,6 +301,7 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXZ3vJtdK6aKAEWBovZFe4YKj1SGo9V20&callback=initMap"></script>
     <script src="js/maps.js"></script>
     <script src="js/custom.js"></script>
+    
     
     <script src="js/custom22.js"></script>
 </body>

@@ -4,6 +4,7 @@
        $result;
        if(empty($firstName) || empty($lastName) || empty($addressName) || empty($addressNumber) || empty($floorNumber) || empty($deptNumber) || empty($cellphoneNumber) || empty($telephoneNumber) || empty($email) || empty($pwd)){
            $result =true;
+           
        }
        else{
            $result = false;
@@ -13,7 +14,17 @@
    
     function invalidfirstName ($firstName){
        $result;
-       if (!preg_match("/^[a-zA-Z0-9]*$/", $firstName)){
+       if (!preg_match("/^[a-zA-Z\s]*$/", $firstName)){
+           $result=true;
+       }
+       else{
+           $result= false;
+       }
+        return $result;
+    }
+    function invalidPhone ($telephoneNumber){
+       $result;
+       if (!preg_match("/^(\s*[0-9]+\s*)+$/", $telephoneNumber)){
            $result=true;
        }
        else{

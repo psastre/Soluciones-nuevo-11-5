@@ -2209,7 +2209,14 @@ input[type="checkbox"]{
   margin-left: 5%;
 }
 
+#form-message{
+  text-align: center;
+  color: rgb(121 17 26);
+}
 
+.contact-form-registro form .input-error{
+  border-color: red;
+}
 .sectionSocioNoregPopup{
   width:70%; 
   margin: auto;
