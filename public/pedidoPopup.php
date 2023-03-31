@@ -18,6 +18,9 @@
                               
                               <?php
                                 if(isset($_SESSION["userEmail"])){
+                                  if($_SESSION["activeStatus"] === 0){
+                                    echo " <form action='index.php' id='sample'>";
+                                  }else{
                                     if($_SESSION["userStatus"] === 1){
                                         echo " <form action='backend/orderCreationSocio.inc.php' method='post' id='sample'>";
                                     }else if($_SESSION["userStatus"] === 0 ){
@@ -26,7 +29,7 @@
                                       }else{
                                         echo " <form action='backend/orderCreationSocio.inc.php' method='post' id='sample'>";
                                       }
-                                }}else{
+                                }}}else{
                                   echo " <form action='backend/orderCreationNoSocio.inc.php' method='get' id='sample55'>";
                                 }
                             
@@ -37,12 +40,12 @@
                               if(isset($_SESSION["userEmail"])){
                                     echo "<input  type='text' name='userid' value='" . $_SESSION["userId"] . "' readonly style='display:none'>";
                                 }
-
+                               
                                 ?>
                                
                                
                               
-                              <a href="guia-precios.html" target="_blank" class="precioServicio">Descripción del trabajo a realizar</a>
+                              <h3 class="precioServicio" style="cursor:auto;">Descripción del trabajo a realizar</h3>
                               <p>Escribi el detalle del pedido lo mas completo posible(esto nos ayuda a elegir al profesional indicado)</p>
                               <textarea name="detalle" class="detallePedido"  rows="5" cols="55"   placeholder="Corte de luz en parte de la casa ..."></textarea>
 

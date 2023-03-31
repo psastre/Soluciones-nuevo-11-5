@@ -29,7 +29,7 @@ if(isset($_POST["submit"])){
        }
     
        createOrder($conn,$userid, $detalle, $codigoRubro, $createDate, $createTime);
-       header("location: ../usuario.php");
+       header("location: ../usuario.php?pedido=realizado");
     }
     else{
         header("location: ../servicios-final.php?error=conexion");

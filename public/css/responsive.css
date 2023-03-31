@@ -205,12 +205,39 @@
     .testimonials .single-testimonial .testimonial-text {
         font-size: 14px;
     }
+
+
     /*=====Home=====*/
 
-    .logIn{
-        width: 96vw;
-        z-index: 999;
+    .navbar-brand img {
+        padding: 0px;
+    
     }
+    #hacerPedido_cellphone{
+        display: block;
+      }
+      #user-btn_cellphone{
+        display: block;
+      }
+    #userName_navbar{
+        display: none;
+    }
+    .perfil_btn_navbar{
+        display: none !important;
+    }
+
+    .logIn{
+        width: 100vw;
+        z-index: 999;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+    }
+
+    .login_closePopup{
+        display: block;
+    }
+
     .carrouselServicios{
         width: 100%;
         
@@ -252,6 +279,13 @@
     .bttn.bttn-lg.bttn-primary{
         top: 0px;
         text-align: center;
+    }
+    .bttn.bttn-lg.contratarServicio{
+        margin: 0;
+    }
+
+    .closePopupButton{
+        padding: 20px 0;
     }
     #section1L h4{
         text-align: center;
@@ -359,6 +393,23 @@
         border-radius: 0;
       }
 
+      .section_popup_notice{
+        width: 80%;
+      }
+
+      .whatsapp_container{
+        bottom: 46px;
+        right: 16px;
+      }
+      .whatsapp_container img{
+        width: 40px;
+        height: 40px;
+      }
+
+      .perfil-popup{
+        position: fixed;
+      }
+
     /*=====Preservicios====*/
     .btndifer{
         flex-direction: column;
@@ -372,6 +423,16 @@
         line-height: 33px;
     }
 
+    .footer_inicio{
+        width: fit-content !important;
+        margin: 0 25px;
+    }
+    .footer_asociarse{
+        width: fit-content !important;
+        margin: 0 25px;
+    }
+   
+
     /*=====Servicios=====*/
     .modal.in .modal-dialog{
         display: flex;
@@ -380,10 +441,11 @@
     }
     .modal-dialog{
         width: 100vw;
-    height: 100vh;
+        height: 100vh;
     }
-    .modal-content{
-        width: 90%;
+    #pruebaPopup .modal-dialog  .modal-content{
+        width: 100%;
+        height: 100vh;
     }
     .bttn.bttn-lg.bttn-primary.top-service{
         top: 0;
@@ -393,6 +455,7 @@
         width: 50%;
          margin: 0 ;
         flex: auto;
+        margin-bottom: 15px;
     }
     .box-servicios{
         margin: -10px;
@@ -400,7 +463,26 @@
     .bttn.bttn-lg.bttn-primary.bttn-hacer-pedido{
         width:180px;
       }
+    
+    #headerServicios{
+        height: 100vh;
+    }
 
+    .container-error-busqueda{
+        height: 66px;
+        margin-bottom: 39px;
+    }
+
+    #service_page_title{
+        margin-bottom: -15px !important;
+    }
+    .service_title-reparaciones{
+        flex-direction: column;
+    }
+
+    .service_title-reparaciones h2{
+        font-size: 30px;
+    }
     /*=====Servicios 2=====*/
     .container.service-list{
         display: flex;
@@ -418,7 +500,15 @@
         height: 84px;
       }
       .servicioBox {
-        height: 320px;
+        height: 220px;
+        margin-bottom: 25px;
+    }
+    .imgServicioBox{
+        object-fit: cover;
+    }
+
+    .servicioBox textarea {
+        margin-bottom: 25px;
     }
      
 
@@ -484,6 +574,8 @@
             margin: 30px auto 30px;
         }
     /*======  Registrarse  ======*/
+
+    
 
     .form-double{
         display: flex;
@@ -591,6 +683,10 @@
       }
       .funcionamiento-form{
         overflow-x: scroll;
+        
+      }
+      .funcionamiento-form::-webkit-scrollbar {
+        display: none;
       }
       .funcionamiento-form-element{
         width: 100%;
@@ -618,6 +714,36 @@
     .socioNoregPopup input{
         width: 100%;
       }
+
+
+    /*PERFIL*/
+
+    .section_popup_notice{
+        padding: 32px;
+    }
+    .funcionamiento-popup{
+        flex-wrap: wrap;
+    }
+    .funcionamiento_popup_order{
+        width: 100%;
+        margin: 5px 0px;
+    }
+    .section_popup_notice img{
+        width: 60px;
+        height: 60px;
+    }
+    .closebar_popup_notice button{
+        padding: 15px;
+    }
+    .section_popup_notice h2{
+        font-size: 25px;
+        font-size: 1.8rem;
+    }
+
+    .privacidad_tab{
+        height: fit-content;
+        padding: 15px 25px;
+    }
     }
 
 @media only screen and (max-width: 480px) {

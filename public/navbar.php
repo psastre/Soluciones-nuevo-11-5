@@ -35,17 +35,19 @@
                                         echo " <a href='servicios-final.php'><button class='bttn bttn-mesgratis bttn-hacer-pedido-nav-index' >Hacer Pedido</button></a>";
                                     }else if($_SESSION["userStatus"] === 0 ){
                                     /*CONDICION DE SI TIENE MAS DE TRES PEDIDOS ESTE USUARIO LLEVA A PAG CON CARTEL*/
-                                    echo " <a href='quienes-somos.php'><button class='bttn bttn-mesgratis'  >Hacerme Socio</button></a>";
+                                    echo " <a href='hacerme-socio.php'><button class='bttn bttn-mesgratis'  > Hacerme Socio</button></a>";
                                 }}else{
-                                    echo " <a href='quienes-somos.php'><button class='bttn bttn-mesgratis'  >Prueba mes gratis</button></a>";
+                                    echo " <a href='registrarse.php'><button class='bttn bttn-mesgratis'  >Prueba mes gratis</button></a>";
                                 }
 
                                 echo  "<li><a href='quienes-somos.php'>¿Qué es Soluciones?</a></li>";
 
 
                                 if(isset($_SESSION["userEmail"])){
-                                    echo"<li><a href='usuario.php'>" . $_SESSION["userName"] ."</a></li>";
-                                    echo "<li><a id='user-btn' onclick='myFunction()'>Perfil</a></li>";
+                                    echo"<li><a href='usuario.php' id='userName_navbar'>" . $_SESSION["userName"] ."</a></li>";
+                                    echo "<li><a id='user-btn' class='perfil_btn_navbar' onclick='myFunction()'>Perfil</a></li>";
+                                    echo"<li><a href='servicios-final.php' id='hacerPedido_cellphone'>Hacer Pedido</a></li>";
+                                    echo "<li><a id='user-btn_cellphone' href='usuario.php'>Perfil</a></li>";
                                 }
                                 else{
                                     echo "<li><a  href='registrarse.php'>Registrarse</a></li>";

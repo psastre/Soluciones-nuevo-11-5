@@ -167,7 +167,7 @@ const funcionamientoTimeOut3 = setTimeout(function(){
    
    $('.popupLogicDatalist').click(function(){
     //  document.querySelector('#descripcionServicio').textContent = datalistValue.value;
-      let rubrosCompleto = ["Electricista", "Carpintería", "Plomería", "Albañileria","Cerrajería" ,"Empapelado" , "Gasista","Herrería" ,"Jardinería" ,"Lustrado de muebles" ,"Persiana" ,"Pintura" ,"Pulido y plastificado" ,"Destapación", "Televisión","Lavarropa" ,"Heladera" ,"Aire acondicionado" ,"Tapicería" ,"Computación" ,"Enlozado", "Toldos","Limpieza de alfombras" ,"Fumigación", "Cocina" ]
+      let rubrosCompleto = ["Electricista", "Carpintería", "Plomería", "Albañileria","Cerrajería" ,"Empapelado" , "Gasista","Herrería" ,"Jardinería" ,"Lustrado de muebles" ,"Persiana" ,"Pintura" ,"Pulido y plastificado" ,"Destapación", "Televisión","Lavarropa" ,"Heladera" ,"Aire acondicionado" ,"Tapicería" ,"Computación" ,"Enlozado", "Toldos","Limpieza de alfombras" ,"Fumigación", "Cocina", "Varios" ]
       console.log(datalistValue.value)
       if(rubrosCompleto.includes(datalistValue.value)){
          document.querySelector('#rubroSeleccionado').value=datalistValue.value;
@@ -211,6 +211,13 @@ const funcionamientoTimeOut3 = setTimeout(function(){
    $('.contratarServicio').href="contratar.php"; 
 });
   $(".socioBtndif").click(function(){
+  $('.modal-backdrop').css("display", "none");
+   $('#myModal2').modal('show');
+  
+  
+   $('.contratarServicio').href="index.html"; 
+});
+  $(".password_forgot").click(function(){
   $('.modal-backdrop').css("display", "none");
    $('#myModal2').modal('show');
   
@@ -320,4 +327,18 @@ function togglePassword() {
     }
    })
    
- 
+
+  
+
+  /* document.addEventListener('click', function handleClickOutsideBox(event) {
+    const box = document.getElementById('logIn');
+    const boton = document.getElementById('user-btn');
+    console.log('user clicked: ', event.target);
+  
+    if ( !box:contains(event.target) || !boton:contains(event.target)) {
+      box.style.display = 'none';
+      console.log("hola");
+    }
+  });
+   
+*/

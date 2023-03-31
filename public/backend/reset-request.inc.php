@@ -1,6 +1,6 @@
   <?php
 
-if(isset($_POST["reset-request-submit"])){
+if(isset($_POST["submit"])){
     $selector = bin2hex(random_bytes(8));
     $token = random_bytes(32);
 
@@ -9,9 +9,27 @@ if(isset($_POST["reset-request-submit"])){
     $expires = date("U") + 1800;
 
     require_once  'dbh.inc.php';
+    require_once  'function.inc.php';
 
     $userEmail=($_POST["email"]);
 
+    $errorEmail = false;
+
+    //VALIDACIONES
+
+    if(invalidEmail($userEmail) !== false){
+        echo"<span class='form-error'>El mail escrito es invalido</span><br>";
+        $errorEmail = true;
+        exit();
+        
+       }
+    if(emailExists($conn, $userEmail) === false){
+        echo"<span class='form-error'>El mail escrito no esta registrado</span>";
+        $errorEmail = true;
+        exit();
+       }
+
+     //VALIDACIONES
     $sql = "DELETE FROM pwdReset WHERE pwdResetEmail=?;";
     
     $stmt = mysqli_stmt_init($conn);
@@ -51,7 +69,16 @@ if(isset($_POST["reset-request-submit"])){
 
     mail($to, $subject, $message, $headers);
 
-    header("Location:../index.php?reset=sended");
+    ?>
+    <script>
+      var errorEmail = "<?php echo $errorEmail; ?>";
+      if (errorEmail == false  ){
+        window.location.href = "http://localhost/Soluciones-firebase/public/index.php?reset=sended";
+      }
+    </script>
+   <?php
+
+    
 
 }else{
     header("Location: ../index.php");

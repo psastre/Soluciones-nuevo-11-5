@@ -55,6 +55,8 @@
     <div class="preloader">
         <div class="spinner"></div>
     </div>
+    <a href="https://wa.me/1136453576" target="_blank"><div class="whatsapp_container"><img src="images/whatsapp-logo.png" alt=""><p class="whatsapp_text">HABLEMOS POR WHATSAPP</p></div></a>
+
 
     <!-- Mainmenu-Area -->
     <div class="sidebar-arrow sidebararrow-out"></div>
@@ -162,7 +164,7 @@
                 </div>
               </div>-->
               <div class="col-sm-12"id="beneficios">
-                      <h2 class="text-center text-quienes">Beneficios</h2>
+                      <h2 class="text-center text-quienes" style="margin-top:30px;">Beneficios</h2>
                      
                   </div>
     
@@ -221,8 +223,8 @@
             
                 <div class="precio-beneficios">
                   <p>Todos estos beneficios con suscripcion mensual de</p>
-                  <h3>$420 + IVA</h3>
-                  <a href="servicios.html" target="_blank" class="bttn bttn-sm bttn-default bttn-beneficios-quienes">Probar un mes gratis</a>
+                  <h3>$620 + IVA</h3>
+                  <a href="registrarse.php" target="_blank" class="bttn bttn-sm bttn-default bttn-beneficios-quienes">Probar un mes gratis</a>
                 </div>
                 <div class="fondo-beneficios"></div>
               
@@ -718,56 +720,8 @@
     </section>
     <!-- Profesionales / -->
 
-    <!-- Footer-Area -->
-    <footer class="footer-area">
-        <div class="footer-top section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                        <div class="footer-text">
-                            <h4 class="upper">Soluciones Hogar</h4>
-                            <p>Encontrá todos los servicios técnicos para tu hogar.</p>
-                            <div class="social-menu">
-                                <a href="#"><i class="icofont icofont-social-facebook"></i></a>
-                                <a href="#"><i class="icofont icofont-social-twitter"></i></a>
-                                <a href="#"><i class="icofont icofont-social-google-plus"></i></a>
-                                <a href="#"><i class="icofont icofont-social-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4" style="text-align: right;">
-                        <div class="footer-single">
-                            <h4 class="upper">Inicio</h4>
-                            <ul>
-                                <li><a href="#">Qué es Soluciones</a></li>
-                                <li><a href="#">Funcionamiento</a></li>
-                                <li><a href="#">Beneficios</a></li>
-                                <li><a href="#">Ser técnico</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4" style="text-align: right;">
-                        <div class="footer-single">
-                            <h4 class="upper">Asociarse</h4>
-                            <ul>
-                                <li><a href="#">Precios</a></li>
-                                <li><a href="#">Asociarse</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+     <!-- Footer-Area -->
+     <?php include_once("footer.php"); ?>
     <!-- Footer-Area / -->
 
     <!--Vendor-JS-->

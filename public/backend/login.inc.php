@@ -1,3 +1,4 @@
+
 <?php
 
 if(isset($_POST["submit"])){
@@ -8,17 +9,70 @@ if(isset($_POST["submit"])){
     require_once "dbh.inc.php";
     require_once "function.inc.php";
 
+    $errorEmpty = false;
+    $errorEmail = false;
+    $errorPassword = false;
+    $emailExistsObj = emailExists($conn, $email);
+
     if(emptyInputLogin($email, $pwd) !== false){
-        header("location:../contratar.php?error=emptyinput");
+        echo"<span class='form-error'>Completa todos los campos</span><br>";
+        $errorEmpty=true;
         exit();
-       }
+    }
+
+    if(invalidEmail($email) !== false){
+        echo"<span class='form-error'>El mail escrito no es invalido</span><br>";
+        $errorEmail=true;
+        exit();
+    }
+
+    if(emailExists($conn, $email) === false){
+    echo"<span class='form-error'>El mail escrito no esta registrado</span>";
+    $errorEmail=true;
+    exit();
+    }
+
+    $pwdHashed = $emailExistsObj["pwd"];
+    $checkPwd = password_verify($pwd, $pwdHashed);
+   
+    if($checkPwd === false){
+        echo"<span class='form-error'>Hay un error en la contraseña</span>";
+        exit();
+    }
+
+
+      
     
-       loginUser($conn, $email, $pwd);
-    }
-    else{
-        header("location: ../login.php");
+      if($errorEmpty == true || $errorEmail == true ||   $errorPassword == true  ){ exit();}
+    
+    
+    
+      loginUser($conn, $email, $pwd);
+       
+     
+       
+        ?>
+        <script>
+         
+            window.location.href = "http://localhost/Soluciones-firebase/public/index.php";
+          
+        </script>
+       <?php
+        
+    
         exit();
+
+    
+       
+    }else{
+        header("location:../index.php?conexion-error");
+        
     }
+    
+    
+    
+    
+    
 
 
 

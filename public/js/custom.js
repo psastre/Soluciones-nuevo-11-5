@@ -16,3 +16,19 @@ function userTitle() {
   
   document.getElementsByName('Email')[0].placeholder='new text for email';
 }
+
+
+const cellphone = document.querySelector('#section1R :nth-child(2)');
+
+gsap.to(cellphone , {
+    scrollTrigger:{
+        trigger: cellphone,
+        start: "top 800px",
+        end:"top 100px",
+        
+    },
+    y:-50,
+    ease:"easeOut",
+    duration:2
+    
+});

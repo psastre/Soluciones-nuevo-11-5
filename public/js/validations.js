@@ -10,7 +10,7 @@ $(document).ready(function(){
         var rubro= $("#rubro").val();
         var detalle= $("#detalle").val();
         var submit= $("#form-submit").val();
-        $("#form-message").load("backend/signup.inc.php", {
+        $(".form-message").load("backend/signup.inc.php", {
             name:name,
             lastname:lastname,
             phone:phone,

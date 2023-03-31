@@ -58,6 +58,35 @@
 
       </div>
     </div>
+      <!--Popup de socio inactivo-->   
+      <?php
+            if(isset($_SESSION["userEmail"])){
+                if($_SESSION["activeStatus"] === 0){ ?>
+                    <div class="complete_popup_notice" >
+                      <div class="section_popup_notice" >
+                        <img class="tick_popup" src="img/pago-error.png" alt="">
+                      <h2>Cuenta inactiva</h2>
+                        <div class="content_popup_order">
+          
+                          
+                          <div class="funcionamiento-popup">
+                          
+                          
+                              
+                              <h4>Su cuenta de Soluciones Hogar esta inactiva, por favor comuniquese al 5789-1800 para consultarlo</h4>
+                          
+                         
+                          
+                      </div>
+                        </div>
+                        <div class="closebar_popup_notice" >
+                          <button class="closebutton_popup_notice" id="closebutton_popup_notice">Entendido</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  <?php }};?>                     
+      <!--Popup de socio inactivo-->     
    <?php include_once('popup-importante.php') ?>
     <!--Header-Area-->
 
@@ -100,20 +129,21 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="header-text">
 
-                            <h2 class="header-title wow fadeInUp" style="text-align:center; margin-bottom: 50px;">BUSCA EL SERVICIO QUE NECESITAS</h2>
-                            <div  style="height:50px;margin:20px"> <p class="error-busqueda">Tenes que seleccionar uno de los rubro ofrecidos antes de hacer el pedido</br> y si no sabes a que rubro pertence tu pedido, selecciona la opcion Varios.</p> </div>
+                            <h2 id="service_page_title" class="header-title wow fadeInUp" style="text-align:center; margin-bottom: 50px;">BUSCA EL SERVICIO QUE NECESITAS</h2>
+                            <div  class="container-error-busqueda" > <p class="error-busqueda">Tenes que seleccionar uno de los rubro ofrecidos antes de hacer el pedido</p> </div>
                             <form>
 
                               <input list="browser" class="browser" placeholder="Buscar..." id="datalistValue">
                                   <datalist id="browser">
                                     <?php   
                                         foreach($rubros as $rubro){
+                                            if($rubro['id'] <= 26){
                                     ?>
 
                                       <option value="<?php echo $rubro['rubro'];?>" style="text-transform: uppercase;"></option>
                                     
                                     <?php
-                                        }
+                                        }}
                                     ?>
 
 
@@ -127,15 +157,17 @@
                 </div>
             </div>
         </div>
+        <div class="arrow2 bounce2"></div>
     </header>
     <!--Header-Area-/ -->
 
     <!-- Portfolio-Area -->
     <section class="section-padding gray-bg" id="servicios-area">
+    
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                    <div class="page-title text-center">
+                    <div class="page-title text-center service_title-reparaciones">
                         <h2 class="title">Reparaciones tecnicas comunes </h2>
                         <p>Para estos servicios  ofrecemos la visita del técnico dentro de las 24hs.</p>
                     </div>
@@ -151,10 +183,10 @@
                 
                 <!-- Box Electricidad -->
                 <div class="col-xs-6 col-sm-4 col-md-3 mix reparaciones popupLogic" data-type="<?php echo $rubro['rubro'];?>" id="electricidad">
-                <h5 class="rubro_logica_js" data-type="<?php echo $rubro['rubro'];?>"><?php echo $rubro['rubro'];?></h5>
+                <h5 class="rubro_logica_js rubro_titulo_img" data-type="<?php echo $rubro['rubro'];?>"><?php echo $rubro['rubro'];?></h5>
                 <div class="filter-box">
                         <div class="filter-image">
-                            <img src="img/<?php echo $rubro['rubro'];?>.jpg" alt="">
+                            <img class="servicio-imagen" src="img/<?php echo $rubro['rubro'];?>.jpg" alt="">
                         </div>
                         <div class="filter-hover">
                             
@@ -210,7 +242,7 @@
 
             <?php   
                     foreach($rubros as $rubro){
-                        if($rubro['id'] > 12 ) {
+                        if($rubro['id'] > 12 && $rubro['id'] <= 26 ) {
                 ?> 
 
             <a class="col-md-6  servicios-extra popupLogic" data-type="tecnico-general"><h4 class="rubro_logica_js" data-type="<?php echo $rubro['rubro'];?>"><?php echo $rubro['rubro'];?></h4></a>
@@ -221,57 +253,11 @@
       </div>
     <!-- Portfolio-Area / -->
 
+    
     <!-- Footer-Area -->
-    <footer class="footer-area">
-        <div class="footer-top section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                        <div class="footer-text">
-                            <h4 class="upper">Soluciones Hogar</h4>
-                            <p>Encontrá todos los servicios técnicos para tu hogar.</p>
-                            <div class="social-menu">
-                                <a href="#"><i class="icofont icofont-social-facebook"></i></a>
-                                <a href="#"><i class="icofont icofont-social-twitter"></i></a>
-                                <a href="#"><i class="icofont icofont-social-google-plus"></i></a>
-                                <a href="#"><i class="icofont icofont-social-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4" style="text-align: right;">
-                        <div class="footer-single">
-                            <h4 class="upper">Inicio</h4>
-                            <ul>
-                                <li><a href="#">Qué es Soluciones</a></li>
-                                <li><a href="#">Funcionamiento</a></li>
-                                <li><a href="#">Beneficios</a></li>
-                                <li><a href="#">Ser técnico</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4" style="text-align: right;">
-                        <div class="footer-single">
-                            <h4 class="upper">Asociarse</h4>
-                            <ul>
-                                <li><a href="#">Precios</a></li>
-                                <li><a href="#">Asociarse</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once("footer.php"); ?>
     <!-- Footer-Area / -->
+   
 
 
     <!--Vendor-JS-->

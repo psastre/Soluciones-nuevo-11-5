@@ -1,7 +1,7 @@
 <?php
     session_start();
-    
-    
+    $fecha = date("U");
+    echo  $fecha;
 ?>
 
 <!doctype html>
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+    
     
 
     <!--[if lt IE 9]>
@@ -38,16 +38,20 @@
         .bttn-hacer-pedido-nav-index{
             display: none;
         }
+       
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area">
+
+    <a href="https://wa.me/1564982059" target="_blank"><div class="whatsapp_container"><img src="images/whatsapp-logo.png" alt=""><p class="whatsapp_text">HABLEMOS POR WHATSAPP</p></div></a>
     <!--Preloader-->
     <div class="preloader">
         <div class="spinner"></div>
     </div>
 
     <!--Popup para resetear password-->
+   
      <?php if(isset($_GET["reset"])){
           if($_GET["reset"]=="sended"){ ?>
           <div class="complete_popup_notice" >
@@ -74,6 +78,8 @@
             </div>
           </div>
         <?php }};?> 
+         <!--Popup para resetear password-->
+         <!--Popup de password ya reseteada-->
      <?php if(isset($_GET["reset"])){
           if($_GET["reset"]=="succes"){ ?>
           <div class="complete_popup_notice" >
@@ -88,10 +94,39 @@
             </div>
           </div>
         <?php }};?> 
-
+      <!--Popup de password ya reseteada-->      
+      <!--Popup de socio inactivo-->   
+      <?php
+            if(isset($_SESSION["userEmail"])){
+                if($_SESSION["activeStatus"] === 0){ ?>
+                    <div class="complete_popup_notice" >
+                      <div class="section_popup_notice" >
+                        <img class="tick_popup" src="img/pago-error.png" alt="">
+                      <h2>Cuenta inactiva</h2>
+                        <div class="content_popup_order">
+          
+                          
+                          <div class="funcionamiento-popup">
+                          
+                          
+                              
+                              <h4>Su cuenta de Soluciones Hogar esta inactiva, por favor comuniquese al 5789-1800 para consultarlo</h4>
+                          
+                         
+                          
+                      </div>
+                        </div>
+                        <div class="closebar_popup_notice" >
+                          <button class="closebutton_popup_notice" id="closebutton_popup_notice">Entendido</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  <?php }};?>                     
+      <!--Popup de socio inactivo-->      
     <!--Header-Area-->
     
-
+                
     <header class="header-area overlay" id="inicio">
         <!-- Mainmenu-Area -->
         <?php include_once("navbar.php"); ?>
@@ -307,7 +342,7 @@ Si no estas suscripto podes probar un mes totalmente gratis.
                             <h3>4</h3>
                             <h4>Garantia</h4>
                     </div>
-                    <p class="funcionamiento_detalle_texto"></p>
+                    <p class="funcionamiento_detalle_texto">Una garantía doble en cada trabajo Domiciliario, ofrecida por cada técnico y por la Empresa.</p>
                 </div>
             </div>
         </div>
@@ -396,17 +431,20 @@ Si no estas suscripto podes probar un mes totalmente gratis.
                 <div class="row">
                     <div class="col-xs-12 col-md-8">
                         <div class="contact-form">
-                            <form action="process.php" id="contact-form" method="post">
+
+                        <!--CONTACT FORM-->
+                            <form action="contactForm.php" id="contact-form" method="post">
                                 <div class="form-double">
-                                    <input type="text" id="form-name" name="form-name" placeholder="Nombre" required="required">
-                                    <input type="number" placeholder="Teléfono">
+                                    <input type="text" id="form-name" name="form-name" placeholder="Nombre" >
+                                    <input type="number" name="phone" id="form-phone"placeholder="Teléfono">
                                 </div>
                                 <div class="form-double">
-                                    <input type="email" name="form-email" name="email" id="form-email" placeholder="Correo Electrónico" required="required">
-                                    <textarea name="form-message" id="message" id="form-message" rows="2" required="required" placeholder="Mensaje"></textarea>
+                                    <input type="text" name="form-email" name="email" id="form-email" placeholder="Correo Electrónico" >
+                                    <textarea name="message"  id="form-message" rows="2"  placeholder="Mensaje" style="resize: none;"></textarea>
                                 </div>
                                
-                                <button class="bttn bttn-primary">Enviar</button>
+                                <button name="submit" id="form-submit" class="bttn bttn-primary">Enviar</button>
+                                <div class="contact-form-message"></div>
                             </form>
                         </div>
                     </div>
@@ -436,6 +474,11 @@ Si no estas suscripto podes probar un mes totalmente gratis.
                                     </a>
                                 </li>
                             </ul>
+                            <div class="socialmedia_menu">
+                                <a href="https://es-la.facebook.com/solucioneshogar/" target="_blank"><img src="img/facebook.svg" alt=""></a>
+                                <a href="https://www.instagram.com/solucioneshogar/" target="_blank"><img src="img/instagram.svg" alt=""></a>
+                                <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=false&heroEntityKey=urn%3Ali%3Aorganization%3A20501165&keywords=soluciones%20hogar&origin=RICH_QUERY_SUGGESTION&position=0&searchId=f9c63556-804d-40ec-a3fa-bd1e9f1133f2&sid=Eto" target="_blank"><img src="img/linkedin.svg" alt=""></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -448,62 +491,14 @@ Si no estas suscripto podes probar un mes totalmente gratis.
     -->  
 
     <!-- Footer-Area -->
-    <footer class="footer-area">
-        <div class="footer-top section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                        <div class="footer-text">
-                            <h4 class="upper">Soluciones Hogar</h4>
-                            <p>Encontrá todos los servicios técnicos para tu hogar.</p>
-                            <div class="social-menu">
-                                <a href="#"><i class="icofont icofont-social-facebook"></i></a>
-                                <a href="#"><i class="icofont icofont-social-twitter"></i></a>
-                                <a href="#"><i class="icofont icofont-social-google-plus"></i></a>
-                                <a href="#"><i class="icofont icofont-social-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4" style="text-align: right;">
-                        <div class="footer-single">
-                            <h4 class="upper">Inicio</h4>
-                            <ul>
-                                <li><a href="#">Qué es Soluciones</a></li>
-                                <li><a href="#">Funcionamiento</a></li>
-                                <li><a href="#">Beneficios</a></li>
-                                <li><a href="#">Ser técnico</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4" style="text-align: right;">
-                        <div class="footer-single">
-                            <h4 class="upper">Asociarse</h4>
-                            <ul>
-                                <li><a href="#">Precios</a></li>
-                                <li><a href="#">Asociarse</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once("footer.php"); ?>
     <!-- Footer-Area / -->
 
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/custom22.js"></script>
+    
+    
     <!--Vendor-JS-->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
@@ -524,6 +519,13 @@ Si no estas suscripto podes probar un mes totalmente gratis.
     <script src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXZ3vJtdK6aKAEWBovZFe4YKj1SGo9V20&callback=initMap"></script>
     <script src="js/maps.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="scrollAnimation.js"></script>
+    <script src="js/custom22.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/contactValidations.js"></script>
+    
 </body>
 
 </html>

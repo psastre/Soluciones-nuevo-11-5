@@ -32,6 +32,16 @@
        }
         return $result;
     }
+    function invalidPwd ($pwd){
+       $result;
+       if (!preg_match("/(?=^.{8,}$)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/", $pwd)){
+           $result=true;
+       }
+       else{
+           $result= false;
+       }
+        return $result;
+    }
     function invalidEmail ($email){
        $result;
        if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -79,38 +89,50 @@
    
    
     function createUser($detalle, $conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd){
-       $sql = "INSERT INTO  usuarios (firstName, lastName, addressName, addressNumber,floorNumber, deptNumber, cellphoneNumber, telephoneNumber, email, pwd) VALUES (?,?,?,?,?,?,?,?,?,?);";
-       $stmt = mysqli_stmt_init($conn);
-       if(!mysqli_stmt_prepare($stmt, $sql)){
-           header("location:../registrarse.php?error=errorcreateuser");
-           exit();
-       }
-   
-       $hashedPwd = password_hash( $pwd, PASSWORD_DEFAULT);
-   
-       mysqli_stmt_bind_param($stmt, "ssssssssss", $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $hashedPwd);
-       mysqli_stmt_execute($stmt);
-       mysqli_stmt_close($stmt);
-
-       session_start();
-            $_SESSION["userEmail"]= $email;
-            
-            $_SESSION["userEmail"]= $email;
-            $_SESSION["userStatus"]= 0 ;
+        $sql = "INSERT INTO  usuarios (firstName, lastName, addressName, addressNumber,floorNumber, deptNumber, cellphoneNumber, telephoneNumber, email, pwd) VALUES (?,?,?,?,?,?,?,?,?,?);";
+        $stmt = mysqli_stmt_init($conn);
+        if(!mysqli_stmt_prepare($stmt, $sql)){
+            header("location:../registrarse.php?error=errorcreateuser");
+            exit();
+        }
+    
+        $hashedPwd = password_hash( $pwd, PASSWORD_DEFAULT);
+    
+        mysqli_stmt_bind_param($stmt, "ssssssssss", $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $hashedPwd);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+ 
+        session_start();
+             $_SESSION["userEmail"]= $email;
+             
+             $_SESSION["userEmail"]= $email;
+             $_SESSION["userStatus"]= 0 ;
+             $_SESSION["activeStatus"]= 1 ;
+         
+             $_SESSION["userName"] =  $firstName;
+             $_SESSION["userLastName"] = $lastName;
+             $_SESSION["userTelephone"] = $telephoneNumber;
+             $_SESSION["userId"] = mysqli_insert_id($conn);
+         
+         
         
-            $_SESSION["userName"] =  $firstName;
-            $_SESSION["userLastName"] = $lastName;
-            $_SESSION["userTelephone"] = $telephoneNumber;
-            $_SESSION["userId"] = mysqli_insert_id($conn);
         
-        
-       
-       
-    }
+     }
       // LOGIN
     function emptyInputLogin($email, $pwd){
        $result;
        if( empty($email) || empty($pwd)){
+           $result =true;
+       }
+       else{
+           $result = false;
+       }
+       return $result;
+    }
+   
+    function emptyInputContact($name, $phone, $email, $message){
+       $result;
+       if( empty($name) || empty($phone) || empty($email) || empty($message)){
            $result =true;
        }
        else{
@@ -138,7 +160,7 @@
            session_start();
            $_SESSION["userEmail"]= $emailExists["email"];
            $_SESSION["userStatus"]= $emailExists["clientStatus"];
-   
+           $_SESSION["activeStatus"]= $emailExists["activeStatus"];
            $_SESSION["userName"] = $emailExists["firstName"];
            $_SESSION["userLastName"] = $emailExists["lastName"];
            $_SESSION["userAddressName"] = $emailExists["addressName"];
@@ -150,8 +172,8 @@
            $_SESSION["userId"] = $emailExists["id"];
    
    
-           header("location:../index.php?todobien");
-           exit();
+           
+           
        }
     }
     
@@ -181,6 +203,6 @@
        mysqli_stmt_bind_param($stmt, "sssss",  $detalle, $userid, $codigoRubro, $createDate, $createTime);
        mysqli_stmt_execute($stmt);
        mysqli_stmt_close($stmt);
-       header("location:../usuario.php?pedido=realizado");
-       exit();
+       
+       
     }
