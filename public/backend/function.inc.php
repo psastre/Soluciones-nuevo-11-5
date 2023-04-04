@@ -88,8 +88,8 @@
     }
    
    
-    function createUser($detalle, $conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd){
-        $sql = "INSERT INTO  usuarios (firstName, lastName, addressName, addressNumber,floorNumber, deptNumber, cellphoneNumber, telephoneNumber, email, pwd) VALUES (?,?,?,?,?,?,?,?,?,?);";
+    function createUser($detalle, $conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd, $activeStatus,  $clientCreateDate, $clientExpirateDate){
+        $sql = "INSERT INTO  usuarios (firstName, lastName, addressName, addressNumber,floorNumber, deptNumber, cellphoneNumber, telephoneNumber, email, pwd, activeStatus, clientCreateDate, clientExpirateDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header("location:../registrarse.php?error=errorcreateuser");
@@ -98,7 +98,7 @@
     
         $hashedPwd = password_hash( $pwd, PASSWORD_DEFAULT);
     
-        mysqli_stmt_bind_param($stmt, "ssssssssss", $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $hashedPwd);
+        mysqli_stmt_bind_param($stmt, "sssssssssssss", $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $hashedPwd, $activeStatus,  $clientCreateDate, $clientExpirateDate);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
  
@@ -107,11 +107,12 @@
              
              $_SESSION["userEmail"]= $email;
              $_SESSION["userStatus"]= 0 ;
-             $_SESSION["activeStatus"]= 1 ;
+             $_SESSION["activeStatus"]= $activeStatus ;
          
              $_SESSION["userName"] =  $firstName;
              $_SESSION["userLastName"] = $lastName;
              $_SESSION["userTelephone"] = $telephoneNumber;
+             $_SESSION["clientExpirateDate"] = $clientExpirateDate;
              $_SESSION["userId"] = mysqli_insert_id($conn);
          
          
@@ -170,6 +171,7 @@
            $_SESSION["userCellphone"] = $emailExists["cellphoneNumber"];
            $_SESSION["userTelephone"] = $emailExists["telephoneNumber"];
            $_SESSION["userId"] = $emailExists["id"];
+           $_SESSION["clientExpirateDate"] = $emailExists["clientExpirateDate"];
    
    
            

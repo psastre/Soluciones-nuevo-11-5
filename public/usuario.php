@@ -250,11 +250,12 @@ if(isset($_SESSION["userEmail"])){
                                 foreach($userPedidosList as $pedido){
                                   
                               ?>
-                              <div class="col-md-12 pedidosDiv" style="display: flex;">
+                              <div class="col-md-12 pedidosDiv historicoPedidos" style="display: flex;">
                                 <div class="columna_pedidos columna_rubro"><p> <?php echo $pedido['rubro'];?></p></div>
                                 <div class="columna_pedidos columna_detalle"><p class="listado_detalle"> <?php echo $pedido['detail'];?></p></div>
                                 <div class="columna_pedidos columna_fecha" > <p> <?php echo $pedido['createDate'];?></p></div>
-
+                                <div class="columna_pedidos columna_flecha"  > <img src="images/uparrow.png" alt=""></div>
+                                  
                               </div>
                               <?php } ?>
                             </div>

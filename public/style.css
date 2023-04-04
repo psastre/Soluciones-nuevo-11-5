@@ -3151,11 +3151,17 @@ input[type="checkbox"]{
   padding-right: 0;
   border: white solid 2px;
   overflow: hidden;
+  transition: 0.5s ease;
 }
 
 .pedidosDiv2 {
   height: 50px;
   background-color: #fbfbfb;
+  transition: 0.5s ease;
+}
+
+.containerPedidos .historicoPedidosAbierto{
+  height: 150px;
 }
 
 .containerPedidos {
@@ -3169,6 +3175,7 @@ input[type="checkbox"]{
   
 }
 .columna_pedidos{
+  height: 100%;
   background-color: #e6e6e6;
   text-align: center;
   overflow: hidden;
@@ -3183,11 +3190,17 @@ input[type="checkbox"]{
   width: 25%;
 }
 .columna_fecha{
-  width: 25%;
+  width: 20%;
 }
 .columna_detalle{
   width: 55%;
   margin: 2.5% 0;
+}
+.columna_flecha{
+  width: 5%;
+  transform: rotate(180deg);
+  height: 100%;
+  cursor: pointer;
 }
 
 .containerPedidos::-webkit-scrollbar {

@@ -82,7 +82,7 @@
                             <h4>Revisa que tus datos esten correctos y hace la consulta que quieras. Te estaremos llamando para contarte mejor nuestro servicio </h4>
                             <form action="backend/userActivationRequest.php" method="post">
                            
-                                  <input  type='text' name='userid' value="<?php  echo $_SESSION['userId']  ?>" readonly style='display:block'>
+                                  <input  type='text' name='userid' value="<?php  echo $_SESSION['userId']  ?>" readonly style='display:none'>
                               
                                 <div class="form_inputs_hacersocio">
                                     <input type="text" name="telefono" value="<?php echo $_SESSION["userTelephone"]; ?>">                               
@@ -91,7 +91,7 @@
                                 </div>
                               
                                 
-                                <button name="submit" type="submit"  class="btn_prueba">Enviar</button>
+                                <button name="submit" type="submit"  class="bttn bttn-primary">Enviar</button>
                               
                               
                             

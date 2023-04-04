@@ -1,7 +1,10 @@
 <?php
     session_start();
-    $fecha = date("U");
-    echo  $fecha;
+
+  require_once 'backend/activeStatusVerification.php'
+      
+
+   
 ?>
 
 <!doctype html>

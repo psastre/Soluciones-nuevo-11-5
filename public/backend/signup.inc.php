@@ -14,12 +14,22 @@ if(isset($_POST["submit"])){
    $pwdRepeat = $_POST["passwordRepeat"];
    $rubro = $_POST["rubro"];
    $detalle = $_POST["detalle"];
+
+   $activeStatus = 1;
+
+   $clientCreateDate = new DateTime();
+   $clientCreateDate = $clientCreateDate->format('d/m/Y') . PHP_EOL;
+
+   $clientExpirateDate = new DateTime();
+   $clientExpirateDate->add(new DateInterval('P30D'));
+  $clientExpirateDate = $clientExpirateDate->format('d/m/Y') . PHP_EOL;
+   
    
    $createDate = new DateTime();
    $createDate -> setTimezone(new DateTimeZone('America/Argentina/Buenos_Aires'));
+   $createDate = $createDate->format('d/m/Y') . PHP_EOL;
    $createTime = new DateTime();
    $createTime -> setTimezone(new DateTimeZone('America/Argentina/Buenos_Aires'));
-   $createDate = $createDate->format('d/m/Y') . PHP_EOL;
    $createTime = $createTime->format('H:i:s') . PHP_EOL;
 
    $errorEmpty = false;
@@ -124,7 +134,7 @@ if (errorPassword == true){
 
 
 
-   createUser($detalle, $conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd);
+   createUser($detalle, $conn, $firstName,  $lastName, $addressName,  $addressNumber,$floorNumber,  $deptNumber, $cellphoneNumber, $telephoneNumber, $email, $pwd, $activeStatus, $clientCreateDate, $clientExpirateDate);
    
  
    if($rubro == "-"){

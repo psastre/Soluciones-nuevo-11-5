@@ -260,7 +260,37 @@ $(".solicitud_baja").click(function(){
    });
   
 
+   const listadoHistorial = document.querySelectorAll('.historicoPedidos')
+  
+   /*document.querySelectorAll('.columna_flecha').forEach(function(el) {
     
+     el.addEventListener('click', () => {
+       console.log("hola");
+      console.log(this)
+       this.parentElement.classList.toggle = "historicoPedidosAbierto";
+      
+     });
+   })*/
+
+   const flechas = document.querySelectorAll('.columna_flecha');
+
+// recorre todos los elementos con la clase "columna_flecha" y agrega el evento de clic
+flechas.forEach(flecha => {
+  flecha.addEventListener('click', () => {
+    // obtén el elemento padre del elemento con la clase "columna_flecha"
+    const historicoPedidos = flecha.parentNode;
+
+    // agrega o quita la clase "historicoPedidosAbierto" en el elemento padre
+    historicoPedidos.classList.toggle('historicoPedidosAbierto');
+  });
+});
+   
+   function prueba(){
+   console.log("jola")
+   }
+   prueba()
+   
+   console.log("jolasdad")
 
 });
 
@@ -329,16 +359,4 @@ function togglePassword() {
    
 
   
-
-  /* document.addEventListener('click', function handleClickOutsideBox(event) {
-    const box = document.getElementById('logIn');
-    const boton = document.getElementById('user-btn');
-    console.log('user clicked: ', event.target);
-  
-    if ( !box:contains(event.target) || !boton:contains(event.target)) {
-      box.style.display = 'none';
-      console.log("hola");
-    }
-  });
    
-*/
